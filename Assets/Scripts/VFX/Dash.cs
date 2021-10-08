@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Activate(float distance, int nTrailInstances)
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
