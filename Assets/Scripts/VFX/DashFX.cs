@@ -11,6 +11,11 @@ public class DashFX : MonoBehaviour
     GameObject startDashObj;
     DashGhost startDashDashGhost;
 
+    [SerializeField] GameObject ParticleEffectObj;
+
+    ParticleSystem speedLinesFX;
+    ParticleSystem.ShapeModule speedLinesFXShape;
+
     [Header("Debugging")]
     [SerializeField] bool showDebugGizmos = true;
 
@@ -25,6 +30,9 @@ public class DashFX : MonoBehaviour
     private void Start()
     {
         playerObj = transform.parent.gameObject;
+
+        speedLinesFX = ParticleEffectObj.GetComponent<ParticleSystem>();
+        speedLinesFXShape = speedLinesFX.shape;
 
         InitialisePlayerStartMesh();
         InitialiseTrailMeshes();
@@ -50,6 +58,13 @@ public class DashFX : MonoBehaviour
             startDashObj.transform.position = startPos;
             startDashObj.SetActive(true);
             startDashDashGhost.FadeIn();
+
+
+            ParticleEffectObj.transform.LookAt(startPos);
+            speedLinesFX.startRotation3D = new Vector3(45f, ParticleEffectObj.transform.rotation.y, 0f);
+            speedLinesFXShape.scale = new Vector3(1f, 1f, distance * 0.15f);
+            speedLinesFXShape.position = new Vector3(1f, 1f, distance* 0.5f);
+            speedLinesFX.Play();
 
         }
     }
