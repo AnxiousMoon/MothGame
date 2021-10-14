@@ -51,7 +51,6 @@ public class DashFX : MonoBehaviour
             {
                 trailMeshGameObjects[i].SetActive(true);
                 trailMeshGameObjects[i].transform.position = (trailStartPos - trailEndPos) * (1f / (numberOfTrailMeshes + 1f)) * (i + 1);
-                trailMeshGameObjects[i].transform.position += Vector3.up;
                 dashGhosts[i].FadeIn();
 
             }
@@ -64,7 +63,7 @@ public class DashFX : MonoBehaviour
             ParticleEffectObj.transform.LookAt(startPos);
             speedLinesFX.startRotation3D = new Vector3(45f, ParticleEffectObj.transform.rotation.y, 0f);
             speedLinesFXShape.scale = new Vector3(1f, 1f, distance * 0.15f);
-            speedLinesFXShape.position = new Vector3(0f, 0f, distance* 0.5f);
+            speedLinesFXShape.position = new Vector3(1f, 1f, distance* 0.5f);
             speedLinesFX.Play();
 
         }
@@ -104,7 +103,7 @@ public class DashFX : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            Activate(new Vector3(-2, 1, -2), numberOfTrailMeshes);
+            Activate(new Vector3(-10, 0, -15), numberOfTrailMeshes);
         }
     }
 
