@@ -48,10 +48,10 @@ public class Move : MonoBehaviour
 
     void myInput()
     {
-        horiziontalMovement = Input.GetAxisRaw("Vertical");
-        verticalMovement = Input.GetAxisRaw("Horizontal");
+        horiziontalMovement = Input.GetAxisRaw("Horizontal");
+        verticalMovement = Input.GetAxisRaw("Vertical");
 
-        moveDirection = transform.forward * verticalMovement + transform.right * -horiziontalMovement;
+        moveDirection = transform.forward * verticalMovement + transform.right * horiziontalMovement;
 
 
     }
