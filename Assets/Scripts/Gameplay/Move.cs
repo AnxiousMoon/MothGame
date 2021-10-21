@@ -6,6 +6,8 @@ public class Move : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 6f;
+    public float dashSpeed = 100f;
+    public float cooldown = 2f;
 
     float horiziontalMovement;
     float verticalMovement;
@@ -18,7 +20,7 @@ public class Move : MonoBehaviour
 
     private void Start()
     {
-        rb = this.GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
 
@@ -30,17 +32,17 @@ public class Move : MonoBehaviour
         {
             if (dashCooldown <= 0)
             {
-                rb.AddForce(moveDirection * 150.0f, ForceMode.VelocityChange);
-                this.gameObject.tag = "Dashing";
+                rb.AddForce(moveDirection * dashSpeed, ForceMode.VelocityChange);
+                gameObject.tag = "Dashing";
                 timePassed = 0;
-                dashCooldown = 2;
+                dashCooldown = cooldown;
             }
         }
         timePassed += Time.deltaTime;
         dashCooldown -= Time.deltaTime;
         if (timePassed >= 1)
         {
-            this.gameObject.tag = "Player";
+            gameObject.tag = "Player";
         }
     }
 

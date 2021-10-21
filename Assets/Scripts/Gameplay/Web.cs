@@ -5,34 +5,34 @@ using UnityEngine;
 public class Web : MonoBehaviour
 {
     public Move move;
-    Collider m_collider;
-    float enableCol;
+    public GameObject web;
+    
+    Collider col;
+
     // Start is called before the first frame update
     void Start()
     {
-        m_collider = GetComponent<Collider>();
+            col = GetComponent<Collider>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        enableCol += Time.deltaTime;
-        if (enableCol >= 1)
-        {
-            m_collider.enabled = true;
-        }
+       
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider other)
     {
-        if (col.collider.tag == "Player")
+        
+        if (other.gameObject.tag == "Dashing")
+        {
+            Destroy(web);
+            col.enabled = false;
+        }
+        else if (other.gameObject.tag == "Player")
         {
             move.moveSpeed = 0f;
-        }
-        if (col.collider.tag == "Dashing")
-        {
-            m_collider.enabled = !m_collider.enabled;
-            enableCol = 0;
         }
     }
 
