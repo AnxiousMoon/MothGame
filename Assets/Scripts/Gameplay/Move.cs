@@ -33,7 +33,7 @@ public class Move : MonoBehaviour
                 rb.AddForce(moveDirection * 150.0f, ForceMode.VelocityChange);
                 this.gameObject.tag = "Dashing";
                 timePassed = 0;
-                dashCooldown = 4;
+                dashCooldown = 2;
             }
         }
         timePassed += Time.deltaTime;
