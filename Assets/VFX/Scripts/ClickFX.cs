@@ -14,15 +14,24 @@ public class ClickFX : MonoBehaviour
     [SerializeField] [Range (0f,1f)]
     float maxAlpha = 0.5f;
 
+    [SerializeField]
+    float coolDownDuration = 10f;
+
+    [SerializeField]
+    [ColorUsage(true, true)] Color negativeDashColor;
+    Color defaultColor;
+
     [Header("Animation")]
 
     [SerializeField]
     float scaleDuration = 0.2f;
     [SerializeField]
-    float fadeOutDelay = 0.5f,
-        fadeOutDuration = 0.5f;
+    float fadeOutDuration = 3f;
+    float fadeOutDelay;
     [SerializeField]
     LeanTweenType tweenType;
+
+    
 
     float alpha;
 
@@ -33,20 +42,25 @@ public class ClickFX : MonoBehaviour
     float groundUIMaxAlpha;
     Color clickRadiusColor;
 
+    MothGlow mothGlow;
+
     enum ClickState
     {
         inactive,
         growing,
-        fadeingOut
+        fadingOut
     }
 
     ClickState clickState = ClickState.inactive;
 
-    bool isActive = false;
+    bool coolingDown = false;
+    bool dashFeedbackPlaying = false;
+    bool groundUIPlaying = false;
 
 
     private void Start()
     {
+        //Get references for Click Radius effect
         clickRadiusMeshObj = Instantiate(clickRadiusMeshObj);
         clickRadiusMeshObj.transform.localScale = Vector3.one * 0.1f;
         clickRadiusMaterial = clickRadiusMeshObj.GetComponent<MeshRenderer>().material;
@@ -54,9 +68,16 @@ public class ClickFX : MonoBehaviour
         maxAlpha = clickRadiusMaterial.GetFloat("_Alpha");
         alpha = maxAlpha;
 
+        //References for Ground effect
         groundUIMaterial = groundUIObj.GetComponent<MeshRenderer>().material;
         groundUIMaxAlpha = groundUIMaterial.GetFloat("_Alpha");
         groundUIAlpha = groundUIMaxAlpha;
+
+        mothGlow = MothGlow.instance;
+
+        defaultColor = clickRadiusColor;
+
+        fadeOutDelay = coolDownDuration - fadeOutDuration;
         
 
         groundUIObj.SetActive(false);
@@ -66,15 +87,21 @@ public class ClickFX : MonoBehaviour
 
     public void Activate()
     {
-        if (!isActive)
+        if (!coolingDown)
         {
             clickRadiusMeshObj.SetActive(true);
             groundUIObj.SetActive(true);
+            groundUIMaterial.SetColor("_Albedo", defaultColor);
 
             ClickGrowLeanTween();
-            GroundUIFadeOut();
+            GroundUIFadeOut(false);
+            mothGlow.ClickDash();
             clickRadiusMeshObj.transform.position = transform.position;
-            isActive = true;
+            coolingDown = true;
+        }
+        else if(!dashFeedbackPlaying && !groundUIPlaying)
+        {
+            NoDashFeedback();
         }
     }
 
@@ -95,8 +122,8 @@ public class ClickFX : MonoBehaviour
             LeanTween.value(clickRadiusMeshObj, maxAlpha, 0f, fadeOutDuration).setOnUpdate((alpha) =>
             {
                 clickRadiusMaterial.SetFloat("_Alpha", alpha);
-            }).setDelay(fadeOutDelay).setOnComplete(AnimationComplete).setEaseOutQuad(); ;
-            clickState = ClickState.fadeingOut;
+            }).setDelay(fadeOutDelay).setOnComplete(AnimationComplete).setEaseOutQuad();
+            clickState = ClickState.fadingOut;
         }
     }
 
@@ -107,24 +134,59 @@ public class ClickFX : MonoBehaviour
         clickRadiusMeshObj.transform.localScale = Vector3.one * 0.1f;
         clickRadiusMaterial.SetFloat("_Alpha", maxAlpha);
 
-        isActive = false;
+        coolingDown = false;
+        mothGlow.EndCooldown();
         clickRadiusMeshObj.SetActive(false);
         
     }
     #endregion
 
-    void GroundUIFadeOut()
+    void GroundUIFadeOut(bool dashFeedback)
     {
-        LeanTween.value(groundUIObj, groundUIMaxAlpha, 0f, fadeOutDuration * 0.5f).setOnUpdate((groundUIAlpha) =>
+        if (!dashFeedback)
         {
-            groundUIMaterial.SetFloat("_Alpha", groundUIAlpha);
-        }).setDelay(fadeOutDelay).setEaseOutQuad().setOnComplete(GroundUIAnimationComplete);
+            groundUIPlaying = true;
+            LeanTween.value(groundUIObj, groundUIMaxAlpha, 0f, fadeOutDuration * 0.1f).setOnUpdate((groundUIAlpha) =>
+            {
+                groundUIMaterial.SetFloat("_Alpha", groundUIAlpha);
+            }).setDelay(0.5f).setEaseOutQuad().setOnComplete(GroundUIAnimationComplete);
+        }
+        else
+        {
+            LeanTween.value(groundUIObj, 0.6f, 0f,  0.3f).setOnUpdate((groundUIAlpha) =>
+            {
+                groundUIMaterial.SetFloat("_Alpha", groundUIAlpha);
+            }).setEaseOutQuad().setOnComplete(DashFeedbackAnimationComplete);
+        }
     }
 
     void GroundUIAnimationComplete()
     {
         groundUIMaterial.SetFloat("_Alpha", groundUIMaxAlpha);
         groundUIObj.SetActive(false);
+        groundUIPlaying = false;
+    }
+
+    void DashFeedbackAnimationComplete()
+    {
+        groundUIMaterial.SetFloat("_Alpha", groundUIMaxAlpha);
+        groundUIObj.SetActive(false);
+        dashFeedbackPlaying = false;
+    }
+
+    void NoDashFeedback()
+    {
+        dashFeedbackPlaying = true;
+        Debug.Log("Dash is cooling down");
+
+        groundUIObj.SetActive(true);
+        groundUIMaterial.SetColor("_Albedo", negativeDashColor);
+        
+        LeanTween.cancel(groundUIObj);
+
+
+        mothGlow.NoDashFeedback(negativeDashColor);
+        GroundUIFadeOut(true);
     }
 
     private void Update()

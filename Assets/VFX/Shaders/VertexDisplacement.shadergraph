@@ -115,9 +115,6 @@
             "m_Id": "f4789a3048334482af2ff28c60e8caad"
         },
         {
-            "m_Id": "8167d7d11298442ba5b5e8a8ce5964e4"
-        },
-        {
             "m_Id": "b5841d8fc5b34eaebf8ea4990b328a0e"
         },
         {
@@ -2203,39 +2200,6 @@
 }
 
 {
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.ScreenPositionNode",
-    "m_ObjectId": "8167d7d11298442ba5b5e8a8ce5964e4",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "Screen Position",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": -293.0,
-            "y": 306.0,
-            "width": 208.0,
-            "height": 313.9999694824219
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "ae05ae92638f497088328b6ad7bad29b"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_ScreenSpaceType": 0
-}
-
-{
     "m_SGVersion": 1,
     "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
     "m_ObjectId": "854239bdf9cd45268e9e7a7954479879",
@@ -2656,7 +2620,7 @@
         "m_Position": {
             "serializedVersion": "2",
             "x": 312.0000305175781,
-            "y": 885.0000610351563,
+            "y": 885.0,
             "width": 138.0,
             "height": 77.0
         }
@@ -2670,7 +2634,7 @@
         }
     ],
     "synonyms": [],
-    "m_Precision": 0,
+    "m_Precision": 1,
     "m_PreviewExpanded": true,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -2945,31 +2909,6 @@
     "m_StageCapability": 3,
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
-    "m_ObjectId": "ae05ae92638f497088328b6ad7bad29b",
-    "m_Id": 0,
-    "m_DisplayName": "Out",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out",
-    "m_StageCapability": 3,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
     "m_Labels": []
 }
 
