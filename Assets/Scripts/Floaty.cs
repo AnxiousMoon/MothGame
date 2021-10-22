@@ -19,7 +19,7 @@ public class Floaty : MonoBehaviour {
     	newPosition.y += Mathf.Sin(2.5f * Time.time) * 1f * Time.deltaTime;
    		transform.position = newPosition;
 
-   		transform.Rotate (1.5f, 0f, 0f * Time.deltaTime);
+   		transform.Rotate (.3f, 0f, 0f * Time.deltaTime);
 	}	
 
 }
