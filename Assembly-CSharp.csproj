@@ -47,10 +47,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\MothAnimation.cs" />
      <Compile Include="Assets\Scripts\Gameplay\LastPosition.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Move.cs" />
      <Compile Include="Assets\Scripts\Rendering\CameraSettings.cs" />
+     <Compile Include="Assets\VFX\Scripts\MoveDustParticles.cs" />
      <Compile Include="Assets\Scripts\Gameplay\BatAI.cs" />
+     <Compile Include="Assets\Scripts\Floaty.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Key_Pickup.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Web.cs" />
      <Compile Include="Assets\VFX\Scripts\EnemyRadius.cs" />
