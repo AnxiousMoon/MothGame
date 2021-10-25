@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Web : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class Web : MonoBehaviour
         else if (other.gameObject.tag == "Player")
         {
             move.moveSpeed = 0f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
