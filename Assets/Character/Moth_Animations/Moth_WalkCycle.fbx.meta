@@ -58,7 +58,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.1611002
+        functionName: RightFootImpact
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: d644e3319707fca4d895166bc451f964,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.66994107
+        functionName: LeftFootImpact
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: d644e3319707fca4d895166bc451f964,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -117,7 +133,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.38
+    globalScale: 38
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

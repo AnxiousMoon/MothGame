@@ -28,7 +28,7 @@ public class MothGlow : MonoBehaviour
     }
     private void Start()
     {
-        wingMaterial = gameObject.GetComponent<MeshRenderer>().material;
+        wingMaterial = gameObject.GetComponent<SkinnedMeshRenderer>().materials[2];
         wingMaterial.EnableKeyword("_EMISSION");
         wingMaterial.SetColor("_EmissionColor", glowColor);
     }

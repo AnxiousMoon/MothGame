@@ -18,10 +18,14 @@ public class Move : MonoBehaviour
 
     Rigidbody rb;
 
+    MothAnimation mothAnimation;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
+        mothAnimation = MothAnimation.instance;
     }
 
     private void Update()
@@ -36,6 +40,8 @@ public class Move : MonoBehaviour
                 gameObject.tag = "Dashing";
                 timePassed = 0;
                 dashCooldown = cooldown;
+
+                mothAnimation.Dash();
             }
         }
         timePassed += Time.deltaTime;
