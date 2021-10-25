@@ -47,16 +47,32 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\VFX\Scripts\MothGlow.cs" />
+     <Compile Include="Assets\LeanTween\Framework\LeanTween.cs" />
      <Compile Include="Assets\MothAnimation.cs" />
+     <Compile Include="Assets\LeanTween\Framework\LTDescr.cs" />
      <Compile Include="Assets\Scripts\Gameplay\LastPosition.cs" />
+     <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
+     <Compile Include="Assets\LeanTween\Framework\LTSeq.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Move.cs" />
      <Compile Include="Assets\Scripts\Rendering\CameraSettings.cs" />
+     <Compile Include="Assets\VFX\Scripts\ClickRadius.cs" />
+     <Compile Include="Assets\VFX\Scripts\DustParticles.cs" />
+     <Compile Include="Assets\VFX\Scripts\DashGhost.cs" />
      <Compile Include="Assets\VFX\Scripts\MoveDustParticles.cs" />
      <Compile Include="Assets\Scripts\Gameplay\BatAI.cs" />
+     <Compile Include="Assets\VFX\Scripts\DashFX.cs" />
+     <Compile Include="Assets\LeanTween\Framework\LTDescrOptional.cs" />
      <Compile Include="Assets\Scripts\Floaty.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Key_Pickup.cs" />
+     <Compile Include="Assets\LeanTween\Framework\LeanAudio.cs" />
+     <Compile Include="Assets\VFX\Scripts\ClickFX.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Web.cs" />
      <Compile Include="Assets\VFX\Scripts\EnemyRadius.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\LeanTween\Framework\LeanSmooth.cs" />
+     <Compile Include="Assets\VFX\Scripts\PlayerSoundRadiusFX.cs" />
+     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
      <Compile Include="Assets\Scripts\Gameplay\SoundReact.cs" />
      <Compile Include="Assets\VFX\Scripts\MistFX.cs" />
      <None Include="Assets\VFX\Shaders\DashBlur.shader" />
