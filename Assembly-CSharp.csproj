@@ -48,9 +48,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Gameplay\LastPosition.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Move.cs" />
      <Compile Include="Assets\Scripts\Rendering\CameraSettings.cs" />
      <Compile Include="Assets\Scripts\Gameplay\BatAI.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Key_Pickup.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Web.cs" />
      <Compile Include="Assets\VFX\Scripts\EnemyRadius.cs" />
      <Compile Include="Assets\Scripts\Gameplay\SoundReact.cs" />
      <Compile Include="Assets\VFX\Scripts\MistFX.cs" />
