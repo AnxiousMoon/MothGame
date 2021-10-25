@@ -14,7 +14,6 @@ public class ClickFX : MonoBehaviour
     [SerializeField] [Range (0f,1f)]
     float maxAlpha = 0.5f;
 
-    [SerializeField]
     float coolDownDuration = 10f;
 
     [SerializeField]
@@ -77,7 +76,7 @@ public class ClickFX : MonoBehaviour
 
         defaultColor = clickRadiusColor;
 
-        fadeOutDelay = coolDownDuration - fadeOutDuration;
+        
         
 
         groundUIObj.SetActive(false);
@@ -85,8 +84,10 @@ public class ClickFX : MonoBehaviour
     }
 
 
-    public void Activate()
+    public void Activate(float _cooldown)
     {
+        coolDownDuration = _cooldown;
+        fadeOutDelay = coolDownDuration - fadeOutDuration;
         if (!coolingDown)
         {
             clickRadiusMeshObj.SetActive(true);
@@ -95,7 +96,7 @@ public class ClickFX : MonoBehaviour
 
             ClickGrowLeanTween();
             GroundUIFadeOut(false);
-            mothGlow.ClickDash();
+            mothGlow.ClickDash(_cooldown);
             clickRadiusMeshObj.transform.position = transform.position;
             coolingDown = true;
         }
@@ -189,11 +190,4 @@ public class ClickFX : MonoBehaviour
         GroundUIFadeOut(true);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            Activate();
-        }
-    }
 }

@@ -11,7 +11,8 @@ public class MothGlow : MonoBehaviour
 
     [SerializeField][ColorUsage(true,true)] Color glowColor = new Color(63f / 255f, 220f / 255f, 203f / 255f, 1f);
     [SerializeField]
-    float glowDuration = 2f, glowDelay = 8f;
+    float glowDuration = 2f;
+    float glowDelay = 8f;
     [SerializeField]
     DustParticles dustParticles;
     Material wingMaterial;
@@ -34,8 +35,9 @@ public class MothGlow : MonoBehaviour
     }
 
 
-    public void ClickDash()
+    public void ClickDash(float _cooldown)
     {
+        glowDelay = _cooldown - glowDuration;
         if (!coolDown)
         {
             wingMaterial.SetColor("_EmissionColor", Color.black);

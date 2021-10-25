@@ -41,7 +41,7 @@ public class Move : MonoBehaviour
                 timePassed = 0;
                 dashCooldown = cooldown;
 
-                mothAnimation.Dash();
+                mothAnimation.Dash(cooldown);
             }
         }
         timePassed += Time.deltaTime;

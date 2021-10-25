@@ -21,8 +21,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: Event DashComplete has a time (1.497299) outside the
-      clip's valid range (0.000000..1.416667). It will never be fired
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -60,7 +59,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.06483302
+      - time: 1
         functionName: DashComplete
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: d644e3319707fca4d895166bc451f964,

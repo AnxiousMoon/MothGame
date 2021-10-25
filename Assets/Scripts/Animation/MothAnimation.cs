@@ -11,8 +11,20 @@ public class MothAnimation : MonoBehaviour
     Rigidbody playerRB;
     Animator animator;
     [SerializeField] [Range(0f, 1f)] float speedMultiplier = 0.275f;
-    [SerializeField] PlaterMoveFXController footPebbleController;
+    [SerializeField] PlayerMoveFXController playerMoveFXController;
+    [SerializeField] ClickFX clickDashScript;
     Vector3 targetMoveDirection;
+
+    enum PlayerState
+    {
+        idle,
+        walking,
+        dashing
+    }
+
+    bool walkFXPlaying = false;
+
+    PlayerState playerState = PlayerState.idle;
     private void Awake()
     {
         SingletonCheck();
@@ -31,6 +43,14 @@ public class MothAnimation : MonoBehaviour
             targetMoveDirection = playerRB.velocity.normalized;
             targetMoveDirection = Vector3.Scale(targetMoveDirection, new Vector3(1f, 0f, 1f));
             
+
+            playerState = PlayerState.walking;
+
+        }
+        else
+        {
+            playerState = PlayerState.idle;
+            
         }
 
         transform.forward = Vector3.RotateTowards(transform.forward, targetMoveDirection, 0.1f, 0.1f) ;
@@ -38,23 +58,51 @@ public class MothAnimation : MonoBehaviour
 
     public void RightFootImpact()
     {
-        footPebbleController.RightFoot();
+        playerMoveFXController.RightFoot();
     }
     public void LeftFootImpact()
     {
-        footPebbleController.LeftFoot();
+        playerMoveFXController.LeftFoot();
     }
 
-    public void Dash()
+    void PlayWalkFX()
+    {
+        if (!walkFXPlaying)
+        {
+            playerMoveFXController.PlayDust();
+            walkFXPlaying = true;
+            Debug.Log("Start FX");
+        }
+    }
+
+    void StopWalkFX()
+    {
+        if (walkFXPlaying)
+        {
+            playerMoveFXController.StopDust();
+            walkFXPlaying = false;
+            Debug.Log("Stop FX");
+
+        }
+    }
+
+    public void Dash(float _cooldown)
     {
         animator.SetBool("isDashing", true);
+        playerState = PlayerState.dashing;
+        StopWalkFX();
+        clickDashScript.Activate(_cooldown);
     }
 
     public void DashComplete()
     {
         animator.SetBool("isDashing", false);
-        Debug.Log("Dsh Complete");
+        playerState = PlayerState.walking;
+        PlayWalkFX();
     }
+
+
+
 
     private void SingletonCheck()
     {
