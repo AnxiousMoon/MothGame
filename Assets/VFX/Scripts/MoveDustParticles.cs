@@ -34,7 +34,6 @@ public class MoveDustParticles : MonoBehaviour
             dustParticleSystem.Play();
             float emissionRate = Mathf.Clamp(velocityMag, 0, maximumSpeed)/maximumSpeed;
             emissionModule.rateOverTime = Mathf.Pow(emissionRate,2.8f) * initialRateOverTime;
-            Debug.Log(emissionRate);
         }
         else
         {
