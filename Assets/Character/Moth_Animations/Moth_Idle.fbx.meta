@@ -6,7 +6,22 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Moth_Idle_anim
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body_tex3
+    second: {fileID: 2100000, guid: e9f30cdb0e8ef924ab82d949d779c91c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyes_tex
+    second: {fileID: 2100000, guid: 9fcc9372209375f448bab437eee823c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wings_tex3
+    second: {fileID: 2100000, guid: bee04da71571c084e9d2182c1140dcb6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -117,7 +132,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.38
+    globalScale: 38
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
