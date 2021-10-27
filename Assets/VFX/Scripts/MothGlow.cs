@@ -9,7 +9,10 @@ public class MothGlow : MonoBehaviour
     public static MothGlow instance { get { return _instance; } }
 
 
-    [SerializeField][ColorUsage(true,true)] Color glowColor = new Color(63f / 255f, 220f / 255f, 203f / 255f, 1f);
+    [SerializeField][ColorUsage(true,true)] 
+    Color glowColor = new Color(63f / 255f, 220f / 255f, 203f / 255f, 1f);
+    [SerializeField]
+    [ColorUsage(true, true)] Color negativeDashColor;
     [SerializeField]
     float glowDuration = 2f;
     float glowDelay = 8f;
@@ -19,6 +22,7 @@ public class MothGlow : MonoBehaviour
     Color currentWingEmissionColor = Color.black;
     float colorLerpValue = 0f;
 
+    float cooldownDuration;
     bool coolDown = false;
     bool NoDashFeedbackPlaying = false;
     int DashRechargeID;
@@ -37,23 +41,41 @@ public class MothGlow : MonoBehaviour
 
     public void ClickDash(float _cooldown)
     {
-        glowDelay = _cooldown - glowDuration;
-        if (!coolDown)
+        _cooldown -= 0.25f;
+        cooldownDuration = _cooldown;
+        glowDelay = _cooldown * 0.8f;
+        glowDuration = _cooldown * 0.2f;
+
+        currentWingEmissionColor = Color.black;
+        wingMaterial.SetColor("_EmissionColor", currentWingEmissionColor);
+        
+        GlowIncreaseAnimation();
+        dustParticles.Activate(glowDelay, glowDuration);
+        coolDown = true;
+
+    }
+
+
+    private void Update()
+    {
+        cooldownDuration -= Time.deltaTime;
+        if(cooldownDuration <= 0)
         {
-            wingMaterial.SetColor("_EmissionColor", Color.black);
-            GlowIncreaseAnimation();
-            dustParticles.Activate(glowDelay, glowDuration);
-            coolDown = true;
+            coolDown = false;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift) && coolDown)
+        {
+            NoDashFeedback();
         }
     }
 
-    public void NoDashFeedback(Color _NoDashFeedbackColor)
+    public void NoDashFeedback()
     {
         Debug.Log("No Dash Feedback Playing");
         Color _currentWingEmissionColor = Color.black;
         LeanTween.value(gameObject, 0f, 1f, 0.3f).setOnUpdate((float _colorLerpValue) =>
         {
-            _currentWingEmissionColor = Color.Lerp(_NoDashFeedbackColor, currentWingEmissionColor, _colorLerpValue);
+            _currentWingEmissionColor = Color.Lerp(negativeDashColor, currentWingEmissionColor, _colorLerpValue);
             wingMaterial.SetColor("_EmissionColor", _currentWingEmissionColor);
         }).setEaseOutQuad().setOnComplete(NoDashFeedbackAnimationComplete);
         NoDashFeedbackPlaying = true;
@@ -81,12 +103,7 @@ public class MothGlow : MonoBehaviour
         NoDashFeedbackPlaying = false;
     }
 
-    public void EndCooldown()
-    {
-        currentWingEmissionColor = Color.black;
-        wingMaterial.SetColor("_EmissionsColor", currentWingEmissionColor);
-        coolDown = false;
-    }
+
     private void SingletonCheck()
     {
         if (_instance != null && _instance != this)

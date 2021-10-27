@@ -43,14 +43,6 @@ public class ClickFX : MonoBehaviour
 
     MothGlow mothGlow;
 
-    enum ClickState
-    {
-        inactive,
-        growing,
-        fadingOut
-    }
-
-    ClickState clickState = ClickState.inactive;
 
     bool coolingDown = false;
     bool dashFeedbackPlaying = false;
@@ -86,57 +78,49 @@ public class ClickFX : MonoBehaviour
 
     public void Activate(float _cooldown)
     {
-        coolDownDuration = _cooldown;
-        fadeOutDelay = coolDownDuration - fadeOutDuration;
-        if (!coolingDown)
-        {
-            clickRadiusMeshObj.SetActive(true);
-            groundUIObj.SetActive(true);
-            groundUIMaterial.SetColor("_Albedo", defaultColor);
+        coolDownDuration = _cooldown - 0.25f;
+        dashFeedbackPlaying = false;
+        scaleDuration = coolDownDuration * 0.1f;
+        fadeOutDelay = coolDownDuration * 0.5f;
+        fadeOutDuration = coolDownDuration * 0.4f;
 
-            ClickGrowLeanTween();
-            GroundUIFadeOut(false);
-            mothGlow.ClickDash(_cooldown);
-            clickRadiusMeshObj.transform.position = transform.position;
-            coolingDown = true;
-        }
-        else if(!dashFeedbackPlaying && !groundUIPlaying)
-        {
-            NoDashFeedback();
-        }
+        clickRadiusMeshObj.SetActive(true);
+        groundUIObj.SetActive(true);
+        groundUIMaterial.SetColor("_Albedo", defaultColor);
+
+        ClickGrowLeanTween();
+        GroundUIFadeOut(false);
+        mothGlow.ClickDash(_cooldown);
+        clickRadiusMeshObj.transform.position = transform.position;
+        coolingDown = true;
+       
     }
 
     #region ClickRefractionAnimation
     void ClickGrowLeanTween()
     {
-        if (clickState == ClickState.inactive)
-        {
-            LeanTween.scale(clickRadiusMeshObj, Vector3.one * clickRadius, scaleDuration).setEase(tweenType).setOnComplete(ClickFadeOutLeanTween);
-            clickState = ClickState.growing;
-        }
+        LeanTween.scale(clickRadiusMeshObj, Vector3.one * clickRadius, scaleDuration).setEase(tweenType).setOnComplete(ClickFadeOutLeanTween);
+        
     }
 
     void ClickFadeOutLeanTween()
     {
-        if (clickState == ClickState.growing)
-        {
+
             LeanTween.value(clickRadiusMeshObj, maxAlpha, 0f, fadeOutDuration).setOnUpdate((alpha) =>
             {
                 clickRadiusMaterial.SetFloat("_Alpha", alpha);
             }).setDelay(fadeOutDelay).setOnComplete(AnimationComplete).setEaseOutQuad();
-            clickState = ClickState.fadingOut;
-        }
+
+        
     }
 
     void AnimationComplete()
     {
         
-        clickState = ClickState.inactive;
         clickRadiusMeshObj.transform.localScale = Vector3.one * 0.1f;
         clickRadiusMaterial.SetFloat("_Alpha", maxAlpha);
 
         coolingDown = false;
-        mothGlow.EndCooldown();
         clickRadiusMeshObj.SetActive(false);
         
     }
@@ -175,19 +159,6 @@ public class ClickFX : MonoBehaviour
         dashFeedbackPlaying = false;
     }
 
-    void NoDashFeedback()
-    {
-        dashFeedbackPlaying = true;
-        Debug.Log("Dash is cooling down");
 
-        groundUIObj.SetActive(true);
-        groundUIMaterial.SetColor("_Albedo", negativeDashColor);
-        
-        LeanTween.cancel(groundUIObj);
-
-
-        mothGlow.NoDashFeedback(negativeDashColor);
-        GroundUIFadeOut(true);
-    }
 
 }
