@@ -12,8 +12,9 @@ public class MothAnimation : MonoBehaviour
     Animator animator;
     [SerializeField] [Range(0f, 1f)] float speedMultiplier = 0.275f;
     [SerializeField] PlayerMoveFXController playerMoveFXController;
-    [SerializeField] ClickFX clickDashScript;
-    Vector3 targetMoveDirection;
+    [SerializeField] ClickFX clickScript;
+    [SerializeField] DashFX dashScript;
+    Vector3 targetMoveDirection = Vector3.zero;
 
     enum PlayerState
     {
@@ -52,8 +53,10 @@ public class MothAnimation : MonoBehaviour
             playerState = PlayerState.idle;
             
         }
-
-        transform.forward = Vector3.RotateTowards(transform.forward, targetMoveDirection, 0.1f, 0.1f) ;
+        if (targetMoveDirection != Vector3.zero)
+        {
+            transform.forward = Vector3.RotateTowards(transform.forward, targetMoveDirection, 1f, 1f) * Time.deltaTime;
+        }
     }
 
     public void RightFootImpact()
@@ -91,7 +94,8 @@ public class MothAnimation : MonoBehaviour
         animator.SetBool("isDashing", true);
         playerState = PlayerState.dashing;
         StopWalkFX();
-        clickDashScript.Activate(_cooldown);
+        clickScript.Activate(_cooldown);
+        dashScript.Activate();
     }
 
     public void DashComplete()

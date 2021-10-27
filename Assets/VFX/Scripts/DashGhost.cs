@@ -4,35 +4,42 @@ using UnityEngine;
 
 public class DashGhost : MonoBehaviour
 {
-    Animator animator;
-    DashFX parentDash;
+
+    [SerializeField] float fadeDuration = 0.5f;
+    [SerializeField] float fadeDelay = 0.5f;
     float defaultAlpha = 0.5f;
     Color defaultColor = Color.magenta;
 
+    MeshRenderer meshRenderer;
+    Material[] materials;
+
     private void Awake()
     {
-        animator = gameObject.GetComponent<Animator>();
+        meshRenderer = gameObject.GetComponent<MeshRenderer>();
+        materials = meshRenderer.materials;
     }
 
     private void Start()
     {
-        parentDash = transform.parent.gameObject.GetComponent<DashFX>();
-        defaultColor = gameObject.GetComponent<MeshRenderer>().material.color;
-        defaultColor = new Color(defaultColor.r, defaultColor.g, defaultColor.b, defaultAlpha);
+        defaultAlpha = materials[0].GetFloat("_Alpha");
+        FadeOut();
     }
 
-    public void FadeIn()
+    public void FadeOut()
     {
+        LeanTween.value(gameObject, defaultAlpha, 0f, fadeDuration).setOnUpdate((float _alpha) =>
+        {
+            for (int i = 0; i < materials.Length; i++)
+            {
+                materials[i].SetFloat("_Alpha", _alpha);
+            }
+        }).setEaseOutQuad().setOnComplete(AnimationComplete).setDelay(fadeDelay);
 
-            Debug.Log(gameObject.name);
-    
-        animator.SetBool("IsActive", true);
     }
 
     public void AnimationComplete()
     {
-        animator.SetBool("IsActive", false);
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
 }
