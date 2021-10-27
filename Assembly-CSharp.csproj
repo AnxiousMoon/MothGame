@@ -76,13 +76,17 @@
     <Compile Include="Assets\Scripts\Gameplay\Key_Pickup.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanAudio.cs" />
     <Compile Include="Assets\VFX\Scripts\ClickFX.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Web.cs" />
     <Compile Include="Assets\VFX\Scripts\PlayerMoveFXController.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanSmooth.cs" />
     <Compile Include="Assets\VFX\Scripts\PlayerSoundRadiusFX.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SoundReact.cs" />
     <Compile Include="Assets\VFX\Scripts\MistFX.cs" />
+    <Compile Include="Assets\Scripts\UI\PressToStartUI.cs" />
+    <Compile Include="Assets\Scripts\UI\UIController.cs" />
+    <Compile Include="Assets\Scripts\UI\FadePanel.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\VFX\Shaders\DashBlur.shader" />
