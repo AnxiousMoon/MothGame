@@ -7,6 +7,7 @@ public class Web : MonoBehaviour
 {
     public Move move;
     public GameObject web;
+    public GameObject web_broken;
     
     Collider col;
 
@@ -29,6 +30,7 @@ public class Web : MonoBehaviour
         if (other.gameObject.tag == "Dashing")
         {
             Destroy(web);
+            web_broken.SetActive(true);
             col.enabled = false;
         }
         else if (other.gameObject.tag == "Player")
