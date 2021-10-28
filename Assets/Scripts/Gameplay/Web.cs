@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Web : MonoBehaviour
 {
-    public Move move;
     public GameObject web;
-    public GameObject web_broken;
     
     Collider col;
 
@@ -29,14 +27,19 @@ public class Web : MonoBehaviour
         
         if (other.gameObject.tag == "Dashing")
         {
-            Destroy(web);
-            web_broken.SetActive(true);
-            col.enabled = false;
+            if (!other.isTrigger)
+            {
+                Destroy(web);
+                col.enabled = false;
+            }
         }
         else if (other.gameObject.tag == "Player")
         {
-            move.moveSpeed = 0f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (!other.isTrigger)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+
         }
     }
 

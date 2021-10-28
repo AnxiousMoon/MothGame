@@ -7,9 +7,13 @@ public class BatAI : MonoBehaviour
 
     public Transform[] waypoints;
     public int speed;
+    public int maxSpeed = 10;
+    public int dashSpeed = 50;
+    public GameObject web;
 
     private int waypointIndex;
     private float dist;
+    private float distRock;
 
     Rigidbody rb;
 
@@ -32,6 +36,21 @@ public class BatAI : MonoBehaviour
             transform.LookAt(col.transform.position);
             speed = 100;
         }
+        if (col.tag == "Web")
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+            rb.freezeRotation = true;
+            speed = 0;
+        }
+        if (col.tag == "Sound")
+        {
+            transform.LookAt(web.transform.position);
+            {
+                maxSpeed = 100;
+            }
+        }
     }
 
     void OnTriggerStay(Collider col)
@@ -41,11 +60,30 @@ public class BatAI : MonoBehaviour
             transform.LookAt(col.transform.position);
             speed = 100;
         }
+        if (col.tag == "Sound")
+        {
+            //rb.velocity = Vector3.zero;
+            //rb.angularVelocity = Vector3.zero;
+            //rb.freezeRotation = true;
+            //transform.LookAt(transform.forward);
+            //distRock = Vector3.Distance(transform.position, col.transform.position);
+            //if (distRock < 1f)
+            //{
+            transform.LookAt(web.transform.position);
+            //}
+            //speed = 100;
+        }
+        //if (col.tag == "Stand-in")
+        //{
+        //    transform.LookAt(waypoints[waypointIndex].position);
+        //    Patrol();
+        //}
     }
 
     void OnTriggerExit(Collider col)
     {
         transform.LookAt(waypoints[waypointIndex].position);
+        maxSpeed = 10;
     }
 
     void OnCollisionEnter(Collision col)
@@ -68,13 +106,13 @@ public class BatAI : MonoBehaviour
         {
             IncreaseIndex();
         }
-	Patrol();      
+        Patrol();
     }
 
     void Patrol()
     {
         rb.AddForce(transform.forward * speed, ForceMode.Acceleration);
-        rb.velocity = Vector3.ClampMagnitude(rb.velocity, 10f);
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
 
     void IncreaseIndex()
