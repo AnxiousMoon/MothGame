@@ -15,6 +15,6 @@ public class MistFX : MonoBehaviour
     {
         particleSystem = gameObject.GetComponent<ParticleSystem>();
         particleSystem.startColor = new Color(1f,1f,1f, strength);
-        particleSystem.maxParticles = Mathf.FloorToInt(density * 1000);
+        particleSystem.maxParticles = Mathf.FloorToInt(density * 1000f);
     }
 }
