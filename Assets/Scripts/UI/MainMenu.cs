@@ -23,14 +23,26 @@ public class MainMenu : MonoBehaviour
     [SerializeField] LeanTweenType leanTweenFadeInType, leanTweenFadeOutType;
 
     bool onMenu = true;
+    bool skipExposition = false;
+    bool postMenuCountdown = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKey && onMenu)
+        if (Input.anyKey)
         {
-            FadeOut();
-            onMenu = false;
+            if (onMenu)
+            {
+                FadeOutMenu();
+                onMenu = false;
+                StartCoroutine(PostMenuCountdown());
+            }
+            else if(!skipExposition && postMenuCountdown)
+            {
+                Debug.Log("Skip Exposition");
+                SkipExposition();
+                skipExposition = true;
+            }
         }
     }
 
@@ -84,7 +96,7 @@ public class MainMenu : MonoBehaviour
         }).setEaseInOutCirc().setLoopPingPong().setDelay(pressToStartDelay);
     }
 
-    void FadeOut()
+    void FadeOutMenu()
     {
         LeanTween.cancelAll();
         LeanTween.value(gameObject, 1f, 0f, titleFadeInDuration).setOnUpdate((float _alpha) =>
@@ -110,6 +122,7 @@ public class MainMenu : MonoBehaviour
 
     void FadeOutExposition()
     {
+        Debug.Log("Fade out exposition");
         LeanTween.value(story, 1f, 0f, titleFadeInDuration).setOnUpdate((float _alpha) =>
         {
             Color _color = new Color(1f, 1f, 1f, _alpha);
@@ -117,6 +130,24 @@ public class MainMenu : MonoBehaviour
         }).setEase(leanTweenFadeOutType).setDelay(expositionDuration).setOnComplete(StartGame);
     }
 
+    void SkipExposition()
+    {
+        LeanTween.cancel(story);
+        StartCoroutine(SkipExpositionDelay());
+    }
+
+    IEnumerator SkipExpositionDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        expositionDuration = 0f;
+        FadeOutExposition();
+    }
+
+    IEnumerator PostMenuCountdown()
+    {
+        yield return new WaitForSeconds(2f);
+        postMenuCountdown = true;
+    }
 
     public void StartGame()
     {
