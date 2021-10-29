@@ -34,6 +34,7 @@ public class BatAI : MonoBehaviour
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             transform.LookAt(col.transform.position);
+            maxSpeed = 100;
             speed = 100;
         }
         if (col.tag == "Web")
@@ -70,6 +71,7 @@ public class BatAI : MonoBehaviour
             //if (distRock < 1f)
             //{
             transform.LookAt(web.transform.position);
+            speed = 100;
             //}
             //speed = 100;
         }
