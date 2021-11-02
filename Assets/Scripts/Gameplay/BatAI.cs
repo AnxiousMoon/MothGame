@@ -20,7 +20,6 @@ public class BatAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 100;
         rb = this.GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         waypointIndex = 0;
@@ -60,6 +59,7 @@ public class BatAI : MonoBehaviour
         {
             transform.LookAt(col.transform.position);
             speed = 100;
+            maxSpeed = 100;
         }
         if (col.tag == "Sound")
         {
@@ -94,9 +94,14 @@ public class BatAI : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            speed = 10;
+            speed = 100;
             maxSpeed = 10;
         }
+    }
+
+    void OnCollisionExit(Collision col)
+    {
+
     }
 
     // Update is called once per frame
