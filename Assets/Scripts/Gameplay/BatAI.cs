@@ -94,9 +94,8 @@ public class BatAI : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            rb.constraints = RigidbodyConstraints.FreezePosition;
-            rb.freezeRotation = true;
-            speed = 0;
+            speed = 10;
+            maxSpeed = 10;
         }
     }
 

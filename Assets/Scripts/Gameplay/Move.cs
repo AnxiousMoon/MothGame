@@ -52,6 +52,15 @@ public class Move : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter(Collision col)
+    {
+        if(col.collider.tag == "Enemy")
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+    }
+
     void myInput()
     {
         horiziontalMovement = Input.GetAxisRaw("Horizontal");
