@@ -8,7 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ClickRadius
-  m_Shader: {fileID: -6465566751694194690, guid: 25c2a470dfc252f4bbb5c4b1a6cfb516, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 25c2a470dfc252f4bbb5c4b1a6cfb516,
+    type: 3}
   m_ShaderKeywords: _ALPHABLEND_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -68,6 +69,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_0568fc96003e48f98d35ae289fc2a69d: 0.5
     - Vector1_5ddcada9b4ff4b78a01ae6da8992b7e9: 0.09
     - Vector1_854239bdf9cd45268e9e7a7954479879: 1
     - Vector1_b10ec3aa7dbc4a9a9347d75af44d7342: 6
@@ -94,8 +96,9 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - Color_f5e79d680e5d4f1fa64d94557ecb274d: {r: 8.947122, g: 170.89003, b: 154.7852, a: 1}
+    - Color_f5e79d680e5d4f1fa64d94557ecb274d: {r: 8.947122, g: 170.89003, b: 154.7852,
+        a: 1}
     - _Color: {r: 0, g: 1, b: 0.67527866, a: 0.47058824}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Tint: {r: 0.8627451, g: 2.9960785, b: 2.7764707, a: 1}
+    - _Tint: {r: 1.945098, g: 4, b: 3.9058824, a: 1}
   m_BuildTextureStacks: []

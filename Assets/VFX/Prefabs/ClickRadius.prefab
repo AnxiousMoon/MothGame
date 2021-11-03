@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1168140700655502738}
   - component: {fileID: 1168140700655502734}
   - component: {fileID: 1168140700655502735}
-  - component: {fileID: 5175139512658236299}
   m_Layer: 0
   m_Name: ClickRadius
   m_TagString: Untagged
@@ -82,15 +81,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5175139512658236299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1168140700655502739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8c1744dd0d4303419e58ec626fc323a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
