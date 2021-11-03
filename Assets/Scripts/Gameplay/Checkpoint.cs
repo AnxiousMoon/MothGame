@@ -26,6 +26,7 @@ public class Checkpoint : MonoBehaviour
         if (col.collider.tag == "Enemy")
         {
             player.transform.position = checkPoint.transform.position;
+            MothAnimation.instance.ResetRotation();
         }
     }
 

@@ -9,11 +9,25 @@ MeshCollider:
   m_GameObject: {fileID: 5744745242985232112}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1313719292539774127, guid: 18002bfce0993094f9de8330866a4389, type: 3}
+--- !u!136 &2687944820846338158
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5744745242985232112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.4446373
+  m_Height: 4.26234
+  m_Direction: 1
+  m_Center: {x: -0.07818222, y: -0.037457705, z: 0}
 --- !u!1 &5879430335477217059
 GameObject:
   m_ObjectHideFlags: 0
@@ -23,6 +37,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5803274841659931083}
+  - component: {fileID: 984960433}
+  - component: {fileID: 984960434}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Untagged
@@ -45,6 +61,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &984960433
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879430335477217059}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &984960434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879430335477217059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07d85beff1df7640a532d469a9733e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  speed: 100
+  maxSpeed: 10
+  dashSpeed: 50
+  web: {fileID: 0}
 --- !u!1001 &4861643002171542433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,6 +164,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bat_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 18002bfce0993094f9de8330866a4389,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18002bfce0993094f9de8330866a4389, type: 3}

@@ -15,6 +15,7 @@ public class MothAnimation : MonoBehaviour
     [SerializeField] ClickFX clickScript;
     [SerializeField] DashFX dashScript;
     Vector3 targetMoveDirection = Vector3.zero;
+    Quaternion originalRotation = Quaternion.identity;
 
     enum PlayerState
     {
@@ -34,6 +35,7 @@ public class MothAnimation : MonoBehaviour
     private void Start()
     {
         playerRB = player.GetComponent<Rigidbody>();
+        originalRotation = transform.rotation;
     }
     private void Update()
     {
@@ -89,6 +91,10 @@ public class MothAnimation : MonoBehaviour
         }
     }
 
+    public void ResetRotation()
+    {
+        transform.rotation = originalRotation;
+    }
     public void Dash(float _cooldown)
     {
         animator.SetBool("isDashing", true);
