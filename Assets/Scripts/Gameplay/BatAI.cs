@@ -108,7 +108,7 @@ public class BatAI : MonoBehaviour
     void Update()
     {
         dist = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
-        if (dist < 1f)
+        if (dist < 3f)
         {
             IncreaseIndex();
         }
