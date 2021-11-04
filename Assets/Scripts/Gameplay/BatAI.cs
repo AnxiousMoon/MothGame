@@ -10,6 +10,7 @@ public class BatAI : MonoBehaviour
     public int maxSpeed = 10;
     public int dashSpeed = 50;
     public GameObject web;
+    public GameObject ghost;
 
     private int waypointIndex;
     private float dist;
@@ -44,6 +45,14 @@ public class BatAI : MonoBehaviour
             rb.freezeRotation = true;
             speed = 0;
         }
+        if (col.tag == "Dashing")
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            transform.LookAt(ghost.transform.position);
+            maxSpeed = 50;
+            speed = 50;
+        }
         if (col.tag == "Sound")
         {
             transform.LookAt(web.transform.position);
@@ -74,6 +83,12 @@ public class BatAI : MonoBehaviour
             speed = 100;
             //}
             //speed = 100;
+        }
+        if (col.tag == "Dashing")
+        {
+            transform.LookAt(ghost.transform.position);
+            maxSpeed = 50;
+            speed = 50;
         }
         //if (col.tag == "Stand-in")
         //{

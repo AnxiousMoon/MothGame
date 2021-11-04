@@ -8,12 +8,14 @@ public class Move : MonoBehaviour
     public float moveSpeed = 6f;
     public float dashSpeed = 100f;
     public float cooldown = 2f;
+    public Collider collider;
 
     float horiziontalMovement;
     float verticalMovement;
     float rbDrag = 6f;
     float timePassed;
     float dashCooldown;
+
     Vector3 moveDirection;
 
     Rigidbody rb;
@@ -38,6 +40,7 @@ public class Move : MonoBehaviour
             {
                 rb.AddForce(moveDirection * dashSpeed, ForceMode.VelocityChange);
                 gameObject.tag = "Dashing";
+                collider.enabled = true;
                 timePassed = 0;
                 dashCooldown = cooldown;
 
@@ -49,6 +52,7 @@ public class Move : MonoBehaviour
         if (timePassed >= 1)
         {
             gameObject.tag = "Player";
+            collider.enabled = false;
         }
     }
 
