@@ -9,11 +9,11 @@ public class Key_Pickup : MonoBehaviour
 
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider col)
     {
-        if (other.tag == "Player")
+        if (col.tag == "Player")
         {
-            if (!other.isTrigger)
+            if (!col.isTrigger)
             {
                 Door.SetActive(false);
                 Key.SetActive(false);

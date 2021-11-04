@@ -10,14 +10,18 @@ public class Rock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Player")
         {
-            collider.enabled = true;
+            if (!col.isTrigger)
+            {
+                collider.enabled = true;
+            }
+
         }
     }
 
