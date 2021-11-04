@@ -95,13 +95,8 @@ public class BatAI : MonoBehaviour
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             speed = 100;
-            maxSpeed = 10;
+            maxSpeed = 100;
         }
-    }
-
-    void OnCollisionExit(Collision col)
-    {
-
     }
 
     // Update is called once per frame

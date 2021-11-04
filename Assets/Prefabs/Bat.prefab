@@ -1071,6 +1071,7 @@ GameObject:
   - component: {fileID: 1018786475}
   - component: {fileID: 1018786477}
   - component: {fileID: 1730396030}
+  - component: {fileID: 327244535722200703}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Enemy
@@ -1150,6 +1151,20 @@ MonoBehaviour:
   maxSpeed: 10
   dashSpeed: 50
   web: {fileID: 0}
+--- !u!136 &327244535722200703
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879430335477217059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.481809
+  m_Height: 4.31993
+  m_Direction: 1
+  m_Center: {x: -4.4865006e-16, y: 2.41296, z: 0.15657091}
 --- !u!1 &6414728659173477375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1422,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3917240636035455677}
   - component: {fileID: 378186662258059288}
-  - component: {fileID: 6722694576692544889}
   m_Layer: 0
   m_Name: bat_low3
   m_TagString: Untagged
@@ -1534,20 +1548,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.096490145, y: 1.4737039, z: -0.061113596}
     m_Extent: {x: 4.1042767, y: 2.4826164, z: 2.181983}
   m_DirtyAABB: 0
---- !u!136 &6722694576692544889
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7780974644454335616}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.21
-  m_Height: 3.03
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.54, z: 0.41}
 --- !u!1 &7854147480507383051
 GameObject:
   m_ObjectHideFlags: 0
