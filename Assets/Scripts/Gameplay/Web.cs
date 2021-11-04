@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Web : MonoBehaviour
 {
     public GameObject web;
+    public GameObject webBroken;
 
     Collider col;
 
@@ -31,6 +32,9 @@ public class Web : MonoBehaviour
             {
                 Destroy(web);
                 col.enabled = false;
+                webBroken.SetActive(true);
+
+
             }
         }
         //else if (other.gameObject.tag == "Player")
