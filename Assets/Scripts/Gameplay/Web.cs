@@ -14,7 +14,6 @@ public class Web : MonoBehaviour
     void Start()
     {
         col = GetComponent<Collider>();
-
     }
 
     // Update is called once per frame
@@ -23,31 +22,13 @@ public class Web : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-
         if (other.gameObject.tag == "Dashing")
         {
-            if (!other.isTrigger)
-            {
                 Destroy(web);
                 col.enabled = false;
                 webBroken.SetActive(true);
-
-
-            }
         }
-        //else if (other.gameObject.tag == "Player")
-        //{
-        //    if (!other.isTrigger)
-        //    {
-        //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //    }
-
-        //}
-    }
-
-    void OnCollisionExit(Collision col)
-    {
     }
 }

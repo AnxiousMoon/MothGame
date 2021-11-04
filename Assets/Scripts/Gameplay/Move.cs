@@ -26,7 +26,7 @@ public class Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
+        Physics.gravity = new Vector3(0, -50, 0);
         mothAnimation = MothAnimation.instance;
     }
 

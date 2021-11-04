@@ -45,7 +45,7 @@ public class BatAI : MonoBehaviour
             rb.freezeRotation = true;
             speed = 0;
         }
-        if (col.tag == "Dashing")
+        if (col.tag == "Clicking")
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
@@ -84,7 +84,7 @@ public class BatAI : MonoBehaviour
             //}
             //speed = 100;
         }
-        if (col.tag == "Dashing")
+        if (col.tag == "Clicking")
         {
             transform.LookAt(ghost.transform.position);
             maxSpeed = 50;

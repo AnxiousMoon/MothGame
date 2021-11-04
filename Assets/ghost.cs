@@ -7,6 +7,7 @@ public class ghost : MonoBehaviour
     public Collider collider;
     public Collider ghostBox;
     public Transform returnPoint;
+    bool reset = true;
     private float x, y, z;
     // Start is called before the first frame update
     void Start()
@@ -19,16 +20,21 @@ public class ghost : MonoBehaviour
     {
         if (collider.enabled)
         {
-           transform.position = new Vector3(x, y, z);
-           ghostBox.enabled = true;
+            transform.position = new Vector3(x, y, z);
+            ghostBox.enabled = true;
+            reset = false;
         }
         else if (!collider.enabled)
         {
             x = transform.position.x;
             y = transform.position.y;
             z = transform.position.z;
-            transform.position = returnPoint.position;
-            ghostBox.enabled = false;
+            if (!reset)
+            {
+                ghostBox.enabled = false;
+                transform.position = returnPoint.position;
+                reset = true;
+            }    
         }
     }
 }

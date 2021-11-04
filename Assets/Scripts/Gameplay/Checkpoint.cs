@@ -9,16 +9,21 @@ public class Checkpoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     void OnTriggerEnter(Collider col)
     {
-        if(col.tag == "Checkpoint")
+        if (col.tag == "Checkpoint")
         {
             checkPoint = col.gameObject;
             col.enabled = false;
         }
+        //if (col.tag == "Web")
+        //{
+        //    player.transform.position = checkPoint.transform.position;
+        //    MothAnimation.instance.ResetRotation();
+        //}
     }
 
     void OnCollisionEnter(Collision col)
@@ -28,11 +33,19 @@ public class Checkpoint : MonoBehaviour
             player.transform.position = checkPoint.transform.position;
             MothAnimation.instance.ResetRotation();
         }
+        if (col.collider.tag == "Web")
+        {
+            if (gameObject.tag != "Dashing")
+            {
+                player.transform.position = checkPoint.transform.position;
+                MothAnimation.instance.ResetRotation();
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
