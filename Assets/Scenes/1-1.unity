@@ -415,6 +415,10 @@ PrefabInstance:
       value: -7.8912973
       objectReference: {fileID: 0}
     - target: {fileID: 1851057062, guid: 1adaf745b6ae80e4b9c7ae70ecef7f91, type: 3}
+      propertyPath: fix
+      value: 
+      objectReference: {fileID: 1373547501}
+    - target: {fileID: 1851057062, guid: 1adaf745b6ae80e4b9c7ae70ecef7f91, type: 3}
       propertyPath: ghostBox
       value: 
       objectReference: {fileID: 196358558}
@@ -804,6 +808,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7982266286886892435, guid: e5adaa86d18866c499a363ec35a2f367,
     type: 3}
   m_PrefabInstance: {fileID: 1445194939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1373547501 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 352980292534586502, guid: 1adaf745b6ae80e4b9c7ae70ecef7f91,
+    type: 3}
+  m_PrefabInstance: {fileID: 399240280}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1445194939
 PrefabInstance:
