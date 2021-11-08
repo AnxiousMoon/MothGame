@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class FadePanel : MonoBehaviour
 {
+    private static FadePanel _instance;
+    public static FadePanel instance { get { return _instance; } }
+
     [SerializeField] LeanTweenType leanTweenType;
     [SerializeField] float defaultFadeDuration = 0.5f;
     Image panel;
@@ -77,5 +80,17 @@ public class FadePanel : MonoBehaviour
         fadedOut = false;
     }
 
+    private void SingletonCheck()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Debug.LogWarning("Another instance of" + this + " exists, destroying this");
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
 
 }
