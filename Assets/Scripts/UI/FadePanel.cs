@@ -28,6 +28,19 @@ public class FadePanel : MonoBehaviour
         }
     }
 
+    public void FadeOut(float _duration)
+    {
+        if (!fadedOut)
+        {
+            LeanTween.value(gameObject, 1f, 0f, _duration).setOnUpdate((float _alpha) =>
+            {
+                Color _color = new Color(0f, 0f, 0f, _alpha);
+                panel.color = _color;
+
+            }).setEaseOutCubic().setDelay(0.5f).setOnComplete(FadedOut);
+        }
+    }
+
     void FadedOut()
     {
         fadedOut = true;
@@ -42,7 +55,20 @@ public class FadePanel : MonoBehaviour
                 Color _color = new Color(0f, 0f, 0f, _alpha);
                 panel.color = _color;
 
-            }).setEaseOutCubic().setDelay(0.5f).setOnComplete(FadedOut);
+            }).setEaseOutCubic().setDelay(0.5f).setOnComplete(FadedIn);
+        }
+    }
+
+    public void FadeIn(float _duration)
+    {
+        if (!fadedOut)
+        {
+            LeanTween.value(gameObject, 0f, 1f, _duration).setOnUpdate((float _alpha) =>
+            {
+                Color _color = new Color(0f, 0f, 0f, _alpha);
+                panel.color = _color;
+
+            }).setEaseOutCubic().setDelay(0.5f).setOnComplete(FadedIn);
         }
     }
 

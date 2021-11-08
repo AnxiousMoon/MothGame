@@ -58,10 +58,10 @@
      <Compile Include="Assets\Scripts\Rendering\CameraSettings.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Gameplay\EndGame.cs" />
-     <Compile Include="Assets\WarmLighting.cs" />
+     <Compile Include="Assets\Rendering\WarmLighting.cs" />
      <Compile Include="Assets\Scripts\UI\FadePanel.cs" />
      <Compile Include="Assets\VFX\Scripts\DustParticles.cs" />
-     <Compile Include="Assets\CoolLighting.cs" />
+     <Compile Include="Assets\Rendering\CoolLighting.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Checkpoint.cs" />
      <Compile Include="Assets\ghost.cs" />
      <Compile Include="Assets\VFX\Scripts\DashGhost.cs" />
@@ -75,7 +75,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Key_Pickup.cs" />
      <Compile Include="Assets\LeanTween\Framework\LeanAudio.cs" />
      <Compile Include="Assets\VFX\Scripts\ClickFX.cs" />
-     <Compile Include="Assets\SceneLightingSettings.cs" />
+     <Compile Include="Assets\Rendering\SceneLightingSettings.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Web.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Rock.cs" />
      <Compile Include="Assets\VFX\Scripts\PlayerMoveFXController.cs" />
