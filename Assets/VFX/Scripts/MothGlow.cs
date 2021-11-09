@@ -22,6 +22,9 @@ public class MothGlow : MonoBehaviour
     Color currentWingEmissionColor = Color.black;
     float colorLerpValue = 0f;
 
+    [SerializeField] Light playerLight;
+    float maxLightIntensity = 1f;
+
     float cooldownDuration;
     bool coolDown = false;
     bool NoDashFeedbackPlaying = false;
@@ -36,6 +39,9 @@ public class MothGlow : MonoBehaviour
         wingMaterial = gameObject.GetComponent<SkinnedMeshRenderer>().materials[2];
         wingMaterial.EnableKeyword("_EMISSION");
         wingMaterial.SetColor("_EmissionColor", glowColor);
+
+        maxLightIntensity = playerLight.intensity;
+        
     }
 
 
@@ -83,6 +89,7 @@ public class MothGlow : MonoBehaviour
 
     void GlowIncreaseAnimation()
     {
+            //Lerp wing colour value so it appears to be glowing
         Debug.Log("Glow Increase Animation Playing");
         Color _currentWingEmissionColor = Color.black;
         LeanTween.value(gameObject, 0f, 1f, glowDuration).setOnUpdate((float _colorLerpValue) =>
@@ -94,6 +101,13 @@ public class MothGlow : MonoBehaviour
             }
         }).setEaseInExpo().setDelay(glowDelay);
 
+
+            //Increase Realtime Light attached to player
+        playerLight.intensity = 0f;
+        LeanTween.value(playerLight.gameObject, 0f, maxLightIntensity, glowDuration).setOnUpdate((float _intensity) =>
+        {
+            playerLight.intensity = _intensity;
+        }).setEaseInExpo().setDelay(glowDelay);
     }
 
 

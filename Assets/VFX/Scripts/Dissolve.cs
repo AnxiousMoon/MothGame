@@ -52,14 +52,16 @@ public class Dissolve : MonoBehaviour
         }
     }
 
-    public void DissolveMe(float _duration = 10f)
+    bool deactivateOnCompletion = true;
+    public void DissolveMe(float _duration = 2f, bool _deactivateOnCompletion = true)
     {
+        deactivateOnCompletion = _deactivateOnCompletion;
         if (materials.Length == 1)
         {
             LeanTween.value(gameObject, 0f, 1f, _duration).setOnUpdate((float dissolveAmount) =>
             {
                 material.SetFloat("_Dissolve", dissolveAmount);
-            });
+            }).setOnComplete(Deactivation);
         }
         else
         {
@@ -69,12 +71,16 @@ public class Dissolve : MonoBehaviour
                 {
                     materials[i].SetFloat("_Dissolve", dissolveAmount);
                 }
-            });
+            }).setOnComplete(Deactivation);
         }
     }
 
-    void Start()
+    void Deactivation()
     {
-        DissolveMe(3f);
+        if (deactivateOnCompletion)
+        {
+            Destroy(gameObject);
+        }
     }
+
 }
