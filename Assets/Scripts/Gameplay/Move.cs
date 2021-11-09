@@ -22,7 +22,7 @@ public class Move : MonoBehaviour
 
     MothAnimation mothAnimation;
 
-    public AK.Wwise.Event Walk;
+
 
     private void Start()
     {
@@ -73,7 +73,6 @@ public class Move : MonoBehaviour
         verticalMovement = Input.GetAxisRaw("Vertical");
 
         moveDirection = transform.forward * verticalMovement + transform.right * horiziontalMovement;
-
 
     }
 

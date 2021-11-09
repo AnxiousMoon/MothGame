@@ -16,6 +16,7 @@ public class MothAnimation : MonoBehaviour
     [SerializeField] DashFX dashScript;
     Vector3 targetMoveDirection = Vector3.zero;
     Quaternion originalRotation = Quaternion.identity;
+    public AK.Wwise.Event Walk;
 
     enum PlayerState
     {
@@ -64,10 +65,12 @@ public class MothAnimation : MonoBehaviour
     public void RightFootImpact()
     {
         playerMoveFXController.RightFoot();
+        Walk.Post(gameObject);
     }
     public void LeftFootImpact()
     {
         playerMoveFXController.LeftFoot();
+        Walk.Post(gameObject);
     }
 
     void PlayWalkFX()

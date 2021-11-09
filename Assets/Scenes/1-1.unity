@@ -693,6 +693,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8359262383812589930, guid: 1adaf745b6ae80e4b9c7ae70ecef7f91,
+        type: 3}
+      propertyPath: Walk.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b01965e9805d01143a38693d65d083c3,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1adaf745b6ae80e4b9c7ae70ecef7f91, type: 3}
 --- !u!1 &400887793 stripped
