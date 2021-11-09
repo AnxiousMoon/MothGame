@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: de245e9d14cd924283450196e99aae17
     GuidInternal: 
-    m_lastTime: -8585652393196022858
+    m_lastTime: -8585653084159873531
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 2c7ca1c113eafc43b7d0b1a41e55cd24
     GuidInternal: 
-    m_lastTime: -8585652393196147810
+    m_lastTime: -8585653084161323823
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 5fea0b2ffc16b8489e836646a86dc9fc
     GuidInternal: 
-    m_lastTime: -8585652393196066482
-    List: []
+    m_lastTime: -8585651455790037100
+    List:
+    - name: Main
+      guid: 7922853428bf52419f14abd1c9075686
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5fea0b2ffc16b8489e836646a86dc9fc
+      - ElementName: Main
+        ObjectType: 7
+        guid: 7922853428bf52419f14abd1c9075686
+      Path: SoundBanks\Default Work Unit\Main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,42 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 52c0aa584cf6d74d8ea2153977597c04
     GuidInternal: 
-    m_lastTime: -8585652393196165613
-    List: []
+    m_lastTime: -8585651455790307203
+    List:
+    - name: Footsteps
+      guid: 793073c16dd2d24c8bd292597a62806d
+      id: 2385628198
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 52c0aa584cf6d74d8ea2153977597c04
+      - ElementName: Footsteps
+        ObjectType: 3
+        guid: 793073c16dd2d24c8bd292597a62806d
+      Path: Events\Default Work Unit\Footsteps
+      maxAttenuation: 0
+      maxDuration: 0.202744
+      minDuration: 0.044331
+    - name: Key_Pickup
+      guid: 4082805d3d774542b3530a5f335eaf3f
+      id: 761761105
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 52c0aa584cf6d74d8ea2153977597c04
+      - ElementName: Key_Pickup
+        ObjectType: 3
+        guid: 4082805d3d774542b3530a5f335eaf3f
+      Path: Events\Default Work Unit\Key_Pickup
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -94,7 +142,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: d715cc28de69cc4b9b180bffd6f1740a
     GuidInternal: 
-    m_lastTime: -8585652393196161061
+    m_lastTime: -8585653084160523669
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -108,7 +156,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: facbb889c18c0b4f8aa5eac9445f0519
     GuidInternal: 
-    m_lastTime: -8585652393196040886
+    m_lastTime: -8585653084161793973
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -122,8 +170,58 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 4daf4b807596604db78c66ceaae8f9f3
     GuidInternal: 
-    m_lastTime: -8585652393196032005
-    List: []
+    m_lastTime: -8585651488726560944
+    List:
+    - name: Footsteps
+      guid: f7a0ffe62253354ca05fe765291f1f47
+      id: 2385628198
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4daf4b807596604db78c66ceaae8f9f3
+      - ElementName: Footsteps
+        ObjectType: 11
+        guid: f7a0ffe62253354ca05fe765291f1f47
+      Path: Switches\Default Work Unit\Footsteps
+      values:
+      - name: Cave
+        guid: 39a08729c9b4b641a03e097575db1fc9
+        id: 4122393694
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 4daf4b807596604db78c66ceaae8f9f3
+        - ElementName: Footsteps
+          ObjectType: 11
+          guid: f7a0ffe62253354ca05fe765291f1f47
+        - ElementName: Cave
+          ObjectType: 10
+          guid: 39a08729c9b4b641a03e097575db1fc9
+      - name: Platform
+        guid: 9b861c77bf608c419c6ea3af38d5f198
+        id: 4035573696
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 4daf4b807596604db78c66ceaae8f9f3
+        - ElementName: Footsteps
+          ObjectType: 11
+          guid: f7a0ffe62253354ca05fe765291f1f47
+        - ElementName: Platform
+          ObjectType: 10
+          guid: 9b861c77bf608c419c6ea3af38d5f198
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -136,10 +234,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 1dcad29542f5844f880ea1c59bd01f6e
     GuidInternal: 
-    m_lastTime: -8585652393196032005
+    m_lastTime: -8585653084161053789
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 010000000500000006000000070000000b0000000c0000000d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

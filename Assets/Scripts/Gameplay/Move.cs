@@ -22,6 +22,8 @@ public class Move : MonoBehaviour
 
     MothAnimation mothAnimation;
 
+    public AK.Wwise.Event Walk;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();

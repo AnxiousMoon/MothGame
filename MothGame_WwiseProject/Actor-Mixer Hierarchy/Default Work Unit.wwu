@@ -26,29 +26,6 @@
 						<ActiveSource Name="Bat_Flap_2" ID="{5C1420F0-9DC1-4663-A1D1-2F87F2AF144B}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Key_Pick_P1" ID="{034B4837-1038-40D5-9E3A-5046C3CDD207}" ShortID="405609316">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1B065ADC-BD1E-4F13-BCFE-72E47A247D88}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1A17C2C-EA13-43FC-B7D0-B1A41E55CD24}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Key_Pick_P1" ID="{B50A3098-0CFB-4177-979A-A44661589065}">
-							<Language>SFX</Language>
-							<AudioFile>Key_Pick_P1.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="100793840"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="Key_Pick_P1" ID="{B50A3098-0CFB-4177-979A-A44661589065}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="Menu_Click_P1" ID="{FE00170D-D167-448C-AADC-80DE387FF918}" ShortID="601850466">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -395,6 +372,36 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<Sound Name="Key_Pick_P1" ID="{12DF155B-9D5B-4E0F-80F8-0ED4964DD963}" ShortID="257434969">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1B065ADC-BD1E-4F13-BCFE-72E47A247D88}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1A17C2C-EA13-43FC-B7D0-B1A41E55CD24}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Key_Pick_P1" ID="{B8771596-99B4-4760-A052-14E6C14D8E42}">
+							<Language>SFX</Language>
+							<AudioFile>Key_Pick_P1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="100793840"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Key_Pick_P1" ID="{B8771596-99B4-4760-A052-14E6C14D8E42}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -7,6 +7,8 @@ public class Key_Pickup : MonoBehaviour
     public GameObject Door;
     public GameObject Key;
 
+    public AK.Wwise.Event Sound;
+
     [SerializeField] float dissoveTime = 1f;
 
     Dissolve dissolve;
@@ -27,6 +29,7 @@ public class Key_Pickup : MonoBehaviour
                 if (!isDissolved)
                 {
                     Dissolve();
+                    Sound.Post(gameObject);
                 }
             }
         }

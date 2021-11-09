@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="946364490">
+		<SoundBank Id="3161908922" Language="SFX" Hash="318906479">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -66,7 +66,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="761761105" Name="Key_Pickup" ObjectPath="\Events\Default Work Unit\Key_Pickup" DurationType="OneShot" DurationMin="2.000000" DurationMax="2.000000">
+				<Event Id="761761105" Name="Key_Pickup" ObjectPath="\Events\Default Work Unit\Key_Pickup" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000">
 					<IncludedMemoryFiles>
 						<File Id="100793840" Language="SFX">
 							<ShortName>Key_Pick_P1.wav</ShortName>

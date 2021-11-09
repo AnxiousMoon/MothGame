@@ -275,6 +275,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3667606437179747199, guid: 1adaf745b6ae80e4b9c7ae70ecef7f91,
+        type: 3}
+      propertyPath: Walk.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b01965e9805d01143a38693d65d083c3,
+        type: 2}
     - target: {fileID: 4156299311509451204, guid: 1adaf745b6ae80e4b9c7ae70ecef7f91,
         type: 3}
       propertyPath: m_RootOrder
@@ -347,6 +353,9 @@ GameObject:
   m_Component:
   - component: {fileID: 681292181}
   - component: {fileID: 681292180}
+  - component: {fileID: 681292182}
+  - component: {fileID: 681292184}
+  - component: {fileID: 681292183}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -394,6 +403,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &681292182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681292179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dafab4bc4f913a4783922f13310cbcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ff6854e2217416543a830f1a06703d48,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!114 &681292183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681292179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9067d194b838865438d07346f7302345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &681292184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681292179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15722bde01dc30849b5231a8901f7373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &819936754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1354,6 +1424,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7982266286495163102, guid: e5adaa86d18866c499a363ec35a2f367,
+        type: 3}
+      propertyPath: Sound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: cf7a60c6816ba0941a0bacdebc735574,
+        type: 2}
     - target: {fileID: 7982266286777543859, guid: e5adaa86d18866c499a363ec35a2f367,
         type: 3}
       propertyPath: m_IsActive
@@ -1374,6 +1450,12 @@ PrefabInstance:
       propertyPath: dissoveTime
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7982266287259086603, guid: e5adaa86d18866c499a363ec35a2f367,
+        type: 3}
+      propertyPath: Sound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: cf7a60c6816ba0941a0bacdebc735574,
+        type: 2}
     - target: {fileID: 8129029492695728116, guid: e5adaa86d18866c499a363ec35a2f367,
         type: 3}
       propertyPath: m_StaticEditorFlags
