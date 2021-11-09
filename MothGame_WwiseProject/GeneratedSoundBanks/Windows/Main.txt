@@ -1,0 +1,20 @@
+Event	ID	Name			Wwise Object Path	Notes
+	761761105	Key_Pickup			\Default Work Unit\Key_Pickup	
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+
+Switch	ID	Name	Switch Group			Notes
+	4035573696	Platform	Footsteps			
+	4122393694	Cave	Footsteps			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	100793840	Key_Pick_P1	C:\Users\robbi\Documents\GitHub\MothGame\MothGame_WwiseProject\.cache\Windows\SFX\Key_Pick_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Key_Pick_P1		352864
+	158214681	Walk_Cave_3_P1	C:\Users\robbi\Documents\GitHub\MothGame\MothGame_WwiseProject\.cache\Windows\SFX\Walk_Cave_3_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Cave\Walk_Cave_3_P1		11160
+	445249717	Walk_Platform_4_P1	C:\Users\robbi\Documents\GitHub\MothGame\MothGame_WwiseProject\.cache\Windows\SFX\Walk_Platform_4_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Platform\Walk_Platform_4_P1		26116
+	729695424	Walk_Cave_2_P1	C:\Users\robbi\Documents\GitHub\MothGame\MothGame_WwiseProject\.cache\Windows\SFX\Walk_Cave_2_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Cave\Walk_Cave_2_P1		7884
+	741895177	Walk_Platform_2_P1	C:\Users\robbi\Documents\GitHub\MothGame\MothGame_WwiseProject\.cache\Windows\SFX\Walk_Platform_2_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Platform\Walk_Platform_2_P1		35096
+	755962693	Walk_Cave_1_P1	C:\Users\robbi\Documents\GitHub\MothGame\MothGame_WwiseProject\.cache\Windows\SFX\Walk_Cave_1_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Cave\Walk_Cave_1_P1		8628
+	955781455	Walk_Platform_1_P1	C:\Users\robbi\Documents\GitHub\MothGame\MothGame_WwiseProject\.cache\Windows\SFX\Walk_Platform_1_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Platform\Walk_Platform_1_P1		35828
+

@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{58AAC052-F64C-4DD7-8EA2-153977597C04}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{58AAC052-F64C-4DD7-8EA2-153977597C04}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{58AAC052-F64C-4DD7-8EA2-153977597C04}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Footsteps" ID="{C1733079-D26D-4CD2-8BD2-92597A62806D}">
+					<ChildrenList>
+						<Action Name="" ID="{D81D7DCF-D6BF-4E87-AE07-AC156BC7518C}" ShortID="986456258">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{9AA09E48-671A-461F-AF0A-0DA8AD78C82D}" WorkUnitID="{2ADFDB95-B96B-4196-83BD-E215AA688A02}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Key_Pickup" ID="{5D808240-773D-4245-B353-0A5F335EAF3F}">
+					<ChildrenList>
+						<Action Name="" ID="{EB67949E-70E8-44B8-93F3-FEB3E6D024C5}" ShortID="522468285">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Key_Pick_P1" ID="{034B4837-1038-40D5-9E3A-5046C3CDD207}" WorkUnitID="{2ADFDB95-B96B-4196-83BD-E215AA688A02}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

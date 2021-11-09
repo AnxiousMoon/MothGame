@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\robbi\Documents\GitHub\MothGame\MothGame_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\robbi\Documents\GitHub\MothGame\MothGame_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\robbi\Documents\GitHub\MothGame\MothGame_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\robbi\Documents\GitHub\MothGame\MothGame_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="946364490">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2385628198" Name="Footsteps" ObjectPath="\Events\Default Work Unit\Footsteps" DurationType="OneShot" DurationMin="0.044331" DurationMax="0.202744">
+					<IncludedMemoryFiles>
+						<File Id="158214681" Language="SFX">
+							<ShortName>Walk_Cave_3_P1.wav</ShortName>
+							<Path>SFX\Walk_Cave_3_P1_10C4C929.wem</Path>
+						</File>
+						<File Id="445249717" Language="SFX">
+							<ShortName>Walk_Platform_4_P1.wav</ShortName>
+							<Path>SFX\Walk_Platform_4_P1_10C4C929.wem</Path>
+						</File>
+						<File Id="729695424" Language="SFX">
+							<ShortName>Walk_Cave_2_P1.wav</ShortName>
+							<Path>SFX\Walk_Cave_2_P1_10C4C929.wem</Path>
+						</File>
+						<File Id="741895177" Language="SFX">
+							<ShortName>Walk_Platform_2_P1.wav</ShortName>
+							<Path>SFX\Walk_Platform_2_P1_10C4C929.wem</Path>
+						</File>
+						<File Id="755962693" Language="SFX">
+							<ShortName>Walk_Cave_1_P1.wav</ShortName>
+							<Path>SFX\Walk_Cave_1_P1_10C4C929.wem</Path>
+						</File>
+						<File Id="955781455" Language="SFX">
+							<ShortName>Walk_Platform_1_P1.wav</ShortName>
+							<Path>SFX\Walk_Platform_1_P1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{2987A039-B4C9-41B6-A03E-097575DB1FC9}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{771C869B-60BF-418C-9C6E-A3AF38D5F198}">
+							<Media>
+								<File Id="445249717"/>
+								<File Id="741895177"/>
+								<File Id="955781455"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{2987A039-B4C9-41B6-A03E-097575DB1FC9}">
+							<Media>
+								<File Id="158214681"/>
+								<File Id="729695424"/>
+								<File Id="755962693"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="761761105" Name="Key_Pickup" ObjectPath="\Events\Default Work Unit\Key_Pickup" DurationType="OneShot" DurationMin="2.000000" DurationMax="2.000000">
+					<IncludedMemoryFiles>
+						<File Id="100793840" Language="SFX">
+							<ShortName>Key_Pick_P1.wav</ShortName>
+							<Path>SFX\Key_Pick_P1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="2385628198" Name="Footsteps" ObjectPath="\Switches\Default Work Unit\Footsteps" GUID="{E6FFA0F7-5322-4C35-A05F-E765291F1F47}">
+					<Switches>
+						<Switch Id="4122393694" Name="Cave" ObjectPath="\Switches\Default Work Unit\Footsteps\Cave" GUID="{2987A039-B4C9-41B6-A03E-097575DB1FC9}"/>
+						<Switch Id="4035573696" Name="Platform" ObjectPath="\Switches\Default Work Unit\Footsteps\Platform" GUID="{771C869B-60BF-418C-9C6E-A3AF38D5F198}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
