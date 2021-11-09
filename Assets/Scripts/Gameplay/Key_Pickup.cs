@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class Key_Pickup : MonoBehaviour
 {
-    public GameObject Door;
-    public GameObject Key;
-
+    [SerializeField] Door door;
     public AK.Wwise.Event Sound;
 
-    [SerializeField] float dissoveTime = 1f;
+    [SerializeField] float dissolveTime = 1f;
 
     Dissolve dissolve;
 
@@ -23,22 +21,24 @@ public class Key_Pickup : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            if (!col.isTrigger)
+            if (!col.isTrigger && !isDissolved)
             {
-                Door.SetActive(false);
-                if (!isDissolved)
-                {
-                    Dissolve();
-                    Sound.Post(gameObject);
-                }
+                Dissolve();
+                DissolveDoor();
+                Sound.Post(gameObject);
+                isDissolved = true;
+            
             }
         }
     }
 
     void Dissolve()
     {
-        
-        dissolve.DissolveMe(dissoveTime);
-        isDissolved = true;
+        dissolve.DissolveMe(dissolveTime);
+    }
+
+    void DissolveDoor()
+    {
+        door.Unlock();
     }
 }

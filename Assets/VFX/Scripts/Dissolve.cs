@@ -20,7 +20,7 @@ public class Dissolve : MonoBehaviour
                 material = meshRenderer.material;
                 if (material.shader != Shader.Find("Custom/Dissolve"))
                 {
-                    Debug.LogError("Dissolve.cs needs the Dissolve shader attached the to the same game object to run properly");
+                    Debug.LogError(gameObject.name + " Dissolve.cs needs the Dissolve shader attached the to the same game object to run properly");
                 }
             }
             else
