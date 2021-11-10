@@ -22,7 +22,7 @@ public class Web : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Dashing")
         {
