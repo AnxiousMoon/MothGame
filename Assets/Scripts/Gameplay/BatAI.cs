@@ -18,9 +18,13 @@ public class BatAI : MonoBehaviour
 
     Rigidbody rb;
 
+    BatAnimation batAnimation;
+
     // Start is called before the first frame update
     void Start()
     {
+        batAnimation = gameObject.GetComponent<BatAnimation>();
+
         rb = this.GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         waypointIndex = 0;
@@ -36,6 +40,8 @@ public class BatAI : MonoBehaviour
             transform.LookAt(col.transform.position);
             maxSpeed = 100;
             speed = 100;
+
+            batAnimation.StartDashAnimation();
         }
         if (col.tag == "Web")
         {

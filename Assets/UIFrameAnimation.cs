@@ -60,10 +60,6 @@ public class UIFrameAnimation : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        Debug.Log(gameObject.name + " Alpha: " + currentAlpha);
-    }
     void FadeOut()
     {
         LeanTween.value(gameObject, currentAlpha, 0f, fadeTime).setOnUpdate((float _currentAlpha) =>
