@@ -2267,7 +2267,9 @@ MonoBehaviour:
   MultiPositionType: 1
   multiPositionTypeLabel: 0
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
-  LargeModePositions: []
+  LargeModePositions:
+  - {fileID: 0}
+  - {fileID: 0}
   multiPositionArray: []
 --- !u!114 &937085457
 MonoBehaviour:
@@ -2291,6 +2293,25 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &937085458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937085454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b4627455877af489cccedb906c97bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  maxSpeed: 0
+  dashSpeed: 50
+  web: {fileID: 0}
+  ghost: {fileID: 847065230}
+  caught: 0
+  returnPoint: {fileID: 2147167072}
 --- !u!4 &940315035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8929955117595377016, guid: ef4a730978eab80499d9167413e438b9,
@@ -2710,7 +2731,10 @@ MonoBehaviour:
   MultiPositionType: 1
   multiPositionTypeLabel: 0
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
-  LargeModePositions: []
+  LargeModePositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   multiPositionArray: []
 --- !u!114 &1151504541
 MonoBehaviour:
@@ -2734,6 +2758,25 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &1151504542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151504538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b4627455877af489cccedb906c97bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  maxSpeed: 0
+  dashSpeed: 50
+  web: {fileID: 7982266286460327387}
+  ghost: {fileID: 847065230}
+  caught: 0
+  returnPoint: {fileID: 27725999}
 --- !u!4 &1171086981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3635091381e9880428a660071849b008,
@@ -7651,26 +7694,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7982266285419731798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937085454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e07d85beff1df7640a532d469a9733e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 7982266287000128590}
-  - {fileID: 7982266285689794748}
-  speed: 100
-  maxSpeed: 10
-  dashSpeed: 50
-  web: {fileID: 0}
-  ghost: {fileID: 847065230}
 --- !u!1001 &7982266285516680926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13804,26 +13827,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb19ed62f587604483abc9892eea392, type: 3}
---- !u!114 &7982266286508188062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151504538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e07d85beff1df7640a532d469a9733e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 7982266285630703006}
-  - {fileID: 7982266286435088670}
-  speed: 100
-  maxSpeed: 10
-  dashSpeed: 25
-  web: {fileID: 7982266286460327387}
-  ghost: {fileID: 847065230}
 --- !u!54 &7982266286508188063
 Rigidbody:
   m_ObjectHideFlags: 0
