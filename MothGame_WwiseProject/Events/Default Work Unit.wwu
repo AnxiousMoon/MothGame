@@ -25,6 +25,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Bat_Flap" ID="{4CA2E7F4-75BB-4AF4-A820-891776802E04}">
+					<ChildrenList>
+						<Action Name="" ID="{D8C71E6C-34DF-4B2C-8868-CAEC32284127}" ShortID="744587695">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bat_Flap_2" ID="{97BAB4D3-2BD8-42D9-A418-66F830E26F82}" WorkUnitID="{2ADFDB95-B96B-4196-83BD-E215AA688A02}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

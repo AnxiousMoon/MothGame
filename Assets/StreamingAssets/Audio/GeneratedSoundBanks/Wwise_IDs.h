@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BAT_FLAP = 576303332U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID KEY_PICKUP = 761761105U;
     } // namespace EVENTS
