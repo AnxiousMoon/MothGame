@@ -22,13 +22,13 @@ public class Web : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision col)
     {
-        if (other.gameObject.tag == "Dashing")
+        if (col.gameObject.tag == "Dashing")
         {
-                Destroy(web);
-                col.enabled = false;
-                webBroken.SetActive(true);
+            Destroy(web);
+            this.col.enabled = false;
+            webBroken.SetActive(true);
         }
     }
 }
