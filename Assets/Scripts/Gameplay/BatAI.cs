@@ -118,6 +118,10 @@ public class BatAI : MonoBehaviour
             speed = 100;
             maxSpeed = 100;
         }
+        if (col.collider.tag == "Wall")
+        {
+            IncreaseIndex();
+        }
     }
 
     // Update is called once per frame

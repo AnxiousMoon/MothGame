@@ -2030,6 +2030,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7982266286030822817}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &847065230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1851057057, guid: 1adaf745b6ae80e4b9c7ae70ecef7f91,
+    type: 3}
+  m_PrefabInstance: {fileID: 399240280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &871598532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6b2aa78f6ba6f604f8672bae2e66ae82,
@@ -5588,7 +5594,7 @@ PrefabInstance:
     - target: {fileID: 1730396030, guid: eee3272c84914bb47a8a039fab86a33d, type: 3}
       propertyPath: ghost
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 847065230}
     - target: {fileID: 1730396030, guid: eee3272c84914bb47a8a039fab86a33d, type: 3}
       propertyPath: speed
       value: 100
@@ -7552,7 +7558,7 @@ MonoBehaviour:
   maxSpeed: 10
   dashSpeed: 50
   web: {fileID: 0}
-  ghost: {fileID: 0}
+  ghost: {fileID: 847065230}
 --- !u!1001 &7982266285516680926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13702,7 +13708,7 @@ MonoBehaviour:
   maxSpeed: 10
   dashSpeed: 25
   web: {fileID: 7982266286460327387}
-  ghost: {fileID: 0}
+  ghost: {fileID: 847065230}
 --- !u!54 &7982266286508188063
 Rigidbody:
   m_ObjectHideFlags: 0
