@@ -8,6 +8,8 @@ public class Checkpoint : MonoBehaviour
     //public GameObject checkPoint;
     //public GameObject player;
     // Start is called before the first frame update
+
+    [SerializeField] float respawnDelay = 2f;
     void Start()
     {
 
@@ -34,7 +36,7 @@ public class Checkpoint : MonoBehaviour
             //player.transform.position = checkPoint.transform.position;
             //MothAnimation.instance.ResetRotation();
             //FadePanel.instance.FadeOut();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            StartCoroutine(Respawn());
         }
         if (col.collider.tag == "Web")
         {
@@ -43,7 +45,7 @@ public class Checkpoint : MonoBehaviour
                 //player.transform.position = checkPoint.transform.position;
                 //MothAnimation.instance.ResetRotation();
                 //FadePanel.instance.FadeOut();
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                StartCoroutine(Respawn());
             }
         }
         if (col.collider.tag == "End")
@@ -53,9 +55,12 @@ public class Checkpoint : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
+
+    IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(respawnDelay);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
 }

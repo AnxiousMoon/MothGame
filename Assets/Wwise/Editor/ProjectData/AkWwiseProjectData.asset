@@ -110,7 +110,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: f4e7a24cbb75f44aa820891776802e04
       Path: Events\Default Work Unit\Bat_Flap
-      maxAttenuation: 0
+      maxAttenuation: 40
       maxDuration: -1
       minDuration: -1
     - name: Footsteps
@@ -128,8 +128,8 @@ MonoBehaviour:
         guid: 793073c16dd2d24c8bd292597a62806d
       Path: Events\Default Work Unit\Footsteps
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.202744
+      minDuration: 0.044331
     - name: Key_Pickup
       guid: 4082805d3d774542b3530a5f335eaf3f
       id: 761761105
@@ -145,8 +145,8 @@ MonoBehaviour:
         guid: 4082805d3d774542b3530a5f335eaf3f
       Path: Events\Default Work Unit\Key_Pickup
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1
+      minDuration: 1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
