@@ -25,17 +25,22 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Bat_Flap" ID="{4CA2E7F4-75BB-4AF4-A820-891776802E04}">
+				<Event Name="Bat_Idle" ID="{4CA2E7F4-75BB-4AF4-A820-891776802E04}">
 					<ChildrenList>
-						<Action Name="" ID="{D8C71E6C-34DF-4B2C-8868-CAEC32284127}" ShortID="744587695">
+						<Action Name="" ID="{BA4674A9-704E-43DD-BAFF-378ED2BCE137}" ShortID="551425510">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Bat_Flap_2" ID="{97BAB4D3-2BD8-42D9-A418-66F830E26F82}" WorkUnitID="{2ADFDB95-B96B-4196-83BD-E215AA688A02}"/>
+									<ObjectRef Name="Bat_Ambient" ID="{02F8D7A8-0100-4F6B-8C19-090F264FE68E}" WorkUnitID="{2ADFDB95-B96B-4196-83BD-E215AA688A02}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Cave_Ambient" ID="{16037D08-6024-4621-B920-612F009476C0}"/>
+				<Event Name="Background_Music" ID="{028F628A-1B57-4018-A8B5-3A4B98AFC027}"/>
+				<Event Name="Moth_Stuck" ID="{9B7F40C5-8087-4995-B5E8-A793C8D651C3}"/>
+				<Event Name="Bat_Stuck" ID="{D2555B44-52E8-4A64-865B-7EEDC8ACD0E6}"/>
+				<Event Name="Menu_Click" ID="{90E2FBC1-7AEE-4BE9-A56B-4C46BEE5F24D}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

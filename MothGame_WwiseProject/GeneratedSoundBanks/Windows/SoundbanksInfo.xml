@@ -16,16 +16,16 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3689129704">
+		<SoundBank Id="3161908922" Language="SFX" Hash="86179024">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="576303332" Name="Bat_Flap" ObjectPath="\Events\Default Work Unit\Bat_Flap" MaxAttenuation="40.000000" DurationType="Infinite">
+				<Event Id="2711326151" Name="Bat_Idle" ObjectPath="\Events\Default Work Unit\Bat_Idle" MaxAttenuation="40.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="650437847" Language="SFX">
-							<ShortName>Bat_Flap_2.wav</ShortName>
-							<Path>SFX\Bat_Flap_2_D79FB2B7.wem</Path>
+						<File Id="1036764374" Language="SFX">
+							<ShortName>Bat_Ambient.wav</ShortName>
+							<Path>SFX\Bat_Ambient_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
