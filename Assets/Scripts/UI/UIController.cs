@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    UIController _instance;
-    UIController instance { get { return _instance; } }
+    private static UIController _instance;
+    public static UIController instance { get { return _instance; } }
 
     [SerializeField] FadePanel fadePanel;
     [SerializeField] DeathCircleUI deathCircle;
@@ -18,7 +18,6 @@ public class UIController : MonoBehaviour
     private void Start()
     {
         SceneFadeIn();
-        DeathCircle();
     }
 
     public void SceneFadeIn()
@@ -26,9 +25,9 @@ public class UIController : MonoBehaviour
         fadePanel.FadeOut();
     }
 
-    public void DeathCircle()
+    public void DeathCircle(float _respawnDelay)
     {
-        deathCircle.Activate();
+        deathCircle.Activate(_respawnDelay);
     }
 
 

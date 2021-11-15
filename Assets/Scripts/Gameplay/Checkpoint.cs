@@ -10,9 +10,10 @@ public class Checkpoint : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] float respawnDelay = 2f;
+    UIController uiController;
     void Start()
     {
-
+        uiController = UIController.instance;
     }
 
     //void OnTriggerEnter(Collider col)
@@ -59,6 +60,7 @@ public class Checkpoint : MonoBehaviour
 
     IEnumerator Respawn()
     {
+        uiController.DeathCircle(respawnDelay);
         yield return new WaitForSeconds(respawnDelay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
