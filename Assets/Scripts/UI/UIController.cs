@@ -8,6 +8,7 @@ public class UIController : MonoBehaviour
     UIController instance { get { return _instance; } }
 
     [SerializeField] FadePanel fadePanel;
+    [SerializeField] DeathCircleUI deathCircle;
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class UIController : MonoBehaviour
     private void Start()
     {
         SceneFadeIn();
+        DeathCircle();
     }
 
     public void SceneFadeIn()
@@ -24,7 +26,10 @@ public class UIController : MonoBehaviour
         fadePanel.FadeOut();
     }
 
-
+    public void DeathCircle()
+    {
+        deathCircle.Activate();
+    }
 
 
 
