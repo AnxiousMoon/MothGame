@@ -90,7 +90,6 @@ public class MothGlow : MonoBehaviour
     void GlowIncreaseAnimation()
     {
             //Lerp wing colour value so it appears to be glowing
-        Debug.Log("Glow Increase Animation Playing");
         Color _currentWingEmissionColor = Color.black;
         LeanTween.value(gameObject, 0f, 1f, glowDuration).setOnUpdate((float _colorLerpValue) =>
         {

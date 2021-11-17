@@ -1180,6 +1180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wingFlapSpeed: 1.8
+  dashSpeed: 5
 --- !u!1 &6414728659173477375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,7 +1438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3917240636035455677}
   - component: {fileID: 378186662258059288}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bat_low3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

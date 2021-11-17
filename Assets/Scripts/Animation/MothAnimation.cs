@@ -79,7 +79,7 @@ public class MothAnimation : MonoBehaviour
         {
             playerMoveFXController.PlayDust();
             walkFXPlaying = true;
-            Debug.Log("Start FX");
+
         }
     }
 
@@ -89,7 +89,6 @@ public class MothAnimation : MonoBehaviour
         {
             playerMoveFXController.StopDust();
             walkFXPlaying = false;
-            Debug.Log("Stop FX");
 
         }
     }

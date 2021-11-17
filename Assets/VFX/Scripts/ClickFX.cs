@@ -6,7 +6,8 @@ public class ClickFX : MonoBehaviour
 {
     [Header("Properties")]
     [SerializeField]
-    GameObject clickRadiusMeshObj, groundUIObj;
+    GameObject clickRadiusMeshObj;
+    GameObject intersectionObj;
 
     [SerializeField]
     float clickRadius = 3f;
@@ -36,9 +37,9 @@ public class ClickFX : MonoBehaviour
 
 
     Material clickRadiusMaterial;
-    Material groundUIMaterial;
-    float groundUIAlpha;
-    float groundUIMaxAlpha;
+    Material intersectionMaterial;
+    float intersectionAlpha;
+    float intersectionMaxAlpha;
     Color clickRadiusColor;
 
     MothGlow mothGlow;
@@ -53,6 +54,7 @@ public class ClickFX : MonoBehaviour
     {
         //Get references for Click Radius effect
         clickRadiusMeshObj = Instantiate(clickRadiusMeshObj);
+        intersectionObj = clickRadiusMeshObj.transform.GetChild(0).gameObject;
         clickRadiusMeshObj.transform.localScale = Vector3.one * 0.1f;
         clickRadiusMaterial = clickRadiusMeshObj.GetComponent<MeshRenderer>().material;
         clickRadiusColor = clickRadiusMaterial.GetColor("_Tint");
@@ -60,9 +62,9 @@ public class ClickFX : MonoBehaviour
         alpha = maxAlpha;
 
         //References for Ground effect
-        groundUIMaterial = groundUIObj.GetComponent<MeshRenderer>().material;
-        groundUIMaxAlpha = groundUIMaterial.GetFloat("_Alpha");
-        groundUIAlpha = groundUIMaxAlpha;
+        intersectionMaterial = intersectionObj.GetComponent<MeshRenderer>().material;
+        intersectionMaxAlpha = intersectionMaterial.GetFloat("_Alpha");
+        intersectionAlpha = intersectionMaxAlpha;
 
         mothGlow = MothGlow.instance;
 
@@ -71,7 +73,7 @@ public class ClickFX : MonoBehaviour
         
         
 
-        groundUIObj.SetActive(false);
+        intersectionObj.SetActive(false);
         clickRadiusMeshObj.SetActive(false);
     }
 
@@ -85,11 +87,11 @@ public class ClickFX : MonoBehaviour
         fadeOutDuration = coolDownDuration * 0.4f;
 
         clickRadiusMeshObj.SetActive(true);
-        groundUIObj.SetActive(true);
-        groundUIMaterial.SetColor("_Albedo", defaultColor);
+        intersectionObj.SetActive(true);
+        intersectionAlpha = 1f;
 
         ClickGrowLeanTween();
-        GroundUIFadeOut(false);
+        IntersectionFadeOut();
         mothGlow.ClickDash(_cooldown);
         clickRadiusMeshObj.transform.position = transform.position;
         coolingDown = true;
@@ -126,36 +128,26 @@ public class ClickFX : MonoBehaviour
     }
     #endregion
 
-    void GroundUIFadeOut(bool dashFeedback)
+
+    void IntersectionFadeOut()
     {
-        if (!dashFeedback)
+        LeanTween.value(intersectionObj, intersectionMaxAlpha, 0f, fadeOutDuration).setOnUpdate((groundUIAlpha) =>
         {
-            groundUIPlaying = true;
-            LeanTween.value(groundUIObj, groundUIMaxAlpha, 0f, fadeOutDuration * 0.1f).setOnUpdate((groundUIAlpha) =>
-            {
-                groundUIMaterial.SetFloat("_Alpha", groundUIAlpha);
-            }).setDelay(0.5f).setEaseOutQuad().setOnComplete(GroundUIAnimationComplete);
-        }
-        else
-        {
-            LeanTween.value(groundUIObj, 0.6f, 0f,  0.3f).setOnUpdate((groundUIAlpha) =>
-            {
-                groundUIMaterial.SetFloat("_Alpha", groundUIAlpha);
-            }).setEaseOutQuad().setOnComplete(DashFeedbackAnimationComplete);
-        }
+            intersectionMaterial.SetFloat("_Alpha", groundUIAlpha);
+        }).setDelay(scaleDuration + fadeOutDelay).setEaseOutQuad().setOnComplete(GroundUIAnimationComplete);
     }
 
     void GroundUIAnimationComplete()
     {
-        groundUIMaterial.SetFloat("_Alpha", groundUIMaxAlpha);
-        groundUIObj.SetActive(false);
+        intersectionMaterial.SetFloat("_Alpha", intersectionMaxAlpha);
+        intersectionObj.SetActive(false);
         groundUIPlaying = false;
     }
 
     void DashFeedbackAnimationComplete()
     {
-        groundUIMaterial.SetFloat("_Alpha", groundUIMaxAlpha);
-        groundUIObj.SetActive(false);
+        intersectionMaterial.SetFloat("_Alpha", intersectionMaxAlpha);
+        intersectionObj.SetActive(false);
         dashFeedbackPlaying = false;
     }
 
