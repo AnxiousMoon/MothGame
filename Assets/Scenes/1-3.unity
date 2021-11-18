@@ -11380,6 +11380,16 @@ PrefabInstance:
       propertyPath: m_ExposedReferences.m_References.Array.data[2].second
       value: 
       objectReference: {fileID: 4667021561618992263}
+    - target: {fileID: 5731586511784978397, guid: 37259211757bf014b91a92be12b96aad,
+        type: 3}
+      propertyPath: far clip plane
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731586511784978397, guid: 37259211757bf014b91a92be12b96aad,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37259211757bf014b91a92be12b96aad, type: 3}
 --- !u!1 &1767142853
@@ -12889,6 +12899,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bce1c3477331ad42999f35b117890c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Cave:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  Platform:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!65 &2097574605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35219,6 +35242,7 @@ Transform:
   - {fileID: 1993249645}
   - {fileID: 1218866175}
   - {fileID: 1388113407}
+  - {fileID: 304871999}
   - {fileID: 879083210}
   - {fileID: 349612020}
   - {fileID: 289784247}
@@ -35235,39 +35259,38 @@ Transform:
   - {fileID: 1573066709}
   - {fileID: 26342796}
   - {fileID: 1972517358}
+  - {fileID: 1507604721}
   - {fileID: 460438853}
   - {fileID: 1429412795}
+  - {fileID: 1574571922}
   - {fileID: 955956461}
   - {fileID: 828062188}
   - {fileID: 770490150}
   - {fileID: 709058871}
+  - {fileID: 729090854}
   - {fileID: 1618867807}
   - {fileID: 307762279}
   - {fileID: 750933346}
   - {fileID: 956201136}
-  - {fileID: 304871999}
-  - {fileID: 2045971282}
   - {fileID: 1927661042}
+  - {fileID: 148799946}
+  - {fileID: 2045971282}
+  - {fileID: 119218169}
+  - {fileID: 518921613}
   - {fileID: 75731747}
   - {fileID: 969363195}
-  - {fileID: 912800504}
-  - {fileID: 613291251}
   - {fileID: 1734863128}
+  - {fileID: 912800504}
+  - {fileID: 1728357121}
+  - {fileID: 613291251}
   - {fileID: 1748066812}
-  - {fileID: 148799946}
+  - {fileID: 532943237}
+  - {fileID: 1664303038}
   - {fileID: 377481692}
   - {fileID: 1500378085}
   - {fileID: 1090626244}
   - {fileID: 1995743710}
   - {fileID: 208745708}
-  - {fileID: 1728357121}
-  - {fileID: 1507604721}
-  - {fileID: 1574571922}
-  - {fileID: 119218169}
-  - {fileID: 518921613}
-  - {fileID: 532943237}
-  - {fileID: 1664303038}
-  - {fileID: 729090854}
   - {fileID: 1363077520}
   - {fileID: 1611478333}
   - {fileID: 1405203233}
