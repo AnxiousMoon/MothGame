@@ -43,14 +43,6 @@ public class BatAI : MonoBehaviour
 
             batAnimation.StartDashAnimation();
         }
-        if (col.tag == "Web")
-        {
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            rb.constraints = RigidbodyConstraints.FreezePosition;
-            rb.freezeRotation = true;
-            speed = 0;
-        }
         if (col.tag == "Clicking")
         {
             rb.velocity = Vector3.zero;
@@ -121,6 +113,14 @@ public class BatAI : MonoBehaviour
         if (col.collider.tag == "Wall")
         {
             IncreaseIndex();
+        }
+        if (col.collider.tag == "Web")
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+            rb.freezeRotation = true;
+            speed = 0;
         }
     }
 

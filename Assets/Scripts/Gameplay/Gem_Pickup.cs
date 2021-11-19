@@ -14,8 +14,11 @@ public class Gem_Pickup : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            Gem.SetActive(false);
-            GemManager.Count += 1;
+            if(!col.isTrigger)
+            {
+                Gem.SetActive(false);
+                GemManager.Count += 1;
+            }
         }
     }
 }

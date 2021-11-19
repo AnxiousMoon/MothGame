@@ -52,6 +52,14 @@ public class BatAIStationary : MonoBehaviour
             caught = true;
             transform.LookAt(returnPoint.transform.position);
         }
+        if (col.collider.tag == "Web")
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+            rb.freezeRotation = true;
+            speed = 0;
+        }
     }
 
     void OnTriggerExit(Collider col)
