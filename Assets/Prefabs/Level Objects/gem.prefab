@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3684745693697955168}
   - component: {fileID: 1496936593092813226}
   - component: {fileID: 930643375223825024}
+  - component: {fileID: 1195308166}
   m_Layer: 0
   m_Name: gem
   m_TagString: Untagged
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136828598435119231}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -263.004, y: -27.08, z: 28.57}
-  m_LocalScale: {x: 65.36158, y: 65.36158, z: 65.36158}
+  m_LocalScale: {x: 65.36158, y: 65.361565, z: 65.361565}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &3684745693697955168
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -90,8 +91,22 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136828598435119231}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.03, y: 0.029999996, z: 0.022557324}
   m_Center: {x: 0, y: 1.7998328e-17, z: 0.0025330393}
+--- !u!114 &1195308166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136828598435119231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a217fad24bfeb4da0dd9e1ac1be185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gem: {fileID: 1136828598435119231}
+  GemManager: {fileID: 0}
