@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129861879}
   m_LocalRotation: {x: 4.3856583e-23, y: 0.3826834, z: 1.4973567e-22, w: 0.92387956}
-  m_LocalPosition: {x: -5.499996, y: 0, z: 5.4999948}
+  m_LocalPosition: {x: -8.33, y: -0, z: 8.33}
   m_LocalScale: {x: 1, y: 0.30129004, z: 1}
   m_Children: []
   m_Father: {fileID: 1851057058}
@@ -90,7 +90,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129861879}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 14
@@ -212,7 +212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148185819}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.6363976, y: 1.597, z: -7.537751}
+  m_LocalPosition: {x: -0, y: 2.07, z: -11.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 352980292534586502}
@@ -247,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851057057}
   m_LocalRotation: {x: -2.1175821e-22, y: 0.38268343, z: -3.5527133e-15, w: 0.92387956}
-  m_LocalPosition: {x: 0.28284383, y: 1.5970001, z: -7.891297}
+  m_LocalPosition: {x: 0, y: 0, z: -11.78}
   m_LocalScale: {x: 1, y: 3.7447, z: 1}
   m_Children:
   - {fileID: 129861883}
@@ -318,6 +318,7 @@ MonoBehaviour:
   collider: {fileID: 399240282}
   ghostBox: {fileID: 196358558}
   returnPoint: {fileID: 1148185820}
+  colliderReturnPoint: {fileID: 4156299311509451204}
   fix: {fileID: 352980292534586502}
 --- !u!54 &196358561
 Rigidbody:
@@ -10280,7 +10281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a48a9a094ac174478b90d67b42b0ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 75
+  moveSpeed: 90
   dashSpeed: 50
   cooldown: 2
   collider: {fileID: 399240282}
@@ -10408,7 +10409,7 @@ Transform:
   m_GameObject: {fileID: 5292259552942898543}
   m_LocalRotation: {x: -0.00000008722142, y: 0.000000059604645, z: -5.198802e-15,
     w: 1}
-  m_LocalPosition: {x: 0, y: 2.58, z: 0}
+  m_LocalPosition: {x: 0, y: 3.34, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4964409036192527322}

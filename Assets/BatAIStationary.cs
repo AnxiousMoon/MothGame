@@ -33,8 +33,14 @@ public class BatAIStationary : MonoBehaviour
         if (col.tag == "Clicking")
         {
             speed = 100;
-            maxSpeed = 10;
+            maxSpeed = 5;
             transform.LookAt(ghost.transform.position);
+        }
+        if (col.tag == "Sound")
+        {
+            speed = 100;
+            maxSpeed = 10;
+            transform.LookAt(webStandIn.transform.position);
         }
         if (col.tag == "Ghost")
         {
@@ -43,12 +49,6 @@ public class BatAIStationary : MonoBehaviour
             transform.LookAt(returnPoint.transform.position);
             speed = 100;
             maxSpeed = 10;
-        }
-        if (col.tag == "Sound")
-        {
-            speed = 100;
-            maxSpeed = 10;
-            transform.LookAt(webStandIn.transform.position);
         }
     }
 
@@ -67,7 +67,6 @@ public class BatAIStationary : MonoBehaviour
             rb.freezeRotation = true;
             speed = 0;
         }
-
     }
 
     void OnTriggerExit(Collider col)

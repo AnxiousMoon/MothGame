@@ -47,16 +47,22 @@ public class BatAI : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
+            maxSpeed = 5;
+            speed = 100;
             transform.LookAt(ghost.transform.position);
-            maxSpeed = 50;
-            speed = 50;
+        }
+        if (col.tag == "Ghost")
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            transform.LookAt(waypoints[waypointIndex].position);
+            speed = 100;
+            maxSpeed = 10;
         }
         if (col.tag == "Sound")
         {
             transform.LookAt(web.transform.position);
-            {
-                maxSpeed = 100;
-            }
+             maxSpeed = 100;
         }
     }
 
@@ -82,12 +88,12 @@ public class BatAI : MonoBehaviour
             //}
             //speed = 100;
         }
-        if (col.tag == "Clicking")
-        {
-            transform.LookAt(ghost.transform.position);
-            maxSpeed = 50;
-            speed = 50;
-        }
+        //if (col.tag == "Clicking")
+        //{
+        //    transform.LookAt(ghost.transform.position);
+        //    maxSpeed = 5;
+        //    speed = 100;
+        //}
         //if (col.tag == "Stand-in")
         //{
         //    transform.LookAt(waypoints[waypointIndex].position);
@@ -110,7 +116,7 @@ public class BatAI : MonoBehaviour
             speed = 100;
             maxSpeed = 100;
         }
-        if (col.collider.tag == "Wall")
+        if (col.collider.tag == "Wall" || col.collider.tag == "Obstacle")
         {
             IncreaseIndex();
         }

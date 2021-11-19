@@ -54,6 +54,9 @@ public class Move : MonoBehaviour
         if (timePassed >= 1)
         {
             gameObject.tag = "Player";
+        }
+        if (timePassed >= 2)
+        {
             collider.enabled = false;
         }
     }

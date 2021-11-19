@@ -41,6 +41,11 @@ public class ghost : MonoBehaviour
             transform.position = returnPoint.position;
             collider.transform.localRotation = Quaternion.Euler(0, 45, 0);
         }
+        //if (col.tag == "Enemy")
+        //{
+        //    ghostBox.enabled = false;
+        //    collider.enabled = false;
+        //}
     }
 
     // Update is called once per frame
