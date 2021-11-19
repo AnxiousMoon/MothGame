@@ -7,9 +7,10 @@ public class ghost : MonoBehaviour
     public Collider collider;
     public Collider ghostBox;
     public Transform returnPoint;
+    public Transform colliderReturnPoint;
     public Transform fix;
     bool reset = true;
-    private float x, y, z, xR, yR, zR;
+    private float x, y, z, xR, yR, zR, x2, y2, z2;
     Vector3 fixRotation;
 
 
@@ -49,7 +50,7 @@ public class ghost : MonoBehaviour
         {
             ghostBox.enabled = true;
             transform.position = new Vector3(x, y, z);
-            collider.transform.position = new Vector3(x, y, z);
+            collider.transform.position = new Vector3(x2, y2, z2);
             collider.transform.rotation = Quaternion.Euler(xR, yR, zR);
             reset = false;
         }
@@ -58,6 +59,9 @@ public class ghost : MonoBehaviour
             x = transform.position.x;
             y = transform.position.y;
             z = transform.position.z;
+            x2 = colliderReturnPoint.position.x;
+            y2 = colliderReturnPoint.position.y;
+            z2 = colliderReturnPoint.position.z;
             xR = transform.rotation.x;
             yR = transform.rotation.y;
             zR = transform.rotation.z;
@@ -65,6 +69,7 @@ public class ghost : MonoBehaviour
             {
                 ghostBox.enabled = false;
                 transform.position = returnPoint.position;
+                collider.transform.position = colliderReturnPoint.position;
                 collider.transform.localRotation = Quaternion.Euler(0, 45, 0);
                 reset = true;
             }
