@@ -14,6 +14,7 @@ public class BatAIStationary : MonoBehaviour
     private float dist;
 
     public GameObject returnPoint;
+    public GameObject webStandIn;
 
     Rigidbody rb;
     BatAnimation batAnimation;
@@ -42,6 +43,12 @@ public class BatAIStationary : MonoBehaviour
             transform.LookAt(returnPoint.transform.position);
             speed = 100;
             maxSpeed = 10;
+        }
+        if (col.tag == "Sound")
+        {
+            speed = 100;
+            maxSpeed = 10;
+            transform.LookAt(webStandIn.transform.position);
         }
     }
 

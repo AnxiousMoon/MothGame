@@ -35,7 +35,7 @@ public class Rock : MonoBehaviour
         gravelSoundRadiusPrefab = Instantiate(gravelSoundRadiusPrefab);
         gravelSoundRadius = gravelSoundRadiusPrefab.GetComponent<SoundPadRadius>();
 
-        GravelGlow();
+       // GravelGlow();
         gravelSoundRadius.Activate();
     }
 
