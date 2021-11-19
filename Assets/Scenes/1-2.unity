@@ -1424,6 +1424,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocks_1
       objectReference: {fileID: 0}
+    - target: {fileID: 6102955385577503762, guid: e4dd29be796ee3f4ba0151f3634f806c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6102955385577503765, guid: e4dd29be796ee3f4ba0151f3634f806c,
         type: 3}
       propertyPath: m_RootOrder
@@ -1478,6 +1483,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373548153811872700, guid: e4dd29be796ee3f4ba0151f3634f806c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373548154108584796, guid: e4dd29be796ee3f4ba0151f3634f806c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373548155339747796, guid: e4dd29be796ee3f4ba0151f3634f806c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4dd29be796ee3f4ba0151f3634f806c, type: 3}
@@ -1645,7 +1665,7 @@ GameObject:
   - component: {fileID: 265514165}
   m_Layer: 0
   m_Name: crate_2 (6)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4492,6 +4512,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocks_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8355629640180134173, guid: 151489bf68e44ff4eaf4b3ad192d1f9f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 9166022827031610668, guid: 151489bf68e44ff4eaf4b3ad192d1f9f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 9166022827197809939, guid: 151489bf68e44ff4eaf4b3ad192d1f9f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 9166022827546155072, guid: 151489bf68e44ff4eaf4b3ad192d1f9f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 151489bf68e44ff4eaf4b3ad192d1f9f, type: 3}
 --- !u!1001 &758289144
@@ -5388,7 +5428,7 @@ GameObject:
   - component: {fileID: 878064110}
   m_Layer: 0
   m_Name: crate_2 (5)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12056,9 +12096,9 @@ GameObject:
   - component: {fileID: 5825492521825603392}
   - component: {fileID: 6076153862179107730}
   - component: {fileID: 5825492521257701230}
-  - component: {fileID: 5825492521257701231}
   - component: {fileID: 94470211299904208}
   - component: {fileID: 94470211299904207}
+  - component: {fileID: 94470211299904209}
   m_Layer: 0
   m_Name: Bat (9)
   m_TagString: Enemy
@@ -12101,6 +12141,7 @@ MonoBehaviour:
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
   LargeModePositions:
   - {fileID: 0}
+  - {fileID: 0}
   multiPositionArray: []
 --- !u!114 &94470211299904208
 MonoBehaviour:
@@ -12124,6 +12165,25 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &94470211299904209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94470211299904206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b4627455877af489cccedb906c97bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  maxSpeed: 0
+  dashSpeed: 50
+  caught: 0
+  ghost: {fileID: 1399531647}
+  returnPoint: {fileID: 5825492520600374454}
+  webStandIn: {fileID: 0}
 --- !u!1 &94470211363572429
 GameObject:
   m_ObjectHideFlags: 0
@@ -12139,6 +12199,7 @@ GameObject:
   - component: {fileID: 5825492521801926827}
   - component: {fileID: 94470211363572431}
   - component: {fileID: 94470211363572430}
+  - component: {fileID: 94470211363572432}
   m_Layer: 0
   m_Name: Bat (4)
   m_TagString: Enemy
@@ -12181,6 +12242,13 @@ MonoBehaviour:
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
   LargeModePositions:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   multiPositionArray: []
 --- !u!114 &94470211363572431
 MonoBehaviour:
@@ -12204,6 +12272,28 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &94470211363572432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94470211363572429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07d85beff1df7640a532d469a9733e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 5825492520180078217}
+  - {fileID: 5825492520793735681}
+  - {fileID: 5825492520058591918}
+  - {fileID: 5825492521003169497}
+  speed: 100
+  maxSpeed: 10
+  dashSpeed: 50
+  web: {fileID: 0}
+  ghost: {fileID: 0}
 --- !u!1 &94470211571798845
 GameObject:
   m_ObjectHideFlags: 0
@@ -13793,7 +13883,7 @@ GameObject:
   - component: {fileID: 730856502570758025}
   m_Layer: 0
   m_Name: crate_1 (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13812,7 +13902,7 @@ GameObject:
   - component: {fileID: 730856501958933115}
   m_Layer: 0
   m_Name: crate_1 (6)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13831,7 +13921,7 @@ GameObject:
   - component: {fileID: 730856502129520039}
   m_Layer: 0
   m_Name: crate_1 (12)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13850,7 +13940,7 @@ GameObject:
   - component: {fileID: 730856502182356447}
   m_Layer: 0
   m_Name: crate_1 (4)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13869,7 +13959,7 @@ GameObject:
   - component: {fileID: 730856502181989340}
   m_Layer: 0
   m_Name: crate_1 (13)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13888,7 +13978,7 @@ GameObject:
   - component: {fileID: 730856502360598482}
   m_Layer: 0
   m_Name: crate_1 (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13907,7 +13997,7 @@ GameObject:
   - component: {fileID: 730856501693036442}
   m_Layer: 0
   m_Name: crate_1 (5)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13926,7 +14016,7 @@ GameObject:
   - component: {fileID: 730856501646653926}
   m_Layer: 0
   m_Name: crate_1 (11)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13945,7 +14035,7 @@ GameObject:
   - component: {fileID: 730856501787263738}
   m_Layer: 0
   m_Name: crate_1 (10)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13964,7 +14054,7 @@ GameObject:
   - component: {fileID: 730856500879026770}
   m_Layer: 0
   m_Name: crate_1 (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13983,7 +14073,7 @@ GameObject:
   - component: {fileID: 730856501159942341}
   m_Layer: 0
   m_Name: crate_1 (7)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14002,7 +14092,7 @@ GameObject:
   - component: {fileID: 730856501073873774}
   m_Layer: 0
   m_Name: crate_1 (9)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14021,7 +14111,7 @@ GameObject:
   - component: {fileID: 730856501080521985}
   m_Layer: 0
   m_Name: crate_1 (8)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14166,7 +14256,7 @@ GameObject:
   - component: {fileID: 1029558003205730448}
   m_Layer: 0
   m_Name: crate_2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14185,7 +14275,7 @@ GameObject:
   - component: {fileID: 1029558004870308540}
   m_Layer: 0
   m_Name: crate_2 (4)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14204,7 +14294,7 @@ GameObject:
   - component: {fileID: 1029558004689630869}
   m_Layer: 0
   m_Name: crate_2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28791,7 +28881,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5825492519886644297}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 198.01065, y: 25.489449, z: 41.58249}
+  m_LocalPosition: {x: 237.62, y: 25.489449, z: 41.58249}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5825492521111031061}
@@ -29235,7 +29325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5825492520145632824}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 278.10068, y: 25.461447, z: 82.548485}
+  m_LocalPosition: {x: 318.53, y: 25.461447, z: 82.548485}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5825492521111031061}
@@ -29694,7 +29784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5825492520285057278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 298.54068, y: 25.660448, z: 75.88649}
+  m_LocalPosition: {x: 339.12, y: 25.660448, z: 75.88649}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5825492521111031061}
@@ -30071,7 +30161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5825492520606727631}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 205.76166, y: 25.660448, z: 69.952484}
+  m_LocalPosition: {x: 245.09, y: 25.660448, z: 69.952484}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5825492521111031061}
@@ -30524,7 +30614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5825492520810655158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 191.39066, y: 25.489449, z: 47.122486}
+  m_LocalPosition: {x: 230.4, y: 25.489449, z: 47.122486}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5825492521111031061}
@@ -30737,7 +30827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5825492520878444459}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 326.49066, y: 25.137447, z: 91.312485}
+  m_LocalPosition: {x: 367.43, y: 25.137447, z: 91.312485}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5825492521111031061}
@@ -31021,7 +31111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5825492521005152483}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 191.39066, y: 25.489449, z: 69.97249}
+  m_LocalPosition: {x: 230.16, y: 25.489449, z: 69.97249}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5825492521111031061}
@@ -31339,25 +31429,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5825492521257701231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 94470211299904206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e07d85beff1df7640a532d469a9733e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 5825492520600374450}
-  speed: 0
-  maxSpeed: 0
-  dashSpeed: 0
-  web: {fileID: 0}
-  ghost: {fileID: 1399531647}
 --- !u!54 &5825492521273925639
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31490,7 +31561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5825492521398873612}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 318.87067, y: 25.660448, z: 75.88649}
+  m_LocalPosition: {x: 359.44998, y: 25.660448, z: 75.88649}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5825492521111031061}
@@ -31812,7 +31883,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5825492521509761732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 326.49066, y: 25.137447, z: 75.90249}
+  m_LocalPosition: {x: 367.43, y: 25.137447, z: 75.90249}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5825492521111031061}
@@ -31926,7 +31997,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5825492521540138520}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 292.92065, y: 25.461447, z: 82.548485}
+  m_LocalPosition: {x: 333.34998, y: 25.461447, z: 82.548485}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5825492521111031061}
@@ -32129,7 +32200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5825492521627311250}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 198.01065, y: 25.489449, z: 64.43249}
+  m_LocalPosition: {x: 236.29, y: 25.489449, z: 64.43249}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5825492521111031061}
@@ -32258,7 +32329,7 @@ GameObject:
   - component: {fileID: 5825492521643333154}
   m_Layer: 0
   m_Name: Rocks_1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32454,19 +32525,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 94470211363572429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e07d85beff1df7640a532d469a9733e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b96ad18cbbafee4cbf5e5d1f27f6229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 5825492520180078217}
-  - {fileID: 5825492520793735681}
-  - {fileID: 5825492520058591918}
-  - {fileID: 5825492521003169497}
-  speed: 100
-  maxSpeed: 10
+  wingFlapSpeed: 1
   dashSpeed: 25
-  web: {fileID: 0}
-  ghost: {fileID: 1399531647}
 --- !u!65 &5825492521814373428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32694,7 +32757,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5825492521936782275}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 205.76166, y: 25.660448, z: 41.232487}
+  m_LocalPosition: {x: 245.09, y: 25.660448, z: 41.232487}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5825492521111031061}
@@ -35848,7 +35911,7 @@ GameObject:
   - component: {fileID: 5825492521039243878}
   m_Layer: 0
   m_Name: crate_2 (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35884,7 +35947,7 @@ GameObject:
   - component: {fileID: 5123367070115379767}
   m_Layer: 0
   m_Name: rock_pile_2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35903,7 +35966,7 @@ GameObject:
   - component: {fileID: 5825492520520125057}
   m_Layer: 0
   m_Name: crate_2 (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35939,7 +36002,7 @@ GameObject:
   - component: {fileID: 5123367071704010876}
   m_Layer: 0
   m_Name: cave_lantern
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35957,7 +36020,7 @@ GameObject:
   - component: {fileID: 5123367071451236331}
   m_Layer: 0
   m_Name: shovel
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35975,7 +36038,7 @@ GameObject:
   - component: {fileID: 5123367071078099135}
   m_Layer: 0
   m_Name: rock_pile_3
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36012,7 +36075,7 @@ GameObject:
   - component: {fileID: 5825492520043421865}
   m_Layer: 0
   m_Name: crate_2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36030,7 +36093,7 @@ GameObject:
   - component: {fileID: 5123367070770896991}
   m_Layer: 0
   m_Name: rock_pile_4
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36048,7 +36111,7 @@ GameObject:
   - component: {fileID: 5123367070737025267}
   m_Layer: 0
   m_Name: pickaxe
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36067,7 +36130,7 @@ GameObject:
   - component: {fileID: 5825492520347579687}
   m_Layer: 0
   m_Name: crate_2 (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

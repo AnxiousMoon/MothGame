@@ -7,12 +7,11 @@ public class BatAIStationary : MonoBehaviour
     public int speed = 0;
     public int maxSpeed = 0;
     public int dashSpeed = 50;
-    public GameObject web;
-    public GameObject ghost;
     public bool caught = false;
 
     private float dist;
 
+    public GameObject ghost;
     public GameObject returnPoint;
     public GameObject webStandIn;
 
@@ -54,7 +53,7 @@ public class BatAIStationary : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.collider.tag == "Wall")
+        if (col.collider.tag == "Wall" || col.collider.tag == "Obstacle")
         {
             caught = true;
             transform.LookAt(returnPoint.transform.position);
