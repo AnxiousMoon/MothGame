@@ -21,11 +21,6 @@ public class ghost : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Enemy")
-        {
-            ghostBox.enabled = false;
-            collider.enabled = false;
-        }
         if (col.tag == "Web")
         {
             ghostBox.transform.position = col.transform.position;
@@ -38,16 +33,24 @@ public class ghost : MonoBehaviour
             ghostBox.transform.position = col.transform.position;
         }
     }
+    void OnTriggerExit(Collider col)
+    {
+        if (col.tag == "Web")
+        {
+            transform.position = returnPoint.position;
+            collider.transform.localRotation = Quaternion.Euler(0, 45, 0);
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (collider.enabled)
         {
+            ghostBox.enabled = true;
             transform.position = new Vector3(x, y, z);
             collider.transform.position = new Vector3(x, y, z);
             collider.transform.rotation = Quaternion.Euler(xR, yR, zR);
-            ghostBox.enabled = true;
             reset = false;
         }
         else if (!collider.enabled)

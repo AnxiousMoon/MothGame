@@ -60,6 +60,7 @@ public class BatAIStationary : MonoBehaviour
             rb.freezeRotation = true;
             speed = 0;
         }
+
     }
 
     void OnTriggerExit(Collider col)

@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129861879}
-  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -5.5, y: -0, z: 5.5}
-  m_LocalScale: {x: 1, y: 0.30129, z: 1}
+  m_LocalRotation: {x: 4.3856583e-23, y: 0.3826834, z: 1.4973567e-22, w: 0.92387956}
+  m_LocalPosition: {x: -5.499996, y: 0, z: 5.4999948}
+  m_LocalScale: {x: 1, y: 0.30129004, z: 1}
   m_Children: []
   m_Father: {fileID: 1851057058}
   m_RootOrder: 0
@@ -246,8 +246,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851057057}
-  m_LocalRotation: {x: -2.1175821e-22, y: 0.38268343, z: -3.5527137e-15, w: 0.92387956}
-  m_LocalPosition: {x: 0.2828438, y: 1.597, z: -7.8912973}
+  m_LocalRotation: {x: -2.1175821e-22, y: 0.38268343, z: -3.5527133e-15, w: 0.92387956}
+  m_LocalPosition: {x: 0.28284383, y: 1.5970001, z: -7.891297}
   m_LocalScale: {x: 1, y: 3.7447, z: 1}
   m_Children:
   - {fileID: 129861883}
@@ -10429,7 +10429,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickRadiusMeshObj: {fileID: 1168140700655502739, guid: d5b5a1e0fb164234f840e023f577307a,
     type: 3}
-  groundUIObj: {fileID: 5741754293494409568}
   clickRadius: 15
   maxAlpha: 0.5
   negativeDashColor: {r: 2.367875, g: 0.12286145, b: 0.18194053, a: 1}
