@@ -19,7 +19,7 @@ public class Key_Pickup : MonoBehaviour
     }
     private void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Player")
+        if (col.tag == "Player" || col.tag == "Dashing")
         {
             if (!col.isTrigger && !isDissolved)
             {
