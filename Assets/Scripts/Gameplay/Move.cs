@@ -36,7 +36,7 @@ public class Move : MonoBehaviour
     {
         myInput();
         ControlDrag();
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (dashCooldown <= 0)
             {

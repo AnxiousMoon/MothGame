@@ -7,6 +7,7 @@ public class Web : MonoBehaviour
 {
     public GameObject web;
     public GameObject webBroken;
+    [SerializeField] ParticleSystem webFX;
 
     Collider col;
 
@@ -26,6 +27,7 @@ public class Web : MonoBehaviour
     {
         if (col.gameObject.tag == "Dashing")
         {
+            webFX.Play();
             Destroy(web);
             this.col.enabled = false;
             webBroken.SetActive(true);
