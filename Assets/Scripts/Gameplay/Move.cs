@@ -65,6 +65,13 @@ public class Move : MonoBehaviour
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
+        if (col.collider.tag == "Web")
+        {
+            if(gameObject.tag == "Dashing")
+            {
+                rb.AddForce(moveDirection * dashSpeed, ForceMode.VelocityChange);
+            }
+        }
     }
 
     void myInput()
