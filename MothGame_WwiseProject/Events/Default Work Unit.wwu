@@ -37,7 +37,17 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Cave_Ambient" ID="{16037D08-6024-4621-B920-612F009476C0}"/>
-				<Event Name="Background_Music" ID="{028F628A-1B57-4018-A8B5-3A4B98AFC027}"/>
+				<Event Name="Background_Music" ID="{028F628A-1B57-4018-A8B5-3A4B98AFC027}">
+					<ChildrenList>
+						<Action Name="" ID="{3D4619B5-C638-4D16-AE7A-B634ACF4DD52}" ShortID="589678375">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Background Music" ID="{7BBBC95B-F6F4-43B9-8209-38835C7D1713}" WorkUnitID="{2ADFDB95-B96B-4196-83BD-E215AA688A02}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Moth_Stuck" ID="{9B7F40C5-8087-4995-B5E8-A793C8D651C3}"/>
 				<Event Name="Bat_Stuck" ID="{D2555B44-52E8-4A64-865B-7EEDC8ACD0E6}"/>
 				<Event Name="Menu_Click" ID="{90E2FBC1-7AEE-4BE9-A56B-4C46BEE5F24D}"/>
