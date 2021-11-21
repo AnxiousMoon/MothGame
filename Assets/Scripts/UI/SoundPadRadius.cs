@@ -13,7 +13,10 @@ public class SoundPadRadius : MonoBehaviour
     }
     public void Activate()
     {
-        Debug.Log(gameObject.name + " is activated. Target scale = " + targetScale);
         LeanTween.scale(gameObject, targetScale, scaleDuration);
+    }
+    public void Deactivate()
+    {
+        transform.localScale = Vector3.zero + Vector3.one * 0.01f;
     }
 }

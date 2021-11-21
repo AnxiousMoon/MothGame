@@ -113,7 +113,10 @@ public class MothAnimation : MonoBehaviour
         PlayWalkFX();
     }
 
-
+    public void PlayDeath()
+    {
+        animator.SetBool("isDead", true);
+    }
 
 
     private void SingletonCheck()

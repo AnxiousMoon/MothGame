@@ -22,7 +22,8 @@ public class Move : MonoBehaviour
 
     MothAnimation mothAnimation;
 
-
+    //bool to control whether player can move during death animation and initial camera pan.
+    bool canMove = true;
 
     private void Start()
     {
@@ -86,6 +87,8 @@ public class Move : MonoBehaviour
 
     }
 
+
+
     void ControlDrag()
     {
         rb.drag = rbDrag;
@@ -93,12 +96,20 @@ public class Move : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayer();
+        if (canMove)
+        {
+            MovePlayer();
+        }
     }
 
     void MovePlayer()
     {
         rb.AddForce(moveDirection.normalized * moveSpeed, ForceMode.Acceleration);
+    }
+
+    public void AllowPlayerMovement(bool _bool)
+    {
+        canMove = _bool;
     }
     //public float zAcceleration; // Acceleration on the Z-Axis
     //public float zVelocity; // Velocity on the Z-Axis

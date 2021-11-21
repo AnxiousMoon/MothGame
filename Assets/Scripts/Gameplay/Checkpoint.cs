@@ -8,12 +8,18 @@ public class Checkpoint : MonoBehaviour
     //public GameObject checkPoint;
     //public GameObject player;
     // Start is called before the first frame update
-
+    [SerializeField] Move playerMoveScript;
     [SerializeField] float respawnDelay = 2f;
+    [SerializeField] DeathFX playerDeathParticleControl;
     UIController uiController;
+    MothAnimation mothAnimation;
+
+    //makes sure checkpoint reset can only be called once;
+    bool checkpointResetting = false;
     void Start()
     {
         uiController = UIController.instance;
+        mothAnimation = MothAnimation.instance;
     }
 
     //void OnTriggerEnter(Collider col)
@@ -32,20 +38,28 @@ public class Checkpoint : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.collider.tag == "Enemy")
+        if (col.collider.tag == "Enemy" && !checkpointResetting)
         {
             //player.transform.position = checkPoint.transform.position;
             //MothAnimation.instance.ResetRotation();
             //FadePanel.instance.FadeOut();
+            checkpointResetting = true;
+            playerDeathParticleControl.Activate();
+            mothAnimation.PlayDeath();
+            playerMoveScript.AllowPlayerMovement(false);
             StartCoroutine(Respawn());
         }
-        if (col.collider.tag == "Web")
+        if (col.collider.tag == "Web" && !checkpointResetting)
         {
             if (gameObject.tag != "Dashing")
             {
                 //player.transform.position = checkPoint.transform.position;
                 //MothAnimation.instance.ResetRotation();
                 //FadePanel.instance.FadeOut();
+                checkpointResetting = true;
+                playerDeathParticleControl.Activate();
+                mothAnimation.PlayDeath();
+                playerMoveScript.AllowPlayerMovement(false);
                 StartCoroutine(Respawn());
             }
         }

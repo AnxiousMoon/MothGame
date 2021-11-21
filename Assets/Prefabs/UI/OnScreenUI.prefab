@@ -324,10 +324,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScale: 250
-  initialDelay: 0.25
-  scaleDuration: 0.3
-  intermediateScaleDelay: 0.2
-  secondScaleDuration: 0.25
+  playerChest: {fileID: 0}
+  initialDelay: 0.6
+  scaleDuration: 0.2
+  intermediateScaleDelay: 0.1
+  secondScaleDuration: 0.1
 --- !u!1 &610134151
 GameObject:
   m_ObjectHideFlags: 0

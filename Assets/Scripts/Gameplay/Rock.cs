@@ -10,6 +10,7 @@ public class Rock : MonoBehaviour
 
     Material[] childMaterials;
     [SerializeField][ColorUsage(true,true)] Color activeColor = Color.white;
+    [SerializeField] [ColorUsage(true, true)] Color idleColor = Color.white;
 
     [SerializeField] GameObject gravelParticleSystemPrefab;
     ParticleSystem gravelParticleSystem;
@@ -35,8 +36,6 @@ public class Rock : MonoBehaviour
         gravelSoundRadiusPrefab = Instantiate(gravelSoundRadiusPrefab);
         gravelSoundRadius = gravelSoundRadiusPrefab.GetComponent<SoundPadRadius>();
 
-       // GravelGlow();
-        gravelSoundRadius.Activate();
     }
 
 
@@ -65,6 +64,16 @@ public class Rock : MonoBehaviour
             collider.enabled = false;
             
         }
+        if (col.tag == "Player")
+        {
+            if (!soundPadActive)
+            {
+                gravelSoundRadius.Deactivate();
+                EndGravelGlow();
+            }
+            
+
+        }
     }
 
     void GetGravelMaterials()
@@ -87,12 +96,20 @@ public class Rock : MonoBehaviour
     }
     void GravelGlow()
     {
-        Debug.Log("Gravel Glow");
         for (int i = 0; i < childMaterials.Length; i++)
         {
             childMaterials[i].SetColor("_EmissionColor", activeColor);
         }
         gravelParticleSystemMain.startColor = activeColor;
+    }
+
+    void EndGravelGlow()
+    {
+        for (int i = 0; i < childMaterials.Length; i++)
+        {
+            childMaterials[i].SetColor("_EmissionColor", Color.black);
+        }
+        gravelParticleSystemMain.startColor = idleColor;
     }
 
     // Update is called once per frame
