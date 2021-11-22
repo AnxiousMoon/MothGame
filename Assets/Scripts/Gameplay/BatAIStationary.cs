@@ -40,12 +40,14 @@ public class BatAIStationary : MonoBehaviour
             speed = 100;
             maxSpeed = 5;
             transform.LookAt(ghost.transform.position);
+            batAnimation.StartDashAnimation();
         }
         if (col.tag == "Sound")
         {
             speed = 100;
             maxSpeed = 10;
             transform.LookAt(webStandIn.transform.position);
+
         }
         if (col.tag == "Ghost")
         {
@@ -62,6 +64,7 @@ public class BatAIStationary : MonoBehaviour
             transform.LookAt(col.transform.position);
             speed = 100;
             maxSpeed = 10;
+            batAnimation.StartDashAnimation();
         }
     }
 

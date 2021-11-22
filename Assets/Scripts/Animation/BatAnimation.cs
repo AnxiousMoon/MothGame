@@ -29,4 +29,9 @@ public class BatAnimation : MonoBehaviour
         Debug.Log("Start Dash Animation");
         animator.SetBool("isDashing", true);
     }
+
+    public void StopDashAnimation()
+    {
+        animator.SetBool("isDashing", false);
+    }
 }
