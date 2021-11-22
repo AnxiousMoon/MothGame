@@ -8,7 +8,12 @@ public class Gem_Pickup : MonoBehaviour
 
     public Gem_manager GemManager;
 
+    Dissolve dissolve;
 
+    private void Awake()
+    {
+        dissolve = gameObject.GetComponent<Dissolve>();
+    }
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider col)
     {
@@ -16,7 +21,7 @@ public class Gem_Pickup : MonoBehaviour
         {
             if(!col.isTrigger)
             {
-                Gem.SetActive(false);
+                dissolve.DissolveMe(1f, true);
                 GemManager.Count += 1;
             }
         }

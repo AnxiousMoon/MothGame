@@ -1153,6 +1153,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 0}
   ghost: {fileID: 0}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  Sound: {fileID: 0}
 --- !u!136 &327244535722200703
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1181,6 +1186,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wingFlapSpeed: 1.8
   dashSpeed: 5
+  swipeVFXObj: {fileID: 1306665689672907951, guid: 313b44474331f5547ac399b748cc0e7c,
+    type: 3}
+  swipeFXDuration: 0.2
 --- !u!1 &6414728659173477375
 GameObject:
   m_ObjectHideFlags: 0

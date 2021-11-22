@@ -84,6 +84,7 @@ public class BatAIStationary : MonoBehaviour
             speed = 0;
             Destroy(Sound);
             Web.Post(gameObject);
+            batAnimation.StartWebAnimation();
         }
     }
 

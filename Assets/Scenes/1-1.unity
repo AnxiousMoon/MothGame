@@ -9474,6 +9474,12 @@ PrefabInstance:
       propertyPath: dashSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 796492192149141179, guid: eee3272c84914bb47a8a039fab86a33d,
+        type: 3}
+      propertyPath: swipeVFXObj
+      value: 
+      objectReference: {fileID: 1306665689672907951, guid: 313b44474331f5547ac399b748cc0e7c,
+        type: 3}
     - target: {fileID: 3917240636035455677, guid: eee3272c84914bb47a8a039fab86a33d,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -9482,7 +9488,7 @@ PrefabInstance:
     - target: {fileID: 5803274841659931083, guid: eee3272c84914bb47a8a039fab86a33d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5803274841659931083, guid: eee3272c84914bb47a8a039fab86a33d,
         type: 3}
@@ -10539,6 +10545,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 76376193}
     m_Modifications:
+    - target: {fileID: 1018786477, guid: eee3272c84914bb47a8a039fab86a33d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5803274841659931083, guid: eee3272c84914bb47a8a039fab86a33d,
         type: 3}
       propertyPath: m_RootOrder

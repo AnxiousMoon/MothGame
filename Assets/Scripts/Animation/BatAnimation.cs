@@ -11,6 +11,10 @@ public class BatAnimation : MonoBehaviour
     [Tooltip("The dash animation plays when the bat chases the player.")]
     [SerializeField] float dashSpeed = 5f;
 
+    [Header("Swipe Effect")]
+    [SerializeField] [Tooltip("Reference GameObject with swipe effect attached")] GameObject swipeVFXObj;
+    [SerializeField] [Tooltip("Duration swipe effect should appear for.")] float swipeFXDuration = 0.2f;
+
     private void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -34,4 +38,16 @@ public class BatAnimation : MonoBehaviour
     {
         animator.SetBool("isDashing", false);
     }
+    public void StartWebAnimation()
+    {
+        animator.SetBool("isWebbed", true);
+    }
+
+    public void ShowSwipeFX()
+    {
+        GameObject SwipeVFX = Instantiate(swipeVFXObj,transform);
+        SwipeVFX.transform.parent = null;
+    }
+
+
 }
