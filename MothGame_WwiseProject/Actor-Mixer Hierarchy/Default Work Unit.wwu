@@ -378,9 +378,10 @@
 				<Sound Name="Background Music" ID="{7BBBC95B-F6F4-43B9-8209-38835C7D1713}" ShortID="462973572">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-8</Value>
+								<Value>-12</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>

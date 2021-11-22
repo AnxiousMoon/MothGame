@@ -51,6 +51,17 @@
 				<Event Name="Moth_Stuck" ID="{9B7F40C5-8087-4995-B5E8-A793C8D651C3}"/>
 				<Event Name="Bat_Stuck" ID="{D2555B44-52E8-4A64-865B-7EEDC8ACD0E6}"/>
 				<Event Name="Menu_Click" ID="{90E2FBC1-7AEE-4BE9-A56B-4C46BEE5F24D}"/>
+				<Event Name="Soundpad" ID="{B93CB908-C559-4B22-A21B-5A29CF51055C}">
+					<ChildrenList>
+						<Action Name="" ID="{F8BAED62-8C4C-42E6-AE1B-B26BD44737FE}" ShortID="514903442">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Soundpad_P1" ID="{A04B3203-590D-4E6F-A53C-812470FB984A}" WorkUnitID="{2ADFDB95-B96B-4196-83BD-E215AA688A02}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
