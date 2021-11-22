@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 5fea0b2ffc16b8489e836646a86dc9fc
     GuidInternal: 
-    m_lastTime: -8585640782916848725
+    m_lastTime: -8585640271586280009
     List:
     - name: Main
       guid: 7922853428bf52419f14abd1c9075686
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 52c0aa584cf6d74d8ea2153977597c04
     GuidInternal: 
-    m_lastTime: -8585640291115526600
+    m_lastTime: -8585640271586380002
     List:
     - name: Background_Music
       guid: 8a628f02571b1840a8b53a4b98afc027
@@ -145,8 +145,8 @@ MonoBehaviour:
         guid: 445b55d2e852644a865b7eedc8acd0e6
       Path: Events\Default Work Unit\Bat_Stuck
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.979206
+      minDuration: 3.979206
     - name: Cave_Ambient
       guid: 087d031624602146b920612f009476c0
       id: 503680259
@@ -247,8 +247,8 @@ MonoBehaviour:
         guid: 08b93cb959c5224ba21b5a29cf51055c
       Path: Events\Default Work Unit\Soundpad
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.827528
+      minDuration: 0.827528
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

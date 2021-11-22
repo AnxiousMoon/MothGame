@@ -15,8 +15,10 @@ namespace AK
     {
         static const AkUniqueID BACKGROUND_MUSIC = 1585661381U;
         static const AkUniqueID BAT_IDLE = 2711326151U;
+        static const AkUniqueID BAT_STUCK = 2003100327U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID KEY_PICKUP = 761761105U;
+        static const AkUniqueID SOUNDPAD = 1063954493U;
     } // namespace EVENTS
 
     namespace SWITCHES

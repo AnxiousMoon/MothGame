@@ -344,6 +344,11 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>350</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-6</Value>
@@ -407,6 +412,92 @@
 						<ActiveSource Name="Background Music" ID="{3DE6C2D4-496C-4FAD-955F-3D68133C870B}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<RandomSequenceContainer Name="Bat_Stuck" ID="{E1EAB5EB-9D82-4969-8183-CEB3B16DA545}" ShortID="758447035">
+					<PropertyList>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1B065ADC-BD1E-4F13-BCFE-72E47A247D88}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1A17C2C-EA13-43FC-B7D0-B1A41E55CD24}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Bat_Stuck_2" ID="{CF9A47BF-72D4-4FA1-B7AF-594CD64E9DF9}" ShortID="226512001">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1B065ADC-BD1E-4F13-BCFE-72E47A247D88}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1A17C2C-EA13-43FC-B7D0-B1A41E55CD24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bat_Stuck_2" ID="{E8B3278F-7A26-4269-80E9-BDC6287F4881}">
+									<Language>SFX</Language>
+									<AudioFile>Bat_Stuck_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="167654484"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Bat_Stuck_2" ID="{E8B3278F-7A26-4269-80E9-BDC6287F4881}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Bat_Stuck_3" ID="{ED0FD88E-84C4-4BE1-BF08-87683245B8A5}" ShortID="1021691887">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1B065ADC-BD1E-4F13-BCFE-72E47A247D88}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1A17C2C-EA13-43FC-B7D0-B1A41E55CD24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bat_Stuck_3" ID="{5DAAFB5E-12C5-4A15-B390-46ACCC9BC69F}">
+									<Language>SFX</Language>
+									<AudioFile>Bat_Stuck_3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="222232579"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Bat_Stuck_3" ID="{5DAAFB5E-12C5-4A15-B390-46ACCC9BC69F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Bat_Stuck_1" ID="{3B7564C7-EF5B-4350-852A-1DD276057F67}" ShortID="572732884">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1B065ADC-BD1E-4F13-BCFE-72E47A247D88}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1A17C2C-EA13-43FC-B7D0-B1A41E55CD24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bat_Stuck_1" ID="{C75F8776-6F11-4D4C-AA7F-B79AF1C9E7AF}">
+									<Language>SFX</Language>
+									<AudioFile>Bat_Stuck_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="503754074"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Bat_Stuck_1" ID="{C75F8776-6F11-4D4C-AA7F-B79AF1C9E7AF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

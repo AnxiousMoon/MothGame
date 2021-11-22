@@ -13482,6 +13482,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 1621333798}
+    - target: {fileID: 1730396030, guid: eee3272c84914bb47a8a039fab86a33d, type: 3}
+      propertyPath: Web.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+        type: 2}
     - target: {fileID: 5803274841659931083, guid: eee3272c84914bb47a8a039fab86a33d,
         type: 3}
       propertyPath: m_RootOrder
@@ -13550,6 +13555,73 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1494519636}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1494519638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5879430335477217059, guid: eee3272c84914bb47a8a039fab86a33d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1494519636}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1494519639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494519638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a950a7367c43c4aa8916cc4f786987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  multiPositionArray: []
+--- !u!114 &1494519640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494519638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15722bde01dc30849b5231a8901f7373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &1500378084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56682,6 +56754,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 980461560}
   ghost: {fileID: 60701694}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
 --- !u!1 &7825660082624977273
 GameObject:
   m_ObjectHideFlags: 0
@@ -56785,6 +56862,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 185265304}
   ghost: {fileID: 60701694}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
 --- !u!1 &7825660082830336703
 GameObject:
   m_ObjectHideFlags: 0
@@ -56892,6 +56974,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 234653173}
   ghost: {fileID: 60701694}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
 --- !u!1 &7825660082858794527
 GameObject:
   m_ObjectHideFlags: 0
@@ -56995,6 +57082,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 185265304}
   ghost: {fileID: 60701694}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
 --- !u!1 &7825660083631244478
 GameObject:
   m_ObjectHideFlags: 0
@@ -57102,6 +57194,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 980461560}
   ghost: {fileID: 60701694}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
 --- !u!1 &7825660083679433073
 GameObject:
   m_ObjectHideFlags: 0
@@ -57203,6 +57300,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 234653173}
   ghost: {fileID: 60701694}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
 --- !u!1 &7825660083758530276
 GameObject:
   m_ObjectHideFlags: 0
@@ -57306,6 +57408,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 244811285}
   ghost: {fileID: 60701694}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
 --- !u!1 &7825660084100023758
 GameObject:
   m_ObjectHideFlags: 0
@@ -57409,6 +57516,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 244811285}
   ghost: {fileID: 60701694}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
 --- !u!1 &7825660084155097022
 GameObject:
   m_ObjectHideFlags: 0
@@ -57510,6 +57622,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 244811285}
   ghost: {fileID: 60701694}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
 --- !u!1 &7825660084348151319
 GameObject:
   m_ObjectHideFlags: 0
@@ -57618,6 +57735,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 234653173}
   ghost: {fileID: 60701694}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
 --- !u!1 &7825660084360299678
 GameObject:
   m_ObjectHideFlags: 0
@@ -57725,6 +57847,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 244811285}
   ghost: {fileID: 60701694}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
 --- !u!1 &7825660084454618760
 GameObject:
   m_ObjectHideFlags: 0
@@ -57832,6 +57959,11 @@ MonoBehaviour:
   dashSpeed: 50
   web: {fileID: 488190575}
   ghost: {fileID: 60701694}
+  Web:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
 --- !u!23 &7835968686836227628
 MeshRenderer:
   m_ObjectHideFlags: 0

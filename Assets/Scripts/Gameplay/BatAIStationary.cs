@@ -15,6 +15,10 @@ public class BatAIStationary : MonoBehaviour
     public GameObject returnPoint;
     public GameObject webStandIn;
 
+    public AK.Wwise.Event Web;
+
+    public AkAmbient Sound;
+
     Rigidbody rb;
     BatAnimation batAnimation;
 
@@ -25,6 +29,8 @@ public class BatAIStationary : MonoBehaviour
 
         rb = gameObject.GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
+        Sound = this.GetComponent<AkAmbient>();
     }
 
     void OnTriggerEnter(Collider col)
@@ -65,6 +71,8 @@ public class BatAIStationary : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.freezeRotation = true;
             speed = 0;
+            Destroy(Sound);
+            Web.Post(gameObject);
         }
     }
 

@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="802684777">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3231137458">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -34,6 +34,22 @@
 						<File Id="1036764374" Language="SFX">
 							<ShortName>Bat_Ambient.wav</ShortName>
 							<Path>SFX\Bat_Ambient_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2003100327" Name="Bat_Stuck" ObjectPath="\Events\Default Work Unit\Bat_Stuck" DurationType="OneShot" DurationMin="3.979206" DurationMax="3.979206">
+					<IncludedMemoryFiles>
+						<File Id="167654484" Language="SFX">
+							<ShortName>Bat_Stuck_2.wav</ShortName>
+							<Path>SFX\Bat_Stuck_2_10C4C929.wem</Path>
+						</File>
+						<File Id="222232579" Language="SFX">
+							<ShortName>Bat_Stuck_3.wav</ShortName>
+							<Path>SFX\Bat_Stuck_3_10C4C929.wem</Path>
+						</File>
+						<File Id="503754074" Language="SFX">
+							<ShortName>Bat_Stuck_1.wav</ShortName>
+							<Path>SFX\Bat_Stuck_1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -87,6 +103,14 @@
 						<File Id="100793840" Language="SFX">
 							<ShortName>Key_Pick_P1.wav</ShortName>
 							<Path>SFX\Key_Pick_P1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1063954493" Name="Soundpad" ObjectPath="\Events\Default Work Unit\Soundpad" DurationType="OneShot" DurationMin="0.827528" DurationMax="0.827528">
+					<IncludedMemoryFiles>
+						<File Id="843175428" Language="SFX">
+							<ShortName>Soundpad_P1.wav</ShortName>
+							<Path>SFX\Soundpad_P1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

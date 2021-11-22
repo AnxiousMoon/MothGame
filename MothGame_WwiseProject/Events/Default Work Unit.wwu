@@ -49,7 +49,17 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Moth_Stuck" ID="{9B7F40C5-8087-4995-B5E8-A793C8D651C3}"/>
-				<Event Name="Bat_Stuck" ID="{D2555B44-52E8-4A64-865B-7EEDC8ACD0E6}"/>
+				<Event Name="Bat_Stuck" ID="{D2555B44-52E8-4A64-865B-7EEDC8ACD0E6}">
+					<ChildrenList>
+						<Action Name="" ID="{D94DDAEC-D954-4779-AE34-54780FB0F1C9}" ShortID="451338399">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bat_Stuck" ID="{E1EAB5EB-9D82-4969-8183-CEB3B16DA545}" WorkUnitID="{2ADFDB95-B96B-4196-83BD-E215AA688A02}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Menu_Click" ID="{90E2FBC1-7AEE-4BE9-A56B-4C46BEE5F24D}"/>
 				<Event Name="Soundpad" ID="{B93CB908-C559-4B22-A21B-5A29CF51055C}">
 					<ChildrenList>

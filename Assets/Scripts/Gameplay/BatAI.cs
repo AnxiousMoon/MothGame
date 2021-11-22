@@ -16,6 +16,10 @@ public class BatAI : MonoBehaviour
     private float dist;
     private float distRock;
 
+    public AK.Wwise.Event Web;
+
+    public AkAmbient Sound;
+
     Rigidbody rb;
 
     BatAnimation batAnimation;
@@ -29,6 +33,8 @@ public class BatAI : MonoBehaviour
         rb.freezeRotation = true;
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
+
+        Sound = this.GetComponent<AkAmbient>();
     }
 
     void OnTriggerEnter(Collider col)
@@ -129,6 +135,8 @@ public class BatAI : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.freezeRotation = true;
             speed = 0;
+            Destroy(Sound);
+            Web.Post(gameObject);
         }
     }
 
