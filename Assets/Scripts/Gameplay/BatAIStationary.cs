@@ -38,16 +38,15 @@ public class BatAIStationary : MonoBehaviour
         if (col.tag == "Clicking")
         {
             speed = 100;
-            maxSpeed = 5;
+            maxSpeed = 1;
             transform.LookAt(ghost.transform.position);
             batAnimation.StartDashAnimation();
         }
         if (col.tag == "Sound")
         {
             speed = 100;
-            maxSpeed = 10;
+            maxSpeed = 1;
             transform.LookAt(webStandIn.transform.position);
-
         }
         if (col.tag == "Ghost")
         {
@@ -55,7 +54,7 @@ public class BatAIStationary : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
             transform.LookAt(returnPoint.transform.position);
             speed = 100;
-            maxSpeed = 10;
+            maxSpeed = 1;
         }
         if (col.tag == "Player")
         {
@@ -63,8 +62,18 @@ public class BatAIStationary : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
             transform.LookAt(col.transform.position);
             speed = 100;
-            maxSpeed = 10;
+            maxSpeed = 1;
             batAnimation.StartDashAnimation();
+        }
+    }
+
+    void OnTriggerStay(Collider col)
+    {
+        if (col.tag == "Sound")
+        {
+            speed = 100;
+            maxSpeed = 1;
+            transform.LookAt(webStandIn.transform.position);
         }
     }
 

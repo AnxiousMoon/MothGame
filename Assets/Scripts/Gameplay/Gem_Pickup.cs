@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Gem_Pickup : MonoBehaviour
 {
+    private Collider g_collider;
+
     public GameObject Gem;
 
     public Gem_manager GemManager;
@@ -12,6 +14,7 @@ public class Gem_Pickup : MonoBehaviour
 
     private void Awake()
     {
+        g_collider = gameObject.GetComponent<Collider>();
         dissolve = gameObject.GetComponent<Dissolve>();
     }
     // Start is called before the first frame update
@@ -21,6 +24,7 @@ public class Gem_Pickup : MonoBehaviour
         {
             if(!col.isTrigger)
             {
+                g_collider.enabled = false;
                 dissolve.DissolveMe(1f, true);
                 GemManager.Count += 1;
             }
