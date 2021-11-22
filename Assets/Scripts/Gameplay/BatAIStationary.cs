@@ -55,6 +55,14 @@ public class BatAIStationary : MonoBehaviour
             speed = 100;
             maxSpeed = 10;
         }
+        if (col.tag == "Player")
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            transform.LookAt(col.transform.position);
+            speed = 100;
+            maxSpeed = 10;
+        }
     }
 
     void OnCollisionEnter(Collision col)
