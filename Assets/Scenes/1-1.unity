@@ -358,6 +358,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3099783683274086870}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &115274257 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1591436754509626984, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7982266286205447979}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &116873757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bcb19ed62f587604483abc9892eea392,
@@ -1222,7 +1228,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: gem (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1195308166, guid: 705216f3233867a4aa3d4c6b44ab04f5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 705216f3233867a4aa3d4c6b44ab04f5, type: 3}
 --- !u!1 &364412787 stripped
 GameObject:
@@ -11744,6 +11751,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 203091911}
     m_Modifications:
+    - target: {fileID: -5521574115901019749, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
+        type: 3}
+      propertyPath: webFX
+      value: 
+      objectReference: {fileID: 115274257}
     - target: {fileID: 4965028701866907504, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
         type: 3}
       propertyPath: m_Name
@@ -14804,6 +14816,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1351226166}
     m_Modifications:
+    - target: {fileID: -5521574115901019749, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
+        type: 3}
+      propertyPath: webFX
+      value: 
+      objectReference: {fileID: 115274257}
     - target: {fileID: 4965028701866907504, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
         type: 3}
       propertyPath: m_Name
@@ -20535,6 +20552,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1419108531}
     m_Modifications:
+    - target: {fileID: -5521574115901019749, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
+        type: 3}
+      propertyPath: webFX
+      value: 
+      objectReference: {fileID: 115274257}
     - target: {fileID: 4965028701866907504, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
         type: 3}
       propertyPath: m_Name
@@ -21824,6 +21846,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1419108531}
     m_Modifications:
+    - target: {fileID: -5521574115901019749, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
+        type: 3}
+      propertyPath: webFX
+      value: 
+      objectReference: {fileID: 115274257}
     - target: {fileID: 4965028701866907504, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
         type: 3}
       propertyPath: m_Name

@@ -62,7 +62,7 @@ public class BatAI : MonoBehaviour
         if (col.tag == "Sound")
         {
             transform.LookAt(web.transform.position);
-             maxSpeed = 100;
+            maxSpeed = 50;
         }
     }
 
@@ -118,6 +118,8 @@ public class BatAI : MonoBehaviour
         }
         if (col.collider.tag == "Wall" || col.collider.tag == "Obstacle")
         {
+            maxSpeed = 10;
+            speed = 100;
             IncreaseIndex();
         }
         if (col.collider.tag == "Web")
@@ -127,6 +129,16 @@ public class BatAI : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.freezeRotation = true;
             speed = 0;
+        }
+    }
+
+    void OnCollisionStay(Collision col)
+    {
+        if (col.collider.tag == "Wall" || col.collider.tag == "Obstacle")
+        {
+            maxSpeed = 10;
+            speed = 100;
+            IncreaseIndex();
         }
     }
 
