@@ -6,29 +6,32 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    #region Parameters
+    [Header("Primary Start Screen Objects")]
+    [SerializeField] GameObject Splash;
+    [SerializeField] Exposition exposition;
 
-    public GameObject Exposition;
-    public GameObject Splash;
-    [SerializeField] GameObject title, subtitle, pressToStart, story;
+    [Header("Splash References")]
+    [SerializeField] GameObject title;
+    [SerializeField] GameObject subtitle, pressToStart;
+
     Image titleImg, subtitleImg;
-    Text pressToStartTxt, storyTxt;
-    [SerializeField]
-    float titleFadeInDuration = 1f,
-        subtitleDelay = 0.5f,
-        pressToStartDelay = 1f,
-        expostitionDelay = 1f,
-        expositionDuration = 10f;
-        
+    Text pressToStartTxt;
+
+    [Header("Splash Animation Properties")]
+    [SerializeField] float titleFadeInDuration = 1f;
+    [SerializeField] float subtitleDelay = 0.5f,
+        pressToStartDelay = 1f;
     
     [SerializeField] LeanTweenType leanTweenFadeInType, leanTweenFadeOutType;
 
     bool onMenu = true;
-    bool skipExposition = false;
     bool postMenuCountdown = false;
+    #endregion
 
-    // Update is called once per frame
     void Update()
     {
+        //check for key input, then close menu and start a countdown to move to splash screen
         if (Input.anyKey)
         {
             if (onMenu)
@@ -37,19 +40,12 @@ public class MainMenu : MonoBehaviour
                 onMenu = false;
                 StartCoroutine(PostMenuCountdown());
             }
-            else if(!skipExposition && postMenuCountdown)
-            {
-                Debug.Log("Skip Exposition");
-                SkipExposition();
-                skipExposition = true;
-            }
         }
     }
 
     private void Start()
     {
         Splash.SetActive(true);
-        Exposition.SetActive(false);
 
         Color transparentColor = new Color(1f, 1f, 1f, 0f);
 
@@ -61,9 +57,6 @@ public class MainMenu : MonoBehaviour
 
         pressToStartTxt = pressToStart.GetComponent<Text>();
         pressToStartTxt.color = new Color(pressToStartTxt.color.r, pressToStartTxt.color.g, pressToStartTxt.color.b, 0f);
-
-        storyTxt = story.GetComponent<Text>();
-        storyTxt.color = transparentColor;
 
         TitleFadeIn();
     }
@@ -110,38 +103,11 @@ public class MainMenu : MonoBehaviour
 
     void OpenExposition()
     {
-        Exposition.SetActive(true);
+        exposition.Activate(this);
         Splash.SetActive(false);
-
-        LeanTween.value(story, 0f, 1f, titleFadeInDuration).setOnUpdate((float _alpha) =>
-        {
-            Color _color = new Color(1f, 1f, 1f, _alpha);
-            storyTxt.color = _color;
-        }).setEase(leanTweenFadeInType).setDelay(expostitionDelay).setOnComplete(FadeOutExposition);
     }
 
-    void FadeOutExposition()
-    {
-        Debug.Log("Fade out exposition");
-        LeanTween.value(story, 1f, 0f, titleFadeInDuration).setOnUpdate((float _alpha) =>
-        {
-            Color _color = new Color(1f, 1f, 1f, _alpha);
-            storyTxt.color = _color;
-        }).setEase(leanTweenFadeOutType).setDelay(expositionDuration).setOnComplete(StartGame);
-    }
 
-    void SkipExposition()
-    {
-        LeanTween.cancel(story);
-        StartCoroutine(SkipExpositionDelay());
-    }
-
-    IEnumerator SkipExpositionDelay()
-    {
-        yield return new WaitForSeconds(0.1f);
-        expositionDuration = 0f;
-        FadeOutExposition();
-    }
 
     IEnumerator PostMenuCountdown()
     {
