@@ -21,6 +21,8 @@ public class Rock : MonoBehaviour
 
     bool soundPadActive = false;
 
+    public AK.Wwise.Event Sound;
+
     private void Awake()
     {
 
@@ -49,6 +51,7 @@ public class Rock : MonoBehaviour
                 collider.enabled = true;
                 if (!soundPadActive)
                 {
+                    Sound.Post(gameObject);
                     gravelSoundRadius.Activate();
                     GravelGlow();
                 }
