@@ -6,6 +6,13 @@ public class SoundPadRadius : MonoBehaviour
 {
     Vector3 targetScale = new Vector3(20,8,20);
     [SerializeField] float scaleDuration = 1f;
+    [SerializeField] float fadeOutDuration = 0.5f;
+    Material material;
+
+    private void Awake()
+    {
+        material = gameObject.GetComponent<MeshRenderer>().material;
+    }
 
     private void Start()
     {
@@ -13,9 +20,17 @@ public class SoundPadRadius : MonoBehaviour
     }
     public void Activate()
     {
+        material.SetFloat("_Alpha", 1f);
         LeanTween.scale(gameObject, targetScale, scaleDuration);
     }
     public void Deactivate()
+    {
+        LeanTween.value(gameObject, 1f, 0f, fadeOutDuration).setOnUpdate((float _alpha) =>
+        {
+            material.SetFloat("_Alpha", _alpha);
+        }).setEaseOutQuad().setOnComplete(ScaleAway);
+    }
+    void ScaleAway()
     {
         transform.localScale = Vector3.zero + Vector3.one * 0.01f;
     }

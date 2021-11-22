@@ -9,16 +9,22 @@ public class Rock : MonoBehaviour
     private float timeOut;
 
     Material[] childMaterials;
+    [Header("Gravel Effects")]
     [SerializeField][ColorUsage(true,true)] Color activeColor = Color.white;
+
+    [Header("Gravel Particle Effect")]
     [SerializeField] [ColorUsage(true, true)] Color idleColor = Color.white;
+    [SerializeField] [ColorUsage(true, true)] Color particleActiveColor = Color.white;
 
     [SerializeField] GameObject gravelParticleSystemPrefab;
     ParticleSystem gravelParticleSystem;
     ParticleSystem.MainModule gravelParticleSystemMain;
 
+    
     [SerializeField] GameObject gravelSoundRadiusPrefab;
     SoundPadRadius gravelSoundRadius;
 
+    [Header("Sound")]
     bool soundPadActive = false;
 
     public AK.Wwise.Event Sound;
@@ -103,7 +109,7 @@ public class Rock : MonoBehaviour
         {
             childMaterials[i].SetColor("_EmissionColor", activeColor);
         }
-        gravelParticleSystemMain.startColor = activeColor;
+        gravelParticleSystemMain.startColor = particleActiveColor;
     }
 
     void EndGravelGlow()
