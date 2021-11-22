@@ -7,18 +7,21 @@ public class PauseUI : MonoBehaviour
 {
     bool pauseActive = false;
     Image canvasImg;
-    [SerializeField] GameObject QuitButtonObj, pauseTitle;
+    [SerializeField] GameObject QuitButtonObj, RetryButtonObj, pauseTitle;
+    Button retryButton;
     Button quitButton;
 
     private void Awake()
     {
         canvasImg = gameObject.GetComponent<Image>();
+
     }
 
     private void Start()
     {
         quitButton = QuitButtonObj.GetComponent<Button>();
         QuitButtonObj.SetActive(false);
+        RetryButtonObj.SetActive(false);
         pauseTitle.SetActive(false);
         canvasImg.enabled = false;
     }
@@ -30,6 +33,7 @@ public class PauseUI : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             QuitButtonObj.SetActive(true);
+            RetryButtonObj.SetActive(true);
             pauseTitle.SetActive(true);
             Time.timeScale = 0;
 
@@ -40,6 +44,7 @@ public class PauseUI : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             QuitButtonObj.SetActive(false);
+            RetryButtonObj.SetActive(false);
             pauseTitle.SetActive(false);
             Time.timeScale = 1;
 

@@ -15,11 +15,30 @@ public class FadePanel : MonoBehaviour
 
     private void Awake()
     {
+        
+        SingletonCheck();
         panel = gameObject.GetComponent<Image>();
+    }
+
+    private void Start()
+    {
+        fadedOut = false;
+        
+        Debug.Log(panel);
+        //FadeOut();
+        StartCoroutine(FadeOutDelay());
+    }
+
+    IEnumerator FadeOutDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        Debug.Log("FadeOut Delay is running");
+        FadeOut();
     }
 
     public void FadeOut()
     {
+        Debug.Log("Fade Out is running");
         if (!fadedOut)
         {
             LeanTween.value(gameObject, 1f, 0f, defaultFadeDuration).setOnUpdate((float _alpha) =>
@@ -51,7 +70,7 @@ public class FadePanel : MonoBehaviour
 
     public void FadeIn()
     {
-        if (!fadedOut)
+        if (fadedOut)
         {
             LeanTween.value(gameObject, 0f, 1f, defaultFadeDuration).setOnUpdate((float _alpha) =>
             {
@@ -64,7 +83,8 @@ public class FadePanel : MonoBehaviour
 
     public void FadeIn(float _duration)
     {
-        if (!fadedOut)
+        Debug.Log("Fading In");
+        if (fadedOut)
         {
             LeanTween.value(gameObject, 0f, 1f, _duration).setOnUpdate((float _alpha) =>
             {

@@ -43,10 +43,15 @@ public class DeathCircleUI : MonoBehaviour
                rectTransform.position = mainCamera.WorldToScreenPoint(playerChest.position);
                scale = _scale;
                rectTransform.sizeDelta = new Vector2(scale, scale);
-           }).setEaseOutQuad().setDelay(initialDelay).setOnComplete(ScaleToZero);
+           }).setEaseOutQuad().setDelay(initialDelay).setOnComplete(FadeOut);
 
             isActive = true;
         }
+    }
+
+    void FadeOut()
+    {
+        FadePanel.instance.FadeIn(secondScaleDuration);
     }
 
     void ScaleToZero()

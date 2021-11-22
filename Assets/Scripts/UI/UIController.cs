@@ -13,6 +13,7 @@ public class UIController : MonoBehaviour
     private void Awake()
     {
         SingletonCheck();
+        fadePanel = FadePanel.instance;
     }
 
     private void Start()
@@ -22,7 +23,7 @@ public class UIController : MonoBehaviour
 
     public void SceneFadeIn()
     {
-        fadePanel.FadeOut();
+        //fadePanel.FadeOut();
     }
 
     public void DeathCircle(float _respawnDelay)
