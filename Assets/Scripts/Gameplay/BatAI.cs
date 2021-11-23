@@ -83,6 +83,7 @@ public class BatAI : MonoBehaviour
             transform.LookAt(col.transform.position);
             speed = 100;
             maxSpeed = 5;
+            batAnimation.StartDashAnimation();
         }
         if (col.tag == "Sound")
         {
@@ -138,6 +139,7 @@ public class BatAI : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.freezeRotation = true;
             speed = 0;
+            batAnimation.StartWebAnimation();
             Destroy(Sound);
             Web.Post(gameObject);
         }
