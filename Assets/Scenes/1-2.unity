@@ -477,6 +477,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cinemachine_Cameras
       objectReference: {fileID: 0}
+    - target: {fileID: 3034505375586633178, guid: 528b879ed7f342446a744281f394ff73,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3034505375586633179, guid: 528b879ed7f342446a744281f394ff73,
         type: 3}
       propertyPath: m_RootOrder
@@ -551,6 +556,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CM Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034505375672253012, guid: 528b879ed7f342446a744281f394ff73,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3034505375597082172, guid: 528b879ed7f342446a744281f394ff73, type: 3}
@@ -6190,8 +6200,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PlayableAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 2f5505f1d027bda47b946d08ab9e0e07,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5731586511784978395, guid: 37259211757bf014b91a92be12b96aad,
         type: 3}
       propertyPath: m_SceneBindings.Array.size
