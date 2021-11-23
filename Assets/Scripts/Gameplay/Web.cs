@@ -7,6 +7,7 @@ public class Web : MonoBehaviour
 {
     public GameObject web;
     public GameObject webBroken;
+    public GameObject stuckBat;
     [SerializeField] ParticleSystem webFX;
 
     Collider col;
@@ -25,12 +26,25 @@ public class Web : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Dashing")
+        if (col.collider.tag == "Dashing" && gameObject.tag == "Web")
         {
             webFX.Play();
             Destroy(web);
             this.col.enabled = false;
             webBroken.SetActive(true);
+        }
+        else if (col.collider.tag == "Dashing" && gameObject.tag == "Full")
+        {
+            webFX.Play();
+            Destroy(stuckBat);
+            Destroy(web);
+            this.col.enabled = false;
+            webBroken.SetActive(true);
+        }
+        if (col.collider.tag == "Enemy")
+        {
+            stuckBat = col.gameObject;
+            gameObject.tag = "Full";
         }
     }
 }

@@ -19,6 +19,8 @@ public class BatAIStationary : MonoBehaviour
 
     public AkAmbient Sound;
 
+    private Collider b_collider;
+
     Rigidbody rb;
     BatAnimation batAnimation;
 
@@ -26,6 +28,7 @@ public class BatAIStationary : MonoBehaviour
     void Start()
     {
         batAnimation = gameObject.GetComponent<BatAnimation>();
+        b_collider = gameObject.GetComponent<Collider>();
 
         rb = gameObject.GetComponent<Rigidbody>();
         rb.freezeRotation = true;
@@ -94,6 +97,14 @@ public class BatAIStationary : MonoBehaviour
             Destroy(Sound);
             Web.Post(gameObject);
             batAnimation.StartWebAnimation();
+        }
+    }
+
+    void OnCollisionStay(Collision col)
+    {
+        if (col.collider.tag == "Full")
+        {
+            b_collider.enabled = false;
         }
     }
 
