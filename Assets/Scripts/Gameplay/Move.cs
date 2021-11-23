@@ -66,17 +66,28 @@ public class Move : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if(col.collider.tag == "Enemy")
+        if (col.collider.tag == "Enemy")
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
         if (col.collider.tag == "Web")
         {
-            if(gameObject.tag == "Dashing")
+            if (gameObject.tag == "Dashing")
             {
                 rb.AddForce(moveDirection * dashSpeed, ForceMode.VelocityChange);
             }
+        }
+        if (col.collider.tag == "Elevation")
+        {
+            Physics.gravity = new Vector3(0, 0, 0);
+        }
+    }
+    void OnCollisionExit(Collision col)
+    {
+        if (col.collider.tag == "Elevation")
+        {
+            Physics.gravity = new Vector3(0, -50, 0);
         }
     }
 

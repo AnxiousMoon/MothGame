@@ -62,7 +62,13 @@ public class Rock : MonoBehaviour
                     GravelGlow();
                 }
             }
-
+        }
+        if (col.tag == "Enemy")
+        {
+            if (gameObject.tag == "Wall")
+            {
+                collider.enabled = false;
+            }
         }
     }
 
@@ -79,9 +85,7 @@ public class Rock : MonoBehaviour
             {
                 gravelSoundRadius.Deactivate();
                 EndGravelGlow();
-            }
-            
-
+            }    
         }
     }
 

@@ -24,7 +24,7 @@ public class BatAI : MonoBehaviour
     Rigidbody rb;
 
     BatAnimation batAnimation;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -47,8 +47,8 @@ public class BatAI : MonoBehaviour
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             transform.LookAt(col.transform.position);
-            maxSpeed = 100;
-            speed = 100;
+            maxSpeed = 10;
+            speed = 10;
 
             batAnimation.StartDashAnimation();
         }
@@ -58,6 +58,7 @@ public class BatAI : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
             maxSpeed = 5;
             speed = 100;
+            maxSpeed = 10;
             transform.LookAt(ghost.transform.position);
         }
         if (col.tag == "Ghost")
@@ -71,7 +72,7 @@ public class BatAI : MonoBehaviour
         if (col.tag == "Sound")
         {
             transform.LookAt(web.transform.position);
-            maxSpeed = 50;
+            maxSpeed = 10;
         }
     }
 
@@ -81,7 +82,7 @@ public class BatAI : MonoBehaviour
         {
             transform.LookAt(col.transform.position);
             speed = 100;
-            maxSpeed = 100;
+            maxSpeed = 5;
         }
         if (col.tag == "Sound")
         {
@@ -122,12 +123,10 @@ public class BatAI : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            speed = 100;
-            maxSpeed = 100;
         }
         if (col.collider.tag == "Wall" || col.collider.tag == "Obstacle")
         {
-            maxSpeed = 10;
+            maxSpeed = 5;
             speed = 100;
             IncreaseIndex();
         }
@@ -140,19 +139,19 @@ public class BatAI : MonoBehaviour
             b_collider.enabled = false;
             speed = 0;
             Destroy(Sound);
-            //Web.Post(gameObject);
+            Web.Post(gameObject);
         }
         if (col.collider.tag == "Full")
         {
             IncreaseIndex();
-        }    
+        }
     }
 
     void OnCollisionStay(Collision col)
     {
         if (col.collider.tag == "Wall" || col.collider.tag == "Obstacle")
         {
-            maxSpeed = 10;
+            maxSpeed = 5;
             speed = 100;
             IncreaseIndex();
         }
