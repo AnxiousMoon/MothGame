@@ -102,7 +102,7 @@ public class BatAIStationary : MonoBehaviour
 
     void OnCollisionStay(Collision col)
     {
-        if (col.collider.tag == "Full")
+        if (col.collider.tag == "Stuck" || col.collider.tag == "Full")
         {
             b_collider.enabled = false;
         }
