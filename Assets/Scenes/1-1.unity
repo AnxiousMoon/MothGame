@@ -537,7 +537,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7982266285543689644}
+  - {fileID: 2075111418}
   m_Father: {fileID: 1336257226}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4822,7 +4822,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7982266286205447980}
+  - {fileID: 1239005634}
   m_Father: {fileID: 321012561}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5008,8 +5008,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7982266287134684312}
-  - {fileID: 7982266287281218119}
+  - {fileID: 419458837}
+  - {fileID: 294724714}
   m_Father: {fileID: 1295183714}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12379,11 +12379,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2, type: 3}
---- !u!4 &7982266285543689644 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 7982266285543689643}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7982266285552730475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15580,11 +15575,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2, type: 3}
---- !u!4 &7982266286205447980 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 7982266286205447979}
-  m_PrefabAsset: {fileID: 0}
 --- !u!65 &7982266286243291240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21656,11 +21646,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2, type: 3}
---- !u!4 &7982266287134684312 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 7982266287134684311}
-  m_PrefabAsset: {fileID: 0}
 --- !u!65 &7982266287138166228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23060,11 +23045,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2, type: 3}
---- !u!4 &7982266287281218119 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 7982266287281218118}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7982266287281619272
 PrefabInstance:
   m_ObjectHideFlags: 0
