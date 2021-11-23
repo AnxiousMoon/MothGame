@@ -135,7 +135,7 @@ public class BatAI : MonoBehaviour
             b_collider.enabled = false;
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            Physics.gravity = new Vector3(0, 0, 0);
+            rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.freezeRotation = true;
             speed = 0;
             Destroy(Sound);
