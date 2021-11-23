@@ -9,13 +9,20 @@ public class Audio_Switch : MonoBehaviour
 
     public GameObject Player;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider col)
     {
-        Platform.SetValue(Player);
+        if (col.tag == "Player");
+        {
+            Platform.SetValue(Player);
+        }
+
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider col)
     {
-        Cave.SetValue(Player);
+        if (col.tag == "Player") ;
+        {
+            Cave.SetValue(Player);
+        }
     }
 }

@@ -72,6 +72,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Moth_Dash" ID="{44731258-56DC-424D-BC46-58763A127E2E}">
+					<ChildrenList>
+						<Action Name="" ID="{A9BD8E85-8619-4A10-8165-105C1C4288C1}" ShortID="383476894">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Moth_Dash" ID="{08B2790A-FEE2-4D3A-BFD6-1E44FE5CA359}" WorkUnitID="{2ADFDB95-B96B-4196-83BD-E215AA688A02}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

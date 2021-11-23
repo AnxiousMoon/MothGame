@@ -25,6 +25,8 @@ public class Move : MonoBehaviour
     //bool to control whether player can move during death animation and initial camera pan.
     bool canMove = true;
 
+    public AK.Wwise.Event Dash;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -46,7 +48,7 @@ public class Move : MonoBehaviour
                 collider.enabled = true;
                 timePassed = 0;
                 dashCooldown = cooldown;
-
+                Dash.Post(gameObject);
                 mothAnimation.Dash(cooldown);
             }
         }
