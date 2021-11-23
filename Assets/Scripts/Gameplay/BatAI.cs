@@ -15,6 +15,7 @@ public class BatAI : MonoBehaviour
     private int waypointIndex;
     private float dist;
     private float distRock;
+    private Collider b_collider;
 
     public AK.Wwise.Event Web;
 
@@ -23,11 +24,13 @@ public class BatAI : MonoBehaviour
     Rigidbody rb;
 
     BatAnimation batAnimation;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         batAnimation = gameObject.GetComponent<BatAnimation>();
+        b_collider = gameObject.GetComponent<Collider>();
 
         rb = this.GetComponent<Rigidbody>();
         rb.freezeRotation = true;
@@ -134,10 +137,15 @@ public class BatAI : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
             rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.freezeRotation = true;
+            b_collider.enabled = false;
             speed = 0;
             Destroy(Sound);
-            Web.Post(gameObject);
+            //Web.Post(gameObject);
         }
+        if (col.collider.tag == "Full")
+        {
+            IncreaseIndex();
+        }    
     }
 
     void OnCollisionStay(Collision col)
