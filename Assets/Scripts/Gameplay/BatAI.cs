@@ -130,13 +130,13 @@ public class BatAI : MonoBehaviour
             speed = 100;
             IncreaseIndex();
         }
-        if (col.collider.tag == "Web")
+        if (col.collider.tag == "Web" || col.collider.tag == "Stuck")
         {
+            b_collider.enabled = false;
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            rb.constraints = RigidbodyConstraints.FreezePosition;
+            Physics.gravity = new Vector3(0, 0, 0);
             rb.freezeRotation = true;
-            b_collider.enabled = false;
             speed = 0;
             Destroy(Sound);
             Web.Post(gameObject);
@@ -154,6 +154,10 @@ public class BatAI : MonoBehaviour
             maxSpeed = 5;
             speed = 100;
             IncreaseIndex();
+        }
+        if (col.collider.tag == "Stuck" || col.collider.tag == "Full")
+        {
+            b_collider.enabled = false;
         }
     }
 
