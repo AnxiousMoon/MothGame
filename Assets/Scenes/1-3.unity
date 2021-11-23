@@ -16776,6 +16776,11 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 485058426}
+    - target: {fileID: 3099783683319640712, guid: 5a10b103e206024429f2eb57bb730481,
+        type: 3}
+      propertyPath: distanceFromCamera
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 3099783683319640714, guid: 5a10b103e206024429f2eb57bb730481,
         type: 3}
       propertyPath: m_Name
@@ -18932,7 +18937,7 @@ PrefabInstance:
     - target: {fileID: 5731586511784978397, guid: 37259211757bf014b91a92be12b96aad,
         type: 3}
       propertyPath: far clip plane
-      value: 1000
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 5731586511784978397, guid: 37259211757bf014b91a92be12b96aad,
         type: 3}
@@ -43560,7 +43565,7 @@ MonoBehaviour:
     FieldOfView: 60
     OrthographicSize: 10
     NearClipPlane: 0.001
-    FarClipPlane: 1000
+    FarClipPlane: 240
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:

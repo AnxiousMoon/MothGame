@@ -472,6 +472,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1159793289}
+    - target: {fileID: 3034505375441104527, guid: 528b879ed7f342446a744281f394ff73,
+        type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 3034505375586633178, guid: 528b879ed7f342446a744281f394ff73,
         type: 3}
       propertyPath: m_Name
@@ -3424,6 +3429,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1124871374}
     m_Modifications:
+    - target: {fileID: 3099783683319640712, guid: 5a10b103e206024429f2eb57bb730481,
+        type: 3}
+      propertyPath: distanceFromCamera
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 3099783683319640714, guid: 5a10b103e206024429f2eb57bb730481,
         type: 3}
       propertyPath: m_Name
@@ -6275,7 +6285,7 @@ PrefabInstance:
     - target: {fileID: 5731586511784978397, guid: 37259211757bf014b91a92be12b96aad,
         type: 3}
       propertyPath: far clip plane
-      value: 1000
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 5731586511784978397, guid: 37259211757bf014b91a92be12b96aad,
         type: 3}
