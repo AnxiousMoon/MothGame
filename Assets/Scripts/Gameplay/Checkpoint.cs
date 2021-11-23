@@ -70,6 +70,18 @@ public class Checkpoint : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.tag == "Death" && !checkpointResetting)
+        {
+            checkpointResetting = true;
+            playerDeathParticleControl.Activate();
+            mothAnimation.PlayDeath();
+            playerMoveScript.AllowPlayerMovement(false);
+            StartCoroutine(Respawn());
+        }
+    }
+
 
 
     IEnumerator Respawn()
