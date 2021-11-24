@@ -56,11 +56,14 @@ public class Checkpoint : MonoBehaviour
                 //player.transform.position = checkPoint.transform.position;
                 //MothAnimation.instance.ResetRotation();
                 //FadePanel.instance.FadeOut();
+                
+                /*  Web kill player script
                 checkpointResetting = true;
                 playerDeathParticleControl.Activate();
                 mothAnimation.PlayDeath();
                 playerMoveScript.AllowPlayerMovement(false);
                 StartCoroutine(Respawn());
+                */
             }
         }
         if (col.collider.tag == "End")

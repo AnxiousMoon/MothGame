@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class EndSceneController : MonoBehaviour
 {
     [SerializeField] Image doorTeaserImage;
+    [SerializeField] Text comingSoonText;
     [SerializeField] float fadeInTime = 1f, fadeOutTime = 1f, duration = 5f, endDelay = 1f;
     
     private void Start()
@@ -31,6 +32,7 @@ public class EndSceneController : MonoBehaviour
         LeanTween.value(doorTeaserImage.gameObject, 0, 1f, fadeInTime).setOnUpdate((float _alpha) =>
         {
             doorTeaserImage.color = new Color(1f, 1f, 1f, _alpha);
+            comingSoonText.color = new Color(1f,1f,1f,_alpha);
         }).setEaseInQuad();
     }
 
@@ -39,6 +41,7 @@ public class EndSceneController : MonoBehaviour
         LeanTween.value(doorTeaserImage.gameObject, 1f, 0f, fadeOutTime).setOnUpdate((float _alpha) =>
         {
             doorTeaserImage.color = new Color(1f, 1f, 1f, _alpha);
+            comingSoonText.color = new Color(1f,1f,1f,_alpha);
         }).setEaseOutQuad() ;
     }
     

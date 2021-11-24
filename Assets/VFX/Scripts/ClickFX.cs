@@ -87,7 +87,9 @@ public class ClickFX : MonoBehaviour
         fadeOutDuration = coolDownDuration * 0.4f;
 
         clickRadiusMeshObj.SetActive(true);
-        intersectionObj.SetActive(true);
+
+        //  Temporary intersection disabled
+        //intersectionObj.SetActive(true);
         intersectionAlpha = 1f;
 
         ClickGrowLeanTween();

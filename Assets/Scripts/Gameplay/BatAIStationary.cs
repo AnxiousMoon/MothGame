@@ -114,9 +114,9 @@ public class BatAIStationary : MonoBehaviour
         transform.LookAt(returnPoint.transform.position);
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        rb.AddForce(transform.forward * speed, ForceMode.Acceleration);
+        rb.AddForce(transform.forward * speed * 4f, ForceMode.Acceleration);
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         if (caught)
         {
