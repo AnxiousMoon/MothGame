@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Background : MonoBehaviour
 {
-    [SerializeField] GameObject mainCamera;
+    [SerializeField] GameObject mainCameraObj;
+    Camera mainCamera;
     [SerializeField] float distanceFromCamera, parallaxAmount = 0.5f;
     [SerializeField] [Range(0f, 1f)] float cameraSmoothness = 0.5f;
 
@@ -18,15 +19,16 @@ public class Background : MonoBehaviour
 
     private void Awake()
     {
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-        
+        mainCameraObj = GameObject.FindGameObjectWithTag("MainCamera");
+        mainCamera = mainCameraObj.GetComponent<Camera>();
     }
 
     private void Start()
     {
+        
         cameraSmoothness = 1f - cameraSmoothness;
-        camPosLast = mainCamera.transform.position;
-        Debug.Log(mainCamera.transform.forward);
+        camPosLast = mainCameraObj.transform.position;
+        Debug.Log(mainCameraObj.transform.forward);
         StartCoroutine(SetCameraInitialPosition());
         tiles = new GameObject[tilesX * tilesY];
         InstantiateTiles();
@@ -35,21 +37,18 @@ public class Background : MonoBehaviour
     IEnumerator SetCameraInitialPosition()
     {
         yield return new WaitForSeconds(0.05f);
-        transform.position = mainCamera.transform.position + mainCamera.transform.forward * distanceFromCamera;
+        transform.position = mainCameraObj.transform.position + mainCameraObj.transform.forward * mainCamera.farClipPlane * 0.6f;
     }
 
     private void Update()
     {
         camPosLast = camPosNow;
-        camPosNow = mainCamera.transform.position;
-        //Target location is in front of the camera. 
+        camPosNow = mainCameraObj.transform.position;
 
-        //Smooth camera motion
-        //transform.position = Vector3.Lerp(transform.position, targetLocation, cameraSmoothness);
 
         //get change in cameras position
         deltaCamPos = camPosNow - camPosLast;
-        transform.position = Vector3.Lerp(transform.position, transform.position + deltaCamPos * parallaxAmount, cameraSmoothness);
+        transform.position = Vector3.Lerp(transform.position, (transform.position + deltaCamPos * parallaxAmount), cameraSmoothness);
     }
 
     void InstantiateTiles()
