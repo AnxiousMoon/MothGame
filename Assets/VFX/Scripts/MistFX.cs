@@ -7,14 +7,18 @@ public class MistFX : MonoBehaviour
 {
     [SerializeField]
     [Range(0f, 1f)]
-    float strength = 0.5f, density = 0.2f;
+    [Tooltip("The opacity of the cloud")] float strength = 0.5f;
 
-    ParticleSystem particleSystem;
+    [SerializeField]
+    [Range(0f, 1f)]
+    [Tooltip("The maximum number of particles")] float density = 0.2f;
+
+    ParticleSystem _particleSystem;
 
     private void OnEnable()
     {
-        particleSystem = gameObject.GetComponent<ParticleSystem>();
-        particleSystem.startColor = new Color(1f,1f,1f, strength);
-        particleSystem.maxParticles = Mathf.FloorToInt(density * 1000f);
+        _particleSystem = gameObject.GetComponent<ParticleSystem>();
+        _particleSystem.startColor = new Color(1f,1f,1f, strength);
+        _particleSystem.maxParticles = Mathf.FloorToInt(density * 1000f);
     }
 }
