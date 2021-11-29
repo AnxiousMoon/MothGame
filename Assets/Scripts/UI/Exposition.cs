@@ -8,6 +8,7 @@ public class Exposition : MonoBehaviour
     [SerializeField] [Tooltip("Controls how long each frame is visible before moving on to the next.")] float frameDuration = 5f;
     int currentFrame = 0;
     MainMenu mainMenu;
+    bool isActive = false;
 
     private void Awake()
     {
@@ -23,6 +24,15 @@ public class Exposition : MonoBehaviour
     {
         mainMenu = _mainMenu;
         frames[currentFrame].Activate(frameDuration, this);
+        isActive = true;
+    }
+
+    public void Update()
+    {
+        if (Input.GetMouseButtonUp(0) && isActive)
+        {
+            frames[currentFrame].Skip();
+        }
     }
 
     //Activates the current frame, until the limit is reached where the next scene will be started
@@ -38,4 +48,5 @@ public class Exposition : MonoBehaviour
             mainMenu.StartGame();
         }
     }
+
 }

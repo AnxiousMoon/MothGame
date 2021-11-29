@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 0
 --- !u!4 &1028122733067342095
 Transform:
@@ -131,6 +131,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   web: {fileID: 5304311924248277933}
   webBroken: {fileID: 4030055127021027510}
+  stuckBat: {fileID: 0}
+  stuckBat2: {fileID: 0}
+  stuckBatPos: {fileID: 0}
+  webFX: {fileID: 0}
 --- !u!65 &7330074525051004176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -237,11 +241,11 @@ GameObject:
   - component: {fileID: 7232836503307684856}
   - component: {fileID: 5736926166612948881}
   m_Layer: 0
-  m_Name: web.000
+  m_Name: web_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2990231517083751249
 Transform:
@@ -407,6 +411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WebFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 7157000101459379036, guid: 3d659c3686cefce4195acf4b37c91dd9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d659c3686cefce4195acf4b37c91dd9, type: 3}

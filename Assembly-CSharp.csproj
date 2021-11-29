@@ -118,6 +118,8 @@
     <Compile Include="Assets\Scripts\UI\BackgroundTile.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SoundReact.cs" />
     <Compile Include="Assets\VFX\Scripts\MistFX.cs" />
+    <Compile Include="Assets\Cloud.cs" />
+    <Compile Include="Assets\CloudSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

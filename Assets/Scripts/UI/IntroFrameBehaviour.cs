@@ -57,6 +57,15 @@ public class IntroFrameBehaviour : MonoBehaviour
         }
     }
 
+    public void Skip()
+    {
+        LeanTween.cancel(gameObject);
+        LeanTween.value(gameObject, 1f, 0f, 0.1f).setOnUpdate((float _alpha) =>
+        {
+            image.color = new Color(1f, 1f, 1f, _alpha);
+            text.color = new Color(1f, 1f, 1f, _alpha);
+        }).setEaseInQuad().setOnComplete(FrameComplete);
+    }
     void FadeOut()
     {
         //Fade out both text and image
@@ -70,6 +79,8 @@ public class IntroFrameBehaviour : MonoBehaviour
     //calls the exposition script once animation is complete.
     void FrameComplete()
     {
+        
         exposition.NextFrame();
+        Destroy(gameObject);
     }
 }

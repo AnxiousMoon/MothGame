@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Game
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 18
+  controlID: 137
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 68
+  controlID: 61
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 69
+  controlID: 62
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -275,8 +275,8 @@ MonoBehaviour:
     y: 0
     width: 553
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -2243,9 +2243,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: c44effff6051ffff6053ffff16b0ffffb2b2ffff94c4ffff16e7ffffb2e9ffff5af4ffff50fbffffda7b0000e87c0000
+      m_SelectedIDs: 28fffeff
+      m_LastClickedID: -65752
+      m_ExpandedIDs: 28fffeff920ffffff43cffff123dffff223dffff243dffffbaf6ffff44f7ffff58f9ffff50fbffffa44b0000e04b0000164c0000664c0000124d0000684d0000864d0000a24d0000ac4d0000b24d0000b64d0000ca4d0000da4d0000224e00008c4e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2306,9 +2306,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -327.917, y: -23.273636, z: -31.61813}
+    m_Target: {x: -270.3341, y: -28.34861, z: -2.7306402}
     speed: 2
-    m_Value: {x: -327.917, y: -23.273636, z: -31.61813}
+    m_Value: {x: -270.3341, y: -28.34861, z: -2.7306402}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2355,13 +2355,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.09323011, y: 0.9067138, z: -0.2963541, w: 0.28525132}
+    m_Target: {x: 0.6716376, y: 0.034407854, z: -0.03125368, w: 0.7394203}
     speed: 2
-    m_Value: {x: 0.09322938, y: 0.90670663, z: -0.29635176, w: 0.28524908}
+    m_Value: {x: 0.6716376, y: 0.034407854, z: -0.03125368, w: 0.7394203}
   m_Size:
-    m_Target: 33.59227
+    m_Target: 126.03485
     speed: 2
-    m_Value: 33.59227
+    m_Value: 120.60751
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2506,23 +2506,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs/Props
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs/Props
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Users\innes\Documents\ProfesionalMasters\DES508- Game Dev
     Promotion and Marketing\Unity\MothGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 304}
+    scrollPos: {x: 0, y: 136}
     m_SelectedIDs: 2e4b0000
     m_LastClickedID: 19246
-    m_ExpandedIDs: 00000000ba4a0000bc4a0000be4a0000c04a0000c24a0000c44a0000c64a000000ca9a3b
+    m_ExpandedIDs: 00000000be4a0000c04a0000c24a0000c44a0000c64a0000c84a0000ca4a0000384b0000444b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2550,7 +2550,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ba4a0000bc4a0000be4a0000c04a0000c24a0000c44a0000c64a0000
+    m_ExpandedIDs: 00000000be4a0000c04a0000c24a0000c44a0000c64a0000c84a0000ca4a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

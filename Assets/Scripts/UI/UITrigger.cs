@@ -12,7 +12,7 @@ public class UITrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "Dashing")
         {
             uiFrameAnimation.TriggerEnter();
         }
@@ -20,7 +20,7 @@ public class UITrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "Dashing")
         {
             uiFrameAnimation.TriggerExit();
         }
