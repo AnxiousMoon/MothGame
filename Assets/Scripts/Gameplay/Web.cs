@@ -40,10 +40,22 @@ public class Web : MonoBehaviour
         if (col.collider.tag == "Dashing" && gameObject.tag == "Stuck")
         {
             webFX.Play();
-            Destroy(stuckBat);
-            Destroy(web);
+            if (stuckBat.GetComponent<BatAIStationary>())
+            {
+                stuckBat.GetComponent<BatAIStationary>().Kill();
+            }else if (stuckBat.GetComponent<BatAI>())
+            {
+                stuckBat.GetComponent<BatAI>().Kill();
+            }
+            else
+            {
+                Debug.LogError("Could not find a Bat AI component attached to " + stuckBat.name);
+            }
+
+            
             this.col.enabled = false;
             webBroken.SetActive(true);
+            Destroy(web);
         }
 
         if (col.collider.tag == "Dashing" && gameObject.tag == "Full")

@@ -97,7 +97,7 @@ GameObject:
   m_TagString: Web
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5741108627126947274
 Transform:
@@ -133,8 +133,9 @@ MonoBehaviour:
   webBroken: {fileID: 4030055127021027510}
   stuckBat: {fileID: 0}
   stuckBat2: {fileID: 0}
-  stuckBatPos: {fileID: 0}
-  webFX: {fileID: 0}
+  stuckBatPos: {fileID: 5741108627126947274}
+  webFX: {fileID: 1591436754509626984}
+  dissolve: {fileID: 0}
 --- !u!65 &7330074525051004176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -159,6 +160,7 @@ GameObject:
   - component: {fileID: 4816427435511752983}
   - component: {fileID: 66877959471201978}
   - component: {fileID: 7036979430649147231}
+  - component: {fileID: 5441606294500818323}
   m_Layer: 0
   m_Name: web
   m_TagString: Untagged
@@ -229,6 +231,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5441606294500818323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5304311924248277933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 356befb8e6334c94a89377c219ce527e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5742574610281993073
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +436,12 @@ PrefabInstance:
 --- !u!4 &2173478091591968943 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2880817459534511347, guid: 3d659c3686cefce4195acf4b37c91dd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 4166681743847511132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1591436754509626984 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3442700321198516788, guid: 3d659c3686cefce4195acf4b37c91dd9,
     type: 3}
   m_PrefabInstance: {fileID: 4166681743847511132}
   m_PrefabAsset: {fileID: 0}

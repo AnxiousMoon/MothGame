@@ -15,6 +15,9 @@ public class BatAnimation : MonoBehaviour
     [SerializeField] [Tooltip("Reference GameObject with swipe effect attached")] GameObject swipeVFXObj;
     [SerializeField] [Tooltip("Duration swipe effect should appear for.")] float swipeFXDuration = 0.2f;
 
+    [Header("Death Effect")]
+    [SerializeField] [Tooltip("Reference to death particle effect on bat gameobject")] ParticleSystem deathFX;
+
     private void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -49,5 +52,8 @@ public class BatAnimation : MonoBehaviour
         SwipeVFX.transform.parent = null;
     }
 
-
+    public void Death()
+    {
+        deathFX.Play();
+    }
 }

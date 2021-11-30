@@ -25,6 +25,8 @@ public class BatAI : MonoBehaviour
 
     BatAnimation batAnimation;
 
+    [SerializeField] Dissolve dissolve;
+
 
     // Start is called before the first frame update
     void Start()
@@ -191,5 +193,18 @@ public class BatAI : MonoBehaviour
         }
         transform.LookAt(waypoints[waypointIndex].position);
         speed = 100;
+    }
+
+    public void Kill()
+    {
+        if (dissolve)
+        {
+            dissolve.DissolveMe(1f, true); //dissolve for 1s then deactivate
+        }
+        else
+        {
+            Debug.LogError("There is no dissolve script attached to this bat - use stationary bat prefab");
+        }
+        batAnimation.Death();
     }
 }

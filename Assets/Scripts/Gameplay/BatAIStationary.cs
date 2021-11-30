@@ -28,6 +28,8 @@ public class BatAIStationary : MonoBehaviour
     Rigidbody rb; // A Rigidbody Variable Used to Access The Rigidbody Component of the Bat.
     BatAnimation batAnimation; // A Variable Used To Assign An Animation to the Bat Model.
 
+    [SerializeField] Dissolve dissolve; // Reference to dissolve script on bat model
+
     // Start is called before the first frame update
     void Start()
     {
@@ -155,5 +157,13 @@ public class BatAIStationary : MonoBehaviour
                 caught = false; // Reset the Caught Bool.
             }
         }
+    }
+
+    //Innes added this function- ask if you need me to clarify any of the code :)
+    //Triggered by web.cs, when the player dashes into a web with a bat trapped in it
+    public void Kill()
+    {
+        dissolve.DissolveMe(1f,true); //dissolve for 1s then deactivate
+        batAnimation.Death();
     }
 }
