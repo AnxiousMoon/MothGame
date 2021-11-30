@@ -510,8 +510,33 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 686354975, guid: 1b654e6d1b4a9194cbc0d4ce8e5d8ade, type: 3}
       propertyPath: m_Text
-      value: Your wings were damaged in the fall. You will have to <b>sneak</b> past
-        the blind bats.
+      value: "Your wings were badly damaged from the fall. You will have to move
+        quickly and quietly to avoid the <b>blind</b> bats. They will be <b>drawn</b>\r
+        to any <b>loud sounds</b>."
+      objectReference: {fileID: 0}
+    - target: {fileID: 686354975, guid: 1b654e6d1b4a9194cbc0d4ce8e5d8ade, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 79
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500422433, guid: 1b654e6d1b4a9194cbc0d4ce8e5d8ade, type: 3}
+      propertyPath: m_Text
+      value: "After Venturing too far you have fallen and found yourself in a mineshaft.
+        Your surroundings are dark however you recognise this is Bat territory\r
+        and you have to <b>escape</b>."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500422433, guid: 1b654e6d1b4a9194cbc0d4ce8e5d8ade, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970123240, guid: 1b654e6d1b4a9194cbc0d4ce8e5d8ade, type: 3}
+      propertyPath: m_Text
+      value: You are far too <b>weak</b> to fight! Take precausion, if they catch
+        you then it will have all been for <b>nothing</b>...
+      objectReference: {fileID: 0}
+    - target: {fileID: 642810157351388548, guid: 1b654e6d1b4a9194cbc0d4ce8e5d8ade,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1594070341920131672, guid: 1b654e6d1b4a9194cbc0d4ce8e5d8ade,
         type: 3}
@@ -519,6 +544,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 1e570ee7153e02b4fba76c79a85e4078,
         type: 3}
+    - target: {fileID: 2178731880518414085, guid: 1b654e6d1b4a9194cbc0d4ce8e5d8ade,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3440792530970901912, guid: 1b654e6d1b4a9194cbc0d4ce8e5d8ade,
         type: 3}
       propertyPath: m_Sprite
