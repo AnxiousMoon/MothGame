@@ -1653,7 +1653,7 @@ MonoBehaviour:
   caught: 0
   ghost: {fileID: 847065230}
   returnPoint: {fileID: 63515029}
-  webStandIn: {fileID: 0}
+  webStandIn: {fileID: 7982266286460327387}
   Web:
     idInternal: 0
     valueGuidInternal: 
@@ -1695,6 +1695,10 @@ MonoBehaviour:
   multiPositionTypeLabel: 0
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
   LargeModePositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -10290,6 +10294,27 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.45
       objectReference: {fileID: 0}
+    - target: {fileID: 5505779663552841450, guid: eee3272c84914bb47a8a039fab86a33d,
+        type: 3}
+      propertyPath: ghost
+      value: 
+      objectReference: {fileID: 847065230}
+    - target: {fileID: 5505779663552841450, guid: eee3272c84914bb47a8a039fab86a33d,
+        type: 3}
+      propertyPath: webStandIn
+      value: 
+      objectReference: {fileID: 7982266286460327387}
+    - target: {fileID: 5505779663552841450, guid: eee3272c84914bb47a8a039fab86a33d,
+        type: 3}
+      propertyPath: returnPoint
+      value: 
+      objectReference: {fileID: 63515029}
+    - target: {fileID: 5505779663552841450, guid: eee3272c84914bb47a8a039fab86a33d,
+        type: 3}
+      propertyPath: Web.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+        type: 2}
     - target: {fileID: 5803274841659931083, guid: eee3272c84914bb47a8a039fab86a33d,
         type: 3}
       propertyPath: m_RootOrder
@@ -11467,6 +11492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1730396030, guid: eee3272c84914bb47a8a039fab86a33d, type: 3}
+    - {fileID: 5505779663552841450, guid: eee3272c84914bb47a8a039fab86a33d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eee3272c84914bb47a8a039fab86a33d, type: 3}
 --- !u!1001 &7982266285274356204
 PrefabInstance:
@@ -16779,6 +16805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1730396030, guid: eee3272c84914bb47a8a039fab86a33d, type: 3}
+    - {fileID: 5505779663552841450, guid: eee3272c84914bb47a8a039fab86a33d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eee3272c84914bb47a8a039fab86a33d, type: 3}
 --- !u!1001 &7982266286333547366
 PrefabInstance:
