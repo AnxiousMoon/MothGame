@@ -1639,16 +1639,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  chaseSpeed: 100
+  stationairySpeed: 0
   maxSpeed: 0
+  maxChaseSpeed: 1
   dashSpeed: 50
   caught: 0
-  ghost: {fileID: 0}
-  returnPoint: {fileID: 0}
+  ghost: {fileID: 847065230}
+  returnPoint: {fileID: 63515029}
   webStandIn: {fileID: 0}
   Web:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
   Sound: {fileID: 0}
 --- !u!114 &477200696
 MonoBehaviour:
@@ -1684,6 +1688,9 @@ MonoBehaviour:
   multiPositionTypeLabel: 0
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
   LargeModePositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -3442,6 +3449,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   multiPositionArray: []
 --- !u!114 &937085457
 MonoBehaviour:
@@ -3478,16 +3489,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  chaseSpeed: 100
+  stationairySpeed: 0
   maxSpeed: 0
+  maxChaseSpeed: 1
   dashSpeed: 50
   caught: 0
-  ghost: {fileID: 0}
-  returnPoint: {fileID: 0}
-  webStandIn: {fileID: 0}
+  ghost: {fileID: 847065230}
+  returnPoint: {fileID: 2147167072}
+  webStandIn: {fileID: 7982266286460327387}
   Web:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
   Sound: {fileID: 0}
 --- !u!1 &939573190
 GameObject:
@@ -4253,6 +4268,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   multiPositionArray: []
 --- !u!114 &1151504541
 MonoBehaviour:
@@ -4289,16 +4307,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  chaseSpeed: 100
+  stationairySpeed: 0
   maxSpeed: 0
+  maxChaseSpeed: 1
   dashSpeed: 50
   caught: 0
-  ghost: {fileID: 0}
-  returnPoint: {fileID: 0}
-  webStandIn: {fileID: 0}
+  ghost: {fileID: 847065230}
+  returnPoint: {fileID: 27725999}
+  webStandIn: {fileID: 7982266286460327387}
   Web:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
+      type: 2}
   Sound: {fileID: 0}
 --- !u!4 &1171086981 stripped
 Transform:
