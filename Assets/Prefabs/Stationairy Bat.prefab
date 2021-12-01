@@ -1162,7 +1162,7 @@ MonoBehaviour:
   swipeVFXObj: {fileID: 1306665689672907951, guid: 313b44474331f5547ac399b748cc0e7c,
     type: 3}
   swipeFXDuration: 0.2
-  deathFX: {fileID: 0}
+  deathFX: {fileID: 1229456593137614672}
 --- !u!114 &5505779663552841450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6265,6 +6265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3917240636035455677}
   - component: {fileID: 378186662258059288}
+  - component: {fileID: 6663331062828968138}
   m_Layer: 3
   m_Name: bat_low3
   m_TagString: Untagged
@@ -6392,6 +6393,18 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.096490145, y: 1.4737039, z: -0.061113596}
     m_Extent: {x: 4.1042767, y: 2.4826164, z: 2.181983}
   m_DirtyAABB: 0
+--- !u!114 &6663331062828968138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7780974644454335616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b304718bfa86c9b4ebc6827960908a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7854147480507383051
 GameObject:
   m_ObjectHideFlags: 0

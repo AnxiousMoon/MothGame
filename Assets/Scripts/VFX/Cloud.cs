@@ -17,8 +17,7 @@ public class Cloud : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
          if (other.name == "CloudSpawner")
-        {
-            Debug.Log("Cloud Destroyed");
+        { 
             Destroy(gameObject);
         }
     }

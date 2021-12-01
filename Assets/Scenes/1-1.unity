@@ -1645,7 +1645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  chaseSpeed: 100
+  chaseSpeed: 60
   stationairySpeed: 0
   maxSpeed: 0
   maxChaseSpeed: 1
@@ -3487,35 +3487,6 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &937085458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937085454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4b4627455877af489cccedb906c97bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  chaseSpeed: 100
-  stationairySpeed: 0
-  maxSpeed: 0
-  maxChaseSpeed: 1
-  dashSpeed: 50
-  caught: 0
-  ghost: {fileID: 847065230}
-  returnPoint: {fileID: 2147167072}
-  webStandIn: {fileID: 7982266286460327387}
-  Web:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 5b7270902f9da114f9578a387d03c08d,
-      type: 2}
-  Sound: {fileID: 0}
-  dissolve: {fileID: 2141117878}
 --- !u!1 &939573190
 GameObject:
   m_ObjectHideFlags: 0
@@ -3863,12 +3834,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6b2aa78f6ba6f604f8672bae2e66ae82,
     type: 3}
   m_PrefabInstance: {fileID: 7982266285867051389}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1037239954 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1229456593137614672, guid: eee3272c84914bb47a8a039fab86a33d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7982266285265537547}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1048077699 stripped
 Transform:
@@ -8811,24 +8776,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1659253712}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2141117875 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7780974644454335616, guid: eee3272c84914bb47a8a039fab86a33d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7982266285265537547}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2141117878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141117875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b304718bfa86c9b4ebc6827960908a6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2145687048 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3641764839940412317, guid: a550790386bd2b64ca64619eb1d0953d,
@@ -11425,11 +11372,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 796492192149141179, guid: eee3272c84914bb47a8a039fab86a33d,
-        type: 3}
-      propertyPath: deathFX
-      value: 
-      objectReference: {fileID: 1037239954}
     - target: {fileID: 5803274841659931083, guid: eee3272c84914bb47a8a039fab86a33d,
         type: 3}
       propertyPath: m_RootOrder
@@ -11490,6 +11432,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6094729159248400912, guid: eee3272c84914bb47a8a039fab86a33d,
+        type: 3}
+      propertyPath: ghost
+      value: 
+      objectReference: {fileID: 847065230}
+    - target: {fileID: 6094729159248400912, guid: eee3272c84914bb47a8a039fab86a33d,
+        type: 3}
+      propertyPath: webStandIn
+      value: 
+      objectReference: {fileID: 7982266286460327387}
+    - target: {fileID: 6094729159248400912, guid: eee3272c84914bb47a8a039fab86a33d,
+        type: 3}
+      propertyPath: returnPoint
+      value: 
+      objectReference: {fileID: 2147167072}
     m_RemovedComponents:
     - {fileID: 1730396030, guid: eee3272c84914bb47a8a039fab86a33d, type: 3}
     - {fileID: 5505779663552841450, guid: eee3272c84914bb47a8a039fab86a33d, type: 3}

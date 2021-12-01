@@ -28,13 +28,14 @@ public class BatAIStationary : MonoBehaviour
     Rigidbody rb; // A Rigidbody Variable Used to Access The Rigidbody Component of the Bat.
     BatAnimation batAnimation; // A Variable Used To Assign An Animation to the Bat Model.
 
-    [SerializeField] Dissolve dissolve; // Reference to dissolve script on bat model
+    Dissolve dissolve; // Reference to dissolve script on bat model
 
     // Start is called before the first frame update
     void Start()
     {
         batAnimation = gameObject.GetComponent<BatAnimation>(); // Sets Bat Animation to the Component Attached to the GameObject.
         b_collider = gameObject.GetComponent<Collider>(); // Sets Bat Collider Variable to the Component Attached to the GameObject.
+        dissolve = transform.GetChild(0).GetComponent<Dissolve>(); //Gets dissolve component from the first child ie the bat mesh
 
         rb = gameObject.GetComponent<Rigidbody>(); // Sets Rigidbody to the Component Attached to the GameObject.
         rb.freezeRotation = true; // Freezes the Rotation of the Bats Rigidbody to Prevent Accidental Rotation.

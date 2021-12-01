@@ -25,7 +25,7 @@ public class BatAI : MonoBehaviour
 
     BatAnimation batAnimation;
 
-    [SerializeField] Dissolve dissolve;
+    Dissolve dissolve;
 
 
     // Start is called before the first frame update
@@ -33,6 +33,7 @@ public class BatAI : MonoBehaviour
     {
         batAnimation = gameObject.GetComponent<BatAnimation>();
         b_collider = gameObject.GetComponent<Collider>();
+        dissolve = transform.GetChild(0).GetComponent<Dissolve>(); //Gets dissolve component from the first child ie the bat mesh
 
         rb = this.GetComponent<Rigidbody>();
         rb.freezeRotation = true;
