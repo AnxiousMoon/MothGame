@@ -42,6 +42,7 @@ public class Rock : MonoBehaviour
         SetUpParticleSystem();
 
         gravelSoundRadiusPrefab = Instantiate(gravelSoundRadiusPrefab);
+        gravelSoundRadiusPrefab.transform.position = transform.position;
         gravelSoundRadius = gravelSoundRadiusPrefab.GetComponent<SoundPadRadius>();
 
     }
@@ -79,7 +80,7 @@ public class Rock : MonoBehaviour
             collider.enabled = false;
             
         }
-        if (col.tag == "Player")
+        if (col.tag == "Player"|| col.tag == "Dashing")
         {
             if (!soundPadActive)
             {

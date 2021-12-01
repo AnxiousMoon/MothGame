@@ -97,7 +97,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4439632551987102090
 Transform:
@@ -178,7 +178,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4076276029410025274
 Transform:
@@ -210,8 +210,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0279657, y: 0.027420338, z: 0.012357115}
-  m_Center: {x: -0.006718964, y: -0.0055332445, z: -0.0017137504}
+  m_Size: {x: 5.626709, y: 5.884283, z: 5.488552}
+  m_Center: {x: -3.8571167, y: 2.9228983, z: 3.826189}
 --- !u!114 &4076276029410025275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,12 +225,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 0}
-  initialTimeOut: 2
-  activeColor: {r: 1, g: 1, b: 1, a: 1}
+  initialTimeOut: 3
+  activeColor: {r: 0.15800977, g: 0.28630832, b: 0.27347848, a: 1}
+  idleColor: {r: 0.028301895, g: 0.028301895, b: 0.028301895, a: 1}
+  particleActiveColor: {r: 0.5019608, g: 1.7254902, b: 1.6, a: 1}
   gravelParticleSystemPrefab: {fileID: 4247543193611417745, guid: e48aa3064e141574ea868724f8cc6b18,
     type: 3}
   gravelSoundRadiusPrefab: {fileID: 2900047990892788900, guid: cb22a122bb3c57542871c9439f78ce4c,
     type: 3}
+  Sound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 38197a5c1a0d688498fbc3ef6a8787e6,
+      type: 2}
 --- !u!1 &5865337420347453209
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +254,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6498146577883723171
 Transform:
@@ -328,7 +335,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7412774410659440822
 Transform:
@@ -409,7 +416,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8939404648361605383
 Transform:
