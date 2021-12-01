@@ -167,7 +167,7 @@ public class BatAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         dist = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
         if (dist < 3f)
@@ -179,7 +179,7 @@ public class BatAI : MonoBehaviour
 
     void Patrol()
     {
-        rb.AddForce(transform.forward * speed, ForceMode.Acceleration);
+        rb.AddForce(transform.forward * speed  * 4, ForceMode.Acceleration);
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
 
