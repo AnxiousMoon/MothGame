@@ -44,6 +44,8 @@ public class ClickFX : MonoBehaviour
 
     MothGlow mothGlow;
 
+    SonarEffect sonarEffect;
+
 
     bool coolingDown = false;
     bool dashFeedbackPlaying = false;
@@ -55,6 +57,7 @@ public class ClickFX : MonoBehaviour
         //Get references for Click Radius effect
         clickRadiusMeshObj = Instantiate(clickRadiusMeshObj);
         intersectionObj = clickRadiusMeshObj.transform.GetChild(0).gameObject;
+        sonarEffect = intersectionObj.GetComponent<SonarEffect>();
         clickRadiusMeshObj.transform.localScale = Vector3.one * 0.1f;
         clickRadiusMaterial = clickRadiusMeshObj.GetComponent<MeshRenderer>().material;
         clickRadiusColor = clickRadiusMaterial.GetColor("_Tint");
@@ -90,6 +93,7 @@ public class ClickFX : MonoBehaviour
 
         //  Temporary intersection disabled
         //intersectionObj.SetActive(true);
+        sonarEffect.Activate();
         intersectionAlpha = 1f;
 
         ClickGrowLeanTween();

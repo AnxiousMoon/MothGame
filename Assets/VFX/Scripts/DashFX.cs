@@ -20,7 +20,7 @@ public class DashFX : MonoBehaviour
     {
         isDashing = true;
         startPos = transform.position;
-        DropGhost(dashingMoth);
+        DropGhost(standingMoth);
         StartCoroutine(cooldown());
     }
 
@@ -30,6 +30,7 @@ public class DashFX : MonoBehaviour
         if (isDashing)
         {
             currentDist = Vector3.Distance(startPos, transform.position);
+            
             if(currentDist > ghostEmissionDistance)
             {
                 DropGhost(dashingMoth);
