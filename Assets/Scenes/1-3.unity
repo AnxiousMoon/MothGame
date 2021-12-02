@@ -22996,22 +22996,22 @@ PrefabInstance:
     - target: {fileID: 1932242798394008305, guid: 6e87c99dc34359c4cac2534ea0820fcb,
         type: 3}
       propertyPath: m_Size.x
-      value: 263.50058
+      value: 324.85962
       objectReference: {fileID: 0}
     - target: {fileID: 1932242798394008305, guid: 6e87c99dc34359c4cac2534ea0820fcb,
         type: 3}
       propertyPath: m_Size.z
-      value: 234.24121
+      value: 237.5806
       objectReference: {fileID: 0}
     - target: {fileID: 1932242798394008305, guid: 6e87c99dc34359c4cac2534ea0820fcb,
         type: 3}
       propertyPath: m_Center.x
-      value: 17.060379
+      value: 19.286652
       objectReference: {fileID: 0}
     - target: {fileID: 1932242798394008305, guid: 6e87c99dc34359c4cac2534ea0820fcb,
         type: 3}
       propertyPath: m_Center.z
-      value: -116.620605
+      value: -118.2903
       objectReference: {fileID: 0}
     - target: {fileID: 1932242798394008306, guid: 6e87c99dc34359c4cac2534ea0820fcb,
         type: 3}
@@ -28493,6 +28493,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1574408194}
     m_Modifications:
+    - target: {fileID: 3099783683319640712, guid: 5a10b103e206024429f2eb57bb730481,
+        type: 3}
+      propertyPath: tilesX
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 3099783683319640712, guid: 5a10b103e206024429f2eb57bb730481,
         type: 3}
       propertyPath: mainCamera
@@ -36343,16 +36348,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 142208482}
     m_Modifications:
-    - target: {fileID: 919132149155446097, guid: 914292a5da4db08429eea2146c041a7d,
-        type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 914292a5da4db08429eea2146c041a7d,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0baffdceca0f0f846a1bd91a6418cf39,
         type: 3}
       propertyPath: m_RootOrder
@@ -36422,6 +36417,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: track_curve (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 914292a5da4db08429eea2146c041a7d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 914292a5da4db08429eea2146c041a7d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0baffdceca0f0f846a1bd91a6418cf39, type: 3}
