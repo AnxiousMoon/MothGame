@@ -41,15 +41,18 @@ public class Move : MonoBehaviour
         ControlDrag();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (dashCooldown <= 0)
+            if (horiziontalMovement != 0 || verticalMovement != 0)
             {
-                rb.AddForce(moveDirection * dashSpeed, ForceMode.VelocityChange);
-                gameObject.tag = "Dashing";
-                collider.enabled = true;
-                timePassed = 0;
-                dashCooldown = cooldown;
-                Dash.Post(gameObject);
-                mothAnimation.Dash(cooldown);
+                if (dashCooldown <= 0)
+                {
+                    rb.AddForce(moveDirection * dashSpeed, ForceMode.VelocityChange);
+                    gameObject.tag = "Dashing";
+                    collider.enabled = true;
+                    timePassed = 0;
+                    dashCooldown = cooldown;
+                    Dash.Post(gameObject);
+                    mothAnimation.Dash(cooldown);
+                }
             }
         }
         timePassed += Time.deltaTime;
