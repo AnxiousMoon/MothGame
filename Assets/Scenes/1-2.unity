@@ -513,6 +513,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3034505375672253013, guid: 528b879ed7f342446a744281f394ff73,
         type: 3}
+      propertyPath: m_Priority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034505375672253013, guid: 528b879ed7f342446a744281f394ff73,
+        type: 3}
       propertyPath: m_Lens.FarClipPlane
       value: 240
       objectReference: {fileID: 0}
@@ -521,6 +526,11 @@ PrefabInstance:
       propertyPath: director
       value: 
       objectReference: {fileID: 811366102}
+    - target: {fileID: 8755697511730766937, guid: 528b879ed7f342446a744281f394ff73,
+        type: 3}
+      propertyPath: playerMoveScript
+      value: 
+      objectReference: {fileID: 489496531}
     m_RemovedComponents:
     - {fileID: 3034505375597082172, guid: 528b879ed7f342446a744281f394ff73, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 528b879ed7f342446a744281f394ff73, type: 3}
@@ -5876,6 +5886,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 489496528}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &489496531 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3667606437179747199, guid: 1adaf745b6ae80e4b9c7ae70ecef7f91,
+    type: 3}
+  m_PrefabInstance: {fileID: 489496528}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a48a9a094ac174478b90d67b42b0ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &508601815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10000,6 +10022,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1124871374}
     m_Modifications:
+    - target: {fileID: 5709708940656616238, guid: 37259211757bf014b91a92be12b96aad,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 489496531}
+    - target: {fileID: 5709708940656616238, guid: 37259211757bf014b91a92be12b96aad,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AllowPlayerMovement
+      objectReference: {fileID: 0}
     - target: {fileID: 5731586511784978385, guid: 37259211757bf014b91a92be12b96aad,
         type: 3}
       propertyPath: m_Name
@@ -10063,6 +10095,11 @@ PrefabInstance:
     - target: {fileID: 5731586511784978394, guid: 37259211757bf014b91a92be12b96aad,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731586511784978395, guid: 37259211757bf014b91a92be12b96aad,
+        type: 3}
+      propertyPath: m_WrapMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5731586511784978395, guid: 37259211757bf014b91a92be12b96aad,

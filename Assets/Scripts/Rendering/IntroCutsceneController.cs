@@ -11,6 +11,7 @@ public class IntroCutsceneController : MonoBehaviour
     [SerializeField] PlayableDirector director;
     GameManager gameManager;
     Scene currentScene;
+    [SerializeField] Move playerMoveScript;
 
 
     
@@ -26,10 +27,11 @@ public class IntroCutsceneController : MonoBehaviour
     {
         if (gameManager)
         {
+            
             if (!gameManager.GetIsCutscenePlayed(currentScene.buildIndex - 1))
             {
                 director.Play();
-
+                playerMoveScript.AllowPlayerMovement(false);
             }
         }
         else
@@ -42,11 +44,15 @@ public class IntroCutsceneController : MonoBehaviour
     void Director_Played(PlayableDirector obj)
     {
         gameManager.SetIsCutscenePlayed(currentScene.buildIndex - 1, true);
+        if (gameManager)
+        {
+            Debug.Log("Director played");
+        }
     }
 
     void Director_Stopped(PlayableDirector obj)
     {
-
+       
     }
 
     void StartTimeLine()
