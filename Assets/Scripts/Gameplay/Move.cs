@@ -86,6 +86,17 @@ public class Move : MonoBehaviour
             Physics.gravity = new Vector3(0, 0, 0);
         }
     }
+
+    void OnCollisionStay(Collision col)
+    {
+        if (col.collider.tag == "Web")
+        {
+            if (gameObject.tag == "Dashing")
+            {
+                rb.AddForce(moveDirection * dashSpeed, ForceMode.VelocityChange);
+            }
+        }
+    }
     void OnCollisionExit(Collision col)
     {
         if (col.collider.tag == "Elevation")
