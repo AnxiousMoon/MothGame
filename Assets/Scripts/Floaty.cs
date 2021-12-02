@@ -7,6 +7,8 @@ public class Floaty : MonoBehaviour {
 	private Vector3 newPosition;
 	private Rigidbody rdb;
 
+	public int num;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,11 +17,28 @@ public class Floaty : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		newPosition = transform.position;
-    	newPosition.y += Mathf.Sin(2.5f * Time.time) * 1f * Time.deltaTime;
-   		transform.position = newPosition;
+		switch (num)
+		{
+			case 1:
+			newPosition = transform.position;
+    		newPosition.y += Mathf.Sin(2.5f * Time.time) * 1f * Time.deltaTime;
+   			transform.position = newPosition;
 
-   		transform.Rotate (.3f, 0f, 0f * Time.deltaTime);
+   			transform.Rotate (.3f, 0f, 0f * Time.deltaTime);
+   			break;
+
+   			case 2:
+   			newPosition = transform.position;
+    		newPosition.y += Mathf.Sin(2.5f * Time.time) * 1f * Time.deltaTime;
+   			transform.position = newPosition;
+
+   			transform.Rotate (0f, 0f, .2f * Time.deltaTime);
+   			break;
+
+   			default:
+   			break;
+		}
+		
 	}	
 
 }

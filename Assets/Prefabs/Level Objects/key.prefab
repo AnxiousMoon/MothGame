@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0f10a0b80e84f4a9b8ce2834e387a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  num: 1
 --- !u!114 &1332768884909433802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a426ca0b1da8b1e43a16f7460b168016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 0}
+  door: {fileID: 0}
   Sound:
     idInternal: 0
     valueGuidInternal: 
