@@ -81,7 +81,7 @@
     <Compile Include="Assets\Scripts\UI\DeathCircleUI.cs" />
     <Compile Include="Assets\Scripts\UI\QuitButton.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Gem_manager.cs" />
-    <Compile Include="Assets\SonarEffect.cs" />
+    <Compile Include="Assets\Scripts\VFX\SonarEffect.cs" />
     <Compile Include="Assets\Rendering\CoolLighting.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\UI\UITrigger.cs" />
@@ -115,7 +115,7 @@
     <Compile Include="Assets\LeanTween\Framework\LeanSmooth.cs" />
     <Compile Include="Assets\VFX\Scripts\PlayerSoundRadiusFX.cs" />
     <Compile Include="Assets\Scripts\UI\UIFrameAnimation.cs" />
-    <Compile Include="Assets\WebDissolve.cs" />
+    <Compile Include="Assets\Scripts\VFX\WebDissolve.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
     <Compile Include="Assets\Scripts\UI\PauseUI.cs" />
     <Compile Include="Assets\Scripts\UI\Background.cs" />

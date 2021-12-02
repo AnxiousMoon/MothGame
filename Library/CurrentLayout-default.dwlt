@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Scene
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 39
+  controlID: 91
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 40
+  controlID: 16
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 41
+  controlID: 17
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -2397,23 +2397,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/VFX/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/VFX/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Users\innes\Documents\ProfesionalMasters\DES508- Game Dev
     Promotion and Marketing\Unity\MothGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 368c0000
-    m_LastClickedID: 35894
-    m_ExpandedIDs: 00000000368c0000388c00003a8c00003c8c00003e8c0000408c0000428c000000ca9a3b
+    scrollPos: {x: 0, y: 371}
+    m_SelectedIDs: ce8d0000
+    m_LastClickedID: 36302
+    m_ExpandedIDs: 00000000368c0000388c00003a8c00003c8c00003e8c0000408c0000428c00008c8c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2468,7 +2468,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2563,10 +2563,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 577}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 4ab0ffff24baffff5c8400001c85000000860000
+      m_ExpandedIDs: 8051ffff0c8bffff4ab0ffff20b9ffff58b9ffff62b9ffffd0b9ffffe4b9ffff24baffff988300005c840000ea840000028500001c85000000860000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2627,13 +2627,13 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -329.8427, y: -21.091568, z: -49.17662}
+    m_Target: {x: -340.36057, y: -23.406055, z: -2.4677534}
     speed: 2
-    m_Value: {x: -329.8427, y: -21.091568, z: -49.17662}
+    m_Value: {x: -340.36057, y: -23.406055, z: -2.4677534}
   m_RenderMode: 0
   m_CameraMode:
-    drawMode: 2
-    name: Shaded Wireframe
+    drawMode: 0
+    name: Shaded
     section: Shading Mode
   m_ValidateTrueMetals: 0
   m_DoValidateTrueMetals: 0
@@ -2676,13 +2676,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.1172364, y: 0.47987968, z: -0.064885706, w: 0.8670454}
+    m_Target: {x: 0.10722435, y: 0.8109316, z: -0.15713403, w: 0.5533563}
     speed: 2
-    m_Value: {x: 0.1225176, y: 0.4612802, z: -0.06448583, w: 0.87638557}
+    m_Value: {x: 0.10698846, y: 0.8117601, z: -0.15729457, w: 0.55213886}
   m_Size:
-    m_Target: 21.052572
+    m_Target: 17.64426
     speed: 2
-    m_Value: 21.052572
+    m_Value: 17.64426
   m_Ortho:
     m_Target: 1
     speed: 2

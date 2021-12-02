@@ -1939,6 +1939,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5292259552942898537, guid: 1adaf745b6ae80e4b9c7ae70ecef7f91,
+        type: 3}
+      propertyPath: sonarRingPrefab
+      value: 
+      objectReference: {fileID: 5976818168263069983, guid: 3fb430a076c3f6e48a9e450f12b85425,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1adaf745b6ae80e4b9c7ae70ecef7f91, type: 3}
 --- !u!1001 &403296016
@@ -10478,6 +10484,11 @@ PrefabInstance:
     - target: {fileID: 2060786316, guid: 279ee15a5b2a9ee42ba26480b6569b4f, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: 150119497024799137, guid: 279ee15a5b2a9ee42ba26480b6569b4f,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3950443131959036576, guid: 279ee15a5b2a9ee42ba26480b6569b4f,
         type: 3}

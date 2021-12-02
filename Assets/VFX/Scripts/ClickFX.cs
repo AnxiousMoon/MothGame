@@ -6,8 +6,8 @@ public class ClickFX : MonoBehaviour
 {
     [Header("Properties")]
     [SerializeField]
-    GameObject clickRadiusMeshObj;
-    GameObject intersectionObj;
+    GameObject clickRadiusMeshObj; 
+    GameObject[] sonarRing = new GameObject[3];
 
     [SerializeField]
     float clickRadius = 3f;
@@ -31,7 +31,11 @@ public class ClickFX : MonoBehaviour
     [SerializeField]
     LeanTweenType tweenType;
 
-    
+    [Header("Sonar")]
+    [SerializeField]
+    GameObject sonarRingPrefab;
+    [SerializeField]
+    float sonarRingRate = 0.2f;
 
     float alpha;
 
@@ -56,8 +60,6 @@ public class ClickFX : MonoBehaviour
     {
         //Get references for Click Radius effect
         clickRadiusMeshObj = Instantiate(clickRadiusMeshObj);
-        intersectionObj = clickRadiusMeshObj.transform.GetChild(0).gameObject;
-        sonarEffect = intersectionObj.GetComponent<SonarEffect>();
         clickRadiusMeshObj.transform.localScale = Vector3.one * 0.1f;
         clickRadiusMaterial = clickRadiusMeshObj.GetComponent<MeshRenderer>().material;
         clickRadiusColor = clickRadiusMaterial.GetColor("_Tint");
@@ -65,18 +67,19 @@ public class ClickFX : MonoBehaviour
         alpha = maxAlpha;
 
         //References for Ground effect
-        intersectionMaterial = intersectionObj.GetComponent<MeshRenderer>().material;
-        intersectionMaxAlpha = intersectionMaterial.GetFloat("_Alpha");
-        intersectionAlpha = intersectionMaxAlpha;
+        for (int i = 0; i < sonarRing.Length; i++)
+        {
+            /*intersectionMaterial = intersectionObjPrefab[i].GetComponent<MeshRenderer>().material;
+            intersectionMaxAlpha = intersectionMaterial.GetFloat("_Alpha");
+            intersectionAlpha = intersectionMaxAlpha;
+            */
+        }
 
         mothGlow = MothGlow.instance;
 
         defaultColor = clickRadiusColor;
 
         
-        
-
-        intersectionObj.SetActive(false);
         clickRadiusMeshObj.SetActive(false);
     }
 
@@ -91,10 +94,7 @@ public class ClickFX : MonoBehaviour
 
         clickRadiusMeshObj.SetActive(true);
 
-        //  Temporary intersection disabled
-        //intersectionObj.SetActive(true);
-        sonarEffect.Activate();
-        intersectionAlpha = 1f;
+        StartCoroutine(SpawnSonarRings());
 
         ClickGrowLeanTween();
         IntersectionFadeOut();
@@ -102,6 +102,7 @@ public class ClickFX : MonoBehaviour
         clickRadiusMeshObj.transform.position = transform.position;
         coolingDown = true;
        
+        
     }
 
     #region ClickRefractionAnimation
@@ -137,26 +138,44 @@ public class ClickFX : MonoBehaviour
 
     void IntersectionFadeOut()
     {
+        /*
         LeanTween.value(intersectionObj, intersectionMaxAlpha, 0f, fadeOutDuration).setOnUpdate((groundUIAlpha) =>
         {
             intersectionMaterial.SetFloat("_Alpha", groundUIAlpha);
         }).setDelay(scaleDuration + fadeOutDelay).setEaseOutQuad().setOnComplete(GroundUIAnimationComplete);
+        */
     }
 
     void GroundUIAnimationComplete()
     {
+        /*
         intersectionMaterial.SetFloat("_Alpha", intersectionMaxAlpha);
         intersectionObj.SetActive(false);
         groundUIPlaying = false;
+        */
     }
 
     void DashFeedbackAnimationComplete()
     {
+        /*
         intersectionMaterial.SetFloat("_Alpha", intersectionMaxAlpha);
         intersectionObj.SetActive(false);
         dashFeedbackPlaying = false;
+        */
     }
 
+    IEnumerator SpawnSonarRings()
+    {
+        int ringCount = 0;
+        Vector3 ringSpawnPos = new Vector3(transform.position.x, -28.0f, transform.position.z);
+        while (ringCount < sonarRing.Length)
+        {
+            sonarRing[ringCount] = Instantiate(sonarRingPrefab);
+            sonarRing[ringCount].transform.position = ringSpawnPos;
+            yield return new WaitForSeconds(sonarRingRate);
+            ringCount++;
+        }
+    }
 
 
 }
