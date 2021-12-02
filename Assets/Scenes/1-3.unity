@@ -740,6 +740,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 2113200697}
+    - target: {fileID: 3649442020457163162, guid: 35b224b7b216fe54a967812992ed4cf0,
+        type: 3}
+      propertyPath: Free.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+        type: 2}
     - target: {fileID: 7074085834630530547, guid: 35b224b7b216fe54a967812992ed4cf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -805,7 +811,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat_10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7147919130205162266, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
 --- !u!1001 &118493917
 PrefabInstance:
@@ -7831,6 +7838,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 1450166955}
+    - target: {fileID: 3649442020457163162, guid: 35b224b7b216fe54a967812992ed4cf0,
+        type: 3}
+      propertyPath: Free.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+        type: 2}
     - target: {fileID: 7074085834630530547, guid: 35b224b7b216fe54a967812992ed4cf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -7896,7 +7909,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat_9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7147919130205162266, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
 --- !u!1001 &724922839
 PrefabInstance:
@@ -10987,6 +11001,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 855015647}
+    - target: {fileID: 3649442020457163162, guid: 35b224b7b216fe54a967812992ed4cf0,
+        type: 3}
+      propertyPath: Free.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+        type: 2}
     - target: {fileID: 7074085834630530547, guid: 35b224b7b216fe54a967812992ed4cf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -11052,7 +11072,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat_6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7147919130205162266, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
 --- !u!1001 &947133405
 PrefabInstance:
@@ -12850,6 +12871,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 962460463}
+    - target: {fileID: 3649442020457163162, guid: 35b224b7b216fe54a967812992ed4cf0,
+        type: 3}
+      propertyPath: Free.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+        type: 2}
     - target: {fileID: 7074085834630530547, guid: 35b224b7b216fe54a967812992ed4cf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -12915,7 +12942,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat_5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7147919130205162266, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
 --- !u!1001 &1107624158
 PrefabInstance:
@@ -13368,6 +13396,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 1414438469}
+    - target: {fileID: 3649442020457163162, guid: 35b224b7b216fe54a967812992ed4cf0,
+        type: 3}
+      propertyPath: Free.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+        type: 2}
     - target: {fileID: 7074085834630530547, guid: 35b224b7b216fe54a967812992ed4cf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -13433,7 +13467,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat_12
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7147919130205162266, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
 --- !u!1 &1155174988
 GameObject:
@@ -16613,6 +16648,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 1060839983}
+    - target: {fileID: 3649442020457163162, guid: 35b224b7b216fe54a967812992ed4cf0,
+        type: 3}
+      propertyPath: Free.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+        type: 2}
     - target: {fileID: 7074085834630530547, guid: 35b224b7b216fe54a967812992ed4cf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -16678,7 +16719,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat_11
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7147919130205162266, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
 --- !u!1 &1414438468
 GameObject:
@@ -19302,6 +19344,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 467838973}
+    - target: {fileID: 3649442020457163162, guid: 35b224b7b216fe54a967812992ed4cf0,
+        type: 3}
+      propertyPath: Free.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+        type: 2}
     - target: {fileID: 7074085834630530547, guid: 35b224b7b216fe54a967812992ed4cf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -19367,7 +19415,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat_2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7147919130205162266, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
 --- !u!1001 &1591369017
 PrefabInstance:
@@ -20953,6 +21002,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 1417854568}
+    - target: {fileID: 3649442020457163162, guid: 35b224b7b216fe54a967812992ed4cf0,
+        type: 3}
+      propertyPath: Free.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+        type: 2}
     - target: {fileID: 7074085834630530547, guid: 35b224b7b216fe54a967812992ed4cf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -21018,7 +21073,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat_4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7147919130205162266, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
 --- !u!1 &1703294832
 GameObject:
@@ -21324,6 +21380,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 129469120}
+    - target: {fileID: 3649442020457163162, guid: 35b224b7b216fe54a967812992ed4cf0,
+        type: 3}
+      propertyPath: Free.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+        type: 2}
     - target: {fileID: 7074085834630530547, guid: 35b224b7b216fe54a967812992ed4cf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -21389,7 +21451,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat_8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7147919130205162266, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
 --- !u!1001 &1728357120
 PrefabInstance:
@@ -21922,6 +21985,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 1278852431}
+    - target: {fileID: 3649442020457163162, guid: 35b224b7b216fe54a967812992ed4cf0,
+        type: 3}
+      propertyPath: Free.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+        type: 2}
     - target: {fileID: 7074085834630530547, guid: 35b224b7b216fe54a967812992ed4cf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -21987,7 +22056,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat_7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7147919130205162266, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
 --- !u!1001 &1760570828
 PrefabInstance:
@@ -22173,6 +22243,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 520107995}
+    - target: {fileID: 3649442020457163162, guid: 35b224b7b216fe54a967812992ed4cf0,
+        type: 3}
+      propertyPath: Free.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+        type: 2}
     - target: {fileID: 7074085834630530547, guid: 35b224b7b216fe54a967812992ed4cf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -22238,7 +22314,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat_1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7147919130205162266, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
 --- !u!1 &1767142853
 GameObject:
@@ -23372,6 +23449,12 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 126843787}
+    - target: {fileID: 3649442020457163162, guid: 35b224b7b216fe54a967812992ed4cf0,
+        type: 3}
+      propertyPath: Free.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f4a6018987f96e4f8ef99b23ef7d52d,
+        type: 2}
     - target: {fileID: 7074085834630530547, guid: 35b224b7b216fe54a967812992ed4cf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -23437,7 +23520,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat_3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7147919130205162266, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b224b7b216fe54a967812992ed4cf0, type: 3}
 --- !u!1001 &1946350739
 PrefabInstance:

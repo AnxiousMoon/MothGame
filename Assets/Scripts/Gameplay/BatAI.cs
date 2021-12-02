@@ -17,9 +17,9 @@ public class BatAI : MonoBehaviour
     private float distRock;
     private Collider b_collider;
 
-    public AK.Wwise.Event Web;
+    public AK.Wwise.Event Web; // A Wise Event That is Triggered When The Bat is Caught in a Web.
 
-    public AkAmbient Sound;
+    public AK.Wwise.Event Free; // Sounds Used by Wise to Play The Sounds of the Bats Wings Flapping.
 
     Rigidbody rb;
 
@@ -39,8 +39,6 @@ public class BatAI : MonoBehaviour
         rb.freezeRotation = true;
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
-
-        Sound = this.GetComponent<AkAmbient>();
     }
 
     void OnTriggerEnter(Collider col)
@@ -143,7 +141,7 @@ public class BatAI : MonoBehaviour
             rb.freezeRotation = true;
             speed = 0;
             batAnimation.StartWebAnimation();
-            Destroy(Sound);
+            Free.Stop(gameObject); // Stop ambient Bat sounds as the Bat is stuck in Web
             Web.Post(gameObject);
         }
         if (col.collider.tag == "Full")
@@ -207,5 +205,6 @@ public class BatAI : MonoBehaviour
             Debug.LogError("There is no dissolve script attached to this bat - use stationary bat prefab");
         }
         batAnimation.Death();
+        Web.Stop(gameObject);
     }
 }

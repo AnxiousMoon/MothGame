@@ -19,7 +19,7 @@ public class BatAIStationary : MonoBehaviour
 
     public AK.Wwise.Event Web; // A Wise Event That is Triggered When The Bat is Caught in a Web.
 
-    public AkAmbient Sound; // Ambient Sounds Used by Wise to Play The Sounds of the Bats Wings Flapping.
+    public AK.Wwise.Event Free; // Sounds Used by Wise to Play The Sounds of the Bats Wings Flapping.
 
     private Collider b_collider; // A Collider Variable Used to Access The Bats Collider.
 
@@ -30,6 +30,10 @@ public class BatAIStationary : MonoBehaviour
 
     Dissolve dissolve; // Reference to dissolve script on bat model
 
+    private void Awake()
+    {
+        Free.Post(gameObject); //Play ambient bat sounds.
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -39,8 +43,6 @@ public class BatAIStationary : MonoBehaviour
 
         rb = gameObject.GetComponent<Rigidbody>(); // Sets Rigidbody to the Component Attached to the GameObject.
         rb.freezeRotation = true; // Freezes the Rotation of the Bats Rigidbody to Prevent Accidental Rotation.
-
-        Sound = this.GetComponent<AkAmbient>(); // Sets the Sound Variable to the Wise Component Attached to the GameObject
     }
 
     // On Trigger Enter Checks When the GameObject Enters Other Triggers and Assigns Behaviours to the GameObject.
@@ -109,7 +111,7 @@ public class BatAIStationary : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezePosition; // Freezes the Position of the Bat.
             rb.freezeRotation = true; // Freezes the Rotation of the Bat.
             speed = stationairySpeed; // Speed is Set to 0.
-            Destroy(Sound); // Destroys the Wing Flapping Sound to Prevent it From Playing.
+            Free.Stop(gameObject); // Stop ambient Bat sounds as the Bat is stuck in Web
             Web.Post(gameObject); // Posts the Web Stuck Sound as the Bat is now Caught in the Web.
             batAnimation.StartWebAnimation(); // Plays the Animation Assigned to the Bat Being Caught in the Web.
         }
@@ -166,5 +168,6 @@ public class BatAIStationary : MonoBehaviour
     {
         dissolve.DissolveMe(1f,true); //dissolve for 1s then deactivate
         batAnimation.Death();
+        Web.Stop(gameObject);
     }
 }

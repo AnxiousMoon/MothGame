@@ -20,8 +20,7 @@ public class BatAnimation : MonoBehaviour
 
     private void Awake()
     {
-        animator = gameObject.GetComponent<Animator>();
-        
+        animator = gameObject.GetComponent<Animator>();       
     }
 
     private void Start()
