@@ -35,6 +35,7 @@ public class Web : MonoBehaviour
             Destroy(web);
             this.col.enabled = false;
             webBroken.SetActive(true);
+            col.collider.tag = "Player";
         }
 
         if (col.collider.tag == "Dashing" && gameObject.tag == "Stuck")
@@ -57,6 +58,7 @@ public class Web : MonoBehaviour
             this.col.enabled = false;
             webBroken.SetActive(true);
             Destroy(web);
+            col.collider.tag = "Player";
         }
 
             //This runs if there are two bats in the web
@@ -95,6 +97,7 @@ public class Web : MonoBehaviour
             this.col.enabled = false;
             webBroken.SetActive(true);
             Destroy(web);
+            col.collider.tag = "Player";
         }
 
         if (col.collider.tag == "Enemy" && gameObject.tag == "Web")
