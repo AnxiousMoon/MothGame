@@ -511,6 +511,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3034505375672253013, guid: 528b879ed7f342446a744281f394ff73,
+        type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 8755697511730766937, guid: 528b879ed7f342446a744281f394ff73,
         type: 3}
       propertyPath: director

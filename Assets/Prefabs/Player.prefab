@@ -5201,7 +5201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154105377669073658}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.092, z: 0}
+  m_LocalPosition: {x: 0, y: 0.092, z: -0.392}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 2745719179749401634}
@@ -10350,6 +10350,9 @@ MonoBehaviour:
   scaleDuration: 1
   fadeOutDuration: 3
   tweenType: 9
+  sonarRingPrefab: {fileID: 5976818168263069983, guid: 3fb430a076c3f6e48a9e450f12b85425,
+    type: 3}
+  sonarRingRate: 0.2
 --- !u!1 &5741754293494409568
 GameObject:
   m_ObjectHideFlags: 0
@@ -20667,7 +20670,7 @@ PrefabInstance:
     - target: {fileID: 5913235174125273157, guid: 149e1380a7d5a284097e8df9841a67b9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 5913235174125273157, guid: 149e1380a7d5a284097e8df9841a67b9,
         type: 3}
@@ -20873,7 +20876,7 @@ PrefabInstance:
     - target: {fileID: 5913235174125273157, guid: 149e1380a7d5a284097e8df9841a67b9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 5913235174125273157, guid: 149e1380a7d5a284097e8df9841a67b9,
         type: 3}

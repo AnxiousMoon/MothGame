@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour
     [Header("Primary Start Screen Objects")]
     [SerializeField] GameObject Splash;
     [SerializeField] Exposition exposition;
+    [SerializeField] GameObject StartButtonObj, QuitButtonObj;
+    Image startButtonImg, quitButtonImg;
 
     [Header("Splash References")]
     [SerializeField] GameObject title;
@@ -29,17 +31,17 @@ public class MainMenu : MonoBehaviour
     bool postMenuCountdown = false;
     #endregion
 
-    void Update()
+
+    public void StartButtonPressed()
     {
-        //check for key input, then close menu and start a countdown to move to splash screen
-        if (Input.anyKey)
+        if (onMenu)
         {
-            if (onMenu)
-            {
-                FadeOutMenu();
-                onMenu = false;
-                StartCoroutine(PostMenuCountdown());
-            }
+            FadeOutMenu();
+            onMenu = false;
+            StartCoroutine(PostMenuCountdown());
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 
@@ -49,6 +51,9 @@ public class MainMenu : MonoBehaviour
 
         Color transparentColor = new Color(1f, 1f, 1f, 0f);
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         titleImg = title.GetComponent<Image>();
         titleImg.color = transparentColor;
 
@@ -57,6 +62,11 @@ public class MainMenu : MonoBehaviour
 
         pressToStartTxt = pressToStart.GetComponent<Text>();
         pressToStartTxt.color = new Color(pressToStartTxt.color.r, pressToStartTxt.color.g, pressToStartTxt.color.b, 0f);
+
+        startButtonImg = StartButtonObj.GetComponent<Image>();
+        quitButtonImg = QuitButtonObj.GetComponent<Image>();
+        startButtonImg.color = new Color(1f, 1f, 1f, 0f);
+        quitButtonImg.color = new Color(1f, 1f, 1f, 0f);
 
         TitleFadeIn();
     }
@@ -85,8 +95,9 @@ public class MainMenu : MonoBehaviour
         LeanTween.value(pressToStart, 0f, 1f, titleFadeInDuration).setOnUpdate((float _alpha) =>
         {
             Color _textColor = new Color(pressToStartTxt.color.r, pressToStartTxt.color.g, pressToStartTxt.color.b, _alpha);
-            pressToStartTxt.color = _textColor;
-        }).setEaseInOutCirc().setLoopPingPong().setDelay(pressToStartDelay);
+            startButtonImg.color = _textColor;
+            quitButtonImg.color = _textColor;
+        }).setEase(leanTweenFadeInType).setDelay(pressToStartDelay);
     }
 
     void FadeOutMenu()
@@ -98,6 +109,8 @@ public class MainMenu : MonoBehaviour
             titleImg.color = _color;
             pressToStartTxt.color = _color;
             subtitleImg.color = _color;
+            startButtonImg.color = _color;
+            quitButtonImg.color = _color;
         }).setEase(leanTweenFadeOutType).setDelay(subtitleDelay).setOnComplete(OpenExposition);
     }
 
