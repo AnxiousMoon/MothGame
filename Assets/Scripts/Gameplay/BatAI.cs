@@ -86,20 +86,20 @@ public class BatAI : MonoBehaviour
             maxSpeed = 5;
             batAnimation.StartDashAnimation();
         }
-        if (col.tag == "Sound")
-        {
-            //rb.velocity = Vector3.zero;
-            //rb.angularVelocity = Vector3.zero;
-            //rb.freezeRotation = true;
-            //transform.LookAt(transform.forward);
-            //distRock = Vector3.Distance(transform.position, col.transform.position);
-            //if (distRock < 1f)
-            //{
-            transform.LookAt(web.transform.position);
-            speed = 100;
-            //}
-            //speed = 100;
-        }
+        //if (col.tag == "Sound")
+        //{
+        //    //rb.velocity = Vector3.zero;
+        //    //rb.angularVelocity = Vector3.zero;
+        //    //rb.freezeRotation = true;
+        //    //transform.LookAt(transform.forward);
+        //    //distRock = Vector3.Distance(transform.position, col.transform.position);
+        //    //if (distRock < 1f)
+        //    //{
+        //    transform.LookAt(web.transform.position);
+        //    speed = 100;
+        //    //}
+        //    //speed = 100;
+        //}
         //if (col.tag == "Clicking")
         //{
         //    transform.LookAt(ghost.transform.position);
