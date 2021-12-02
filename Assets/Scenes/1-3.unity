@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 9s
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -34012,7 +34012,6 @@ Transform:
 --- !u!1001 &2069497366
 PrefabInstance:
   m_ObjectHideFlags: 0
-<<<<<<< Updated upstream
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -34029,7 +34028,6 @@ PrefabInstance:
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2056347944
-=======
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 7040701801796470470}
@@ -34112,7 +34110,6 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cd5872fd61b51b4fa7e8b938bbbbf3f, type: 3}
 --- !u!4 &2069497367 stripped
->>>>>>> Stashed changes
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5cd5872fd61b51b4fa7e8b938bbbbf3f,
     type: 3}
@@ -34193,7 +34190,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0baffdceca0f0f846a1bd91a6418cf39,
         type: 3}
       propertyPath: m_Name
-<<<<<<< Updated upstream
       value: track_curve (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 914292a5da4db08429eea2146c041a7d,
@@ -34205,9 +34201,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
-=======
       value: floating_rock_small_1 (1)
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0baffdceca0f0f846a1bd91a6418cf39, type: 3}
