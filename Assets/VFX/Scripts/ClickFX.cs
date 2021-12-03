@@ -35,7 +35,7 @@ public class ClickFX : MonoBehaviour
     [SerializeField]
     GameObject sonarRingPrefab;
     [SerializeField]
-    float sonarRingRate = 0.2f;
+    float sonarRingRate = 0.2f, yPosOffset = -2f;
 
     float alpha;
 
@@ -167,7 +167,7 @@ public class ClickFX : MonoBehaviour
     IEnumerator SpawnSonarRings()
     {
         int ringCount = 0;
-        Vector3 ringSpawnPos = new Vector3(transform.position.x, -28.0f, transform.position.z);
+        Vector3 ringSpawnPos = transform.position + new Vector3(0f, yPosOffset, 0f);
         while (ringCount < sonarRing.Length)
         {
             sonarRing[ringCount] = Instantiate(sonarRingPrefab);

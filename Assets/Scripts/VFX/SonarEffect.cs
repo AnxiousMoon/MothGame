@@ -6,7 +6,8 @@ public class SonarEffect : MonoBehaviour
 {
     Vector3 targetScale = new Vector3(18, 18, 18);
     [SerializeField] float scaleDuration = 1f;
-    [SerializeField] float fadeOutDuration = 0.5f;
+    [SerializeField] float fadeOutDuration;
+
     Material material;
 
     private void Awake()
