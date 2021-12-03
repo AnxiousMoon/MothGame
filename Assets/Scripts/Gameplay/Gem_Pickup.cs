@@ -10,12 +10,19 @@ public class Gem_Pickup : MonoBehaviour
 
     public Gem_manager GemManager;
 
-    Dissolve dissolve;
 
+    Material material;
+    float initialAlpha;
+    [SerializeField] float pickUpFadeOutTime = 1f;
     private void Awake()
     {
         g_collider = gameObject.GetComponent<Collider>();
-        dissolve = gameObject.GetComponent<Dissolve>();
+        material = gameObject.GetComponent<MeshRenderer>().material;
+    }
+
+    private void Start()
+    {
+        initialAlpha = material.GetFloat("_Alpha");
     }
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider col)
@@ -25,9 +32,24 @@ public class Gem_Pickup : MonoBehaviour
             if(!col.isTrigger)
             {
                 g_collider.enabled = false;
-                dissolve.DissolveMe(1f, true);
                 GemManager.Count += 1;
+                
+                PickUpAnimation();
             }
         }
+    }
+
+    void PickUpAnimation()
+    {
+        material.SetFloat("_FresnelStrength", 0f);
+        LeanTween.value(gameObject, initialAlpha, 0f, pickUpFadeOutTime).setOnUpdate((float _alpha) =>
+        {
+            material.SetFloat("_Alpha", _alpha);
+        }).setOnComplete(Deactivation);
+    }
+
+    void Deactivation()
+    {
+        Destroy(gameObject);
     }
 }

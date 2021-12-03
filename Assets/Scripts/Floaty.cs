@@ -6,7 +6,7 @@ public class Floaty : MonoBehaviour {
 
 	private Vector3 newPosition;
 	private Rigidbody rdb;
-
+	[SerializeField] float rotationSpeedMultiplier = 1f;
 	public int num;
 
 	// Use this for initialization
@@ -32,10 +32,11 @@ public class Floaty : MonoBehaviour {
     		newPosition.y += Mathf.Sin(2.5f * Time.time) * 1f * Time.deltaTime;
    			transform.position = newPosition;
 
-   			transform.Rotate (0f, 0f, .2f * Time.deltaTime);
+   			transform.Rotate (0f, 0f, .2f * Time.deltaTime* rotationSpeedMultiplier);
    			break;
 
-   			default:
+
+			default:
    			break;
 		}
 		

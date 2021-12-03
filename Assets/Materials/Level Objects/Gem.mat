@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Gem
-  m_Shader: {fileID: -6465566751694194690, guid: 83b363b575ab03e4db29cfb4b479ae9e,
+  m_Shader: {fileID: -6465566751694194690, guid: 25c2a470dfc252f4bbb5c4b1a6cfb516,
     type: 3}
   m_ShaderKeywords: _METALLICSPECGLOSSMAP _NORMALMAP _PARALLAXMAP _SPECULAR_SETUP
   m_LightmapFlags: 4
@@ -94,7 +94,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_0568fc96003e48f98d35ae289fc2a69d: 0.5
     - Vector1_90fc29e78d4b4bf8830d0f2146bbcdb1: 5
+    - Vector1_b10ec3aa7dbc4a9a9347d75af44d7342: 12
+    - Vector1_bfdf67e5b6d24c6796cbf23fe8314c16: 0
+    - _Alpha: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -104,9 +108,11 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _DisplacementStrength: 0
     - _Dissolve: 0
     - _DstBlend: 10
     - _EnvironmentReflections: 1
+    - _FresnelStrength: 0.83
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -116,6 +122,7 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _RefractionStrength: 0
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 1
     - _SpecularHighlights: 1
@@ -131,6 +138,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emmisive: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Tint: {r: 0.5026178, g: 2, b: 1.9372549, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2485406921613065178
 MonoBehaviour:
