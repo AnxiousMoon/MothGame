@@ -177,7 +177,7 @@ public class BatAI : MonoBehaviour
 
     void Patrol()
     {
-        rb.AddForce(transform.forward * speed  * 4, ForceMode.Acceleration);
+        rb.AddForce(transform.forward * speed  * 2f, ForceMode.Acceleration);
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
 
