@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 132
+  controlID: 112
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 85
+  controlID: 18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 45
+  controlID: 19
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1933,22 +1933,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\robbi\Documents\GitHub\MothGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 61}
-    m_SelectedIDs: 7e8f0000
-    m_LastClickedID: 36734
-    m_ExpandedIDs: 000000007e8f000000ca9a3b
+    m_SelectedIDs: 70e00000
+    m_LastClickedID: 57456
+    m_ExpandedIDs: 000000005ae0000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1976,7 +1976,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007e8f0000
+    m_ExpandedIDs: 000000005ae00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2099,9 +2099,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7e8f0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 72bdffff
+      m_ExpandedIDs: dac3fdffba5afeffa490feff9c93feff14aefeff54ccfeff30dbfeffa8f8feff1c00ffff9c0affff2413ffff961affff4431ffffde3fffff0057ffffe67effff9aee00006afb0000aafb00005cfc00009e0b0100140d010010110100ce110100b21501006a180100c4180100ea180100ee1801002a190100bc190100c0190100dc190100e2190100843f0100344301006a4901007e49010082490100b0490100f0490100f4490100fe490100024a0100124a0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2162,9 +2162,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -362.06952, y: -18.484047, z: -19.453146}
+    m_Target: {x: -57.11705, y: 12.362363, z: 49.925728}
     speed: 2
-    m_Value: {x: 16.473549, y: -35.445824, z: 37.815582}
+    m_Value: {x: -57.11705, y: 12.362363, z: 49.925728}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2211,20 +2211,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.01927128, y: 0.7422043, z: -0.021413842, w: 0.66969645}
+    m_Target: {x: -0.095472224, y: -0.90015817, z: 0.24973486, w: -0.34432647}
     speed: 2
-    m_Value: {x: 0.17931898, y: 0.77619606, z: -0.2536943, w: 0.5486397}
+    m_Value: {x: -0.09442393, y: -0.9007557, z: 0.24699254, w: -0.3445547}
   m_Size:
-    m_Target: 6.33877
+    m_Target: 5.065242
     speed: 2
-    m_Value: 36.51221
+    m_Value: 5.065269
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1
-    m_SpeedNormalized: 0.5
+    m_Speed: 1.4202896
+    m_SpeedNormalized: 0.7099998
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
