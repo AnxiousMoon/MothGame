@@ -22,21 +22,21 @@ public class ghost : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Web")
+        if (col.tag == "Web" || col.tag == "NoDestroy" || col.tag == "Stuck")
         {
             ghostBox.transform.position = col.transform.position;
         }
     }
     void OnTriggerStay(Collider col)
     {
-        if (col.tag == "Web")
+        if (col.tag == "Web" || col.tag == "NoDestroy" || col.tag == "Stuck")
         {
             ghostBox.transform.position = col.transform.position;
         }
     }
     void OnTriggerExit(Collider col)
     {
-        if (col.tag == "Web")
+        if (col.tag == "Web" || col.tag == "NoDestroy" || col.tag == "Stuck")
         {
             transform.position = returnPoint.position;
             collider.transform.localRotation = Quaternion.Euler(0, 45, 0);
