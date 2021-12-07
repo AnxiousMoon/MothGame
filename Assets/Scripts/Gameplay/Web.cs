@@ -103,6 +103,7 @@ public class Web : MonoBehaviour
         if (col.collider.tag == "Enemy" && gameObject.tag == "Web")
         {
             stuckBat = col.gameObject;
+            stuckBat.transform.position = stuckBatPos.position;
             gameObject.tag = "Stuck";
             stuckBat.tag = "Stuck";
         }
@@ -110,7 +111,6 @@ public class Web : MonoBehaviour
         if (col.collider.tag == "Enemy" && gameObject.tag == "Stuck")
         {
             gameObject.tag = "Full";
-            stuckBat.transform.position = stuckBatPos.position;
             stuckBat2 = col.gameObject;
         }
     }
