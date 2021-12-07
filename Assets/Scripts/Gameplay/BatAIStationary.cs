@@ -104,7 +104,7 @@ public class BatAIStationary : MonoBehaviour
             caught = true; // Set Caught to True in Order To Reset The Bat. This Prevents it From Getting Stuck in a Part of the Map.
             transform.LookAt(returnPoint.transform.position); // Set the Bats Movement Direction to the Bats Initial Position.
         }
-        if (col.collider.tag == "Web") // Check if the Collider is Tagged as "Web".
+        if (col.collider.tag == "NoDestroy") // Check if the Collider is Tagged as "Web".
         {
             rb.velocity = Vector3.zero; // Sets the Velocity of the Bat to 0.
             rb.angularVelocity = Vector3.zero; // Sets the Rotational Velocity of the Bat to 0.

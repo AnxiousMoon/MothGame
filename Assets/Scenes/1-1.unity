@@ -23679,7 +23679,7 @@ PrefabInstance:
     - target: {fileID: 4965028701866907504, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
         type: 3}
       propertyPath: m_TagString
-      value: Web
+      value: NoDestroy
       objectReference: {fileID: 0}
     - target: {fileID: 4965028701866907504, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
         type: 3}
@@ -26119,6 +26119,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: web
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965028701866907504, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: NoDestroy
       objectReference: {fileID: 0}
     - target: {fileID: 5741108627126947274, guid: b386b53cc263bcd47bf9b4ab5f7dd3a2,
         type: 3}
