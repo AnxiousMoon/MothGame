@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 59c0c8cbf140b6c4896666a259be3441, type: 3}
-    m_FontSize: 79
+    m_FontSize: 68
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -78,9 +78,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Your wings were badly damaged from the fall. You will have to move quickly
-    and quietly to avoid the <b>blind</b> bats. They will be <b>drawn</b>\r to any
-    <b>loud sounds</b>."
+  m_Text: Your wings are badly damaged from the fall, so you must journey on foot.
+    Move quickly and quietly to avoid the blind bats; they are drawn to loud sounds.
 --- !u!1 &1500422431
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,9 +158,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "After Venturing too far you have fallen and found yourself in a mineshaft.
-    Your surroundings are dark however you recognise this is Bat territory\r and
-    you have to <b>escape</b>."
+  m_Text: You ventured too far from home this time, and now you have fallen down
+    a mineshaft. Your surroundings are dark, but you can tell you are deep in bat
+    territory. You must escape undetected.
 --- !u!1 &1633968719
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +373,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 59c0c8cbf140b6c4896666a259be3441, type: 3}
-    m_FontSize: 96
+    m_FontSize: 68
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -385,8 +384,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You are far too <b>weak</b> to fight! Be careful, if they catch you then
-    it will have all been for <b>nothing</b>...
+  m_Text: You are too weak to fight, so proceed with caution. If you are caught,
+    then it will have all been for nothing...
 --- !u!1 &2126182092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc3078af9379c24aa49c8ce2b5a2cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frameDuration: 5
+  frameDuration: 8
 --- !u!1 &6558798919030559949
 GameObject:
   m_ObjectHideFlags: 0
